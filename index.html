@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Người Gieo Hạt Nắng — Tập San Điện Tử 3D Tri Ân Thầy Cô | Thanh Long ❤️‍🩹</title>
+  <title>Thanh Long ❤️‍🩹</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -224,6 +224,81 @@
       0%, 100% { height: 4px; }
       50% { height: 14px; }
     }
+
+    /* ==========================================================================
+       LIQUID SOCIAL LINKS (TLong MMO Style)
+       ========================================================================== */
+    .social-container {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .liquid-social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 14px;
+      color: inherit;
+      text-decoration: none;
+      font-family: inherit;
+      font-size: 13px;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .liquid-social-link::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.25),
+        transparent
+      );
+      transition: 0.5s ease;
+    }
+
+    .liquid-social-link:hover::after {
+      left: 100%;
+    }
+
+    /* Hiệu ứng Neon riêng cho Facebook */
+    .liquid-social-link.fb:hover {
+      background: rgba(24, 119, 242, 0.12);
+      border-color: rgba(24, 119, 242, 0.6);
+      box-shadow: 0 0 20px rgba(24, 119, 242, 0.35), inset 0 0 10px rgba(24, 119, 242, 0.15);
+      transform: translateY(-2px);
+    }
+    .liquid-social-link.fb:hover .name-text {
+      color: #4da3ff;
+      text-shadow: 0 0 8px rgba(77, 163, 255, 0.6);
+    }
+
+    /* Hiệu ứng Neon riêng cho TikTok */
+    .liquid-social-link.tk:hover {
+      background: rgba(254, 44, 85, 0.12);
+      border-color: rgba(254, 44, 85, 0.6);
+      box-shadow: 0 0 20px rgba(254, 44, 85, 0.35), inset 0 0 10px rgba(254, 44, 85, 0.15);
+      transform: translateY(-2px);
+    }
+    .liquid-social-link.tk:hover .name-text {
+      color: #ff5c7c;
+      text-shadow: 0 0 8px rgba(255, 92, 124, 0.6);
+    }
+
 
     /* ==========================================================================
        3D FLIPBOOK STAGE & LUXURY MAGAZINE ARCHITECTURE
@@ -730,8 +805,7 @@
       </div>
       <div class="truncate">
         <div class="flex items-center gap-1.5">
-          <span class="text-xs sm:text-sm font-bold text-white tracking-wide truncate">Người Gieo Hạt Nắng</span>
-          <span class="hidden md:inline-block text-[10px] px-2 py-0.5 rounded-full bg-amber-400/25 border border-amber-300/40 text-amber-200 font-medium">20/11 Digital</span>
+          <span class="text-xs sm:text-sm font-bold text-white tracking-wide truncate">Tập San Điện Tử</span>
         </div>
         <p class="text-[10px] sm:text-[11px] text-amber-100/85 truncate">
           Thiết kế bởi <strong class="text-amber-300 font-semibold">Thanh Long ❤️‍🩹</strong>
@@ -757,16 +831,7 @@
         <span id="music-status-label" class="font-semibold whitespace-nowrap">Nhạc: BẬT</span>
       </button>
 
-      <!-- Page Flip SFX Button -->
-      <button
-        id="btn-sfx-toggle"
-        onclick="toggleFlipSound()"
-        class="liquid-btn liquid-btn-accent text-xs px-2.5 sm:px-3.5 py-1.5"
-        title="Bật / Tắt tiếng lật giấy"
-      >
-        <i id="sfx-icon" class="fa-solid fa-volume-high text-xs"></i>
-        <span id="sfx-label" class="hidden sm:inline">Âm lật giấy</span>
-      </button>
+      
 
       <!-- Table of Contents Modal Button -->
       <button
@@ -779,18 +844,7 @@
       </button>
     </div>
   </header>
-
-  <!-- Subtle Floating Audio Unlock Notification Pill (Auto-hides once browser allows sound) -->
-  <div
-    id="audio-unlock-pill"
-    onclick="unlockAudioImmediately()"
-    class="fixed top-16 left-1/2 -translate-x-1/2 z-50 liquid-glass px-4 py-1.5 flex items-center gap-2 text-xs text-amber-100 cursor-pointer shadow-lg transition-all duration-300 opacity-0 pointer-events-none"
-  >
-    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-    <span>Chạm nhẹ bất kỳ đâu để phát nhạc nền YouTube 🎵</span>
-  </div>
-
-  <!-- ==========================================================================
+ <!-- ==========================================================================
        MAIN 3D BOOK STAGE (PC SPREAD & MOBILE SINGLE-PAGE 3D)
        ========================================================================== -->
   <main id="book-touch-zone" class="stage-wrapper">
@@ -828,7 +882,7 @@
         aria-label="Trang trước"
       >
         <i class="fa-solid fa-chevron-left text-amber-300"></i>
-        <span class="hidden sm:inline">Trang trước</span>
+      
       </button>
 
       <!-- Page Indicator & Quick Dots -->
@@ -849,16 +903,10 @@
         class="liquid-btn liquid-btn-gold px-3.5 sm:px-4 py-2 text-xs sm:text-sm font-bold"
         aria-label="Lật trang tiếp"
       >
-        <span class="hidden sm:inline">Lật trang</span>
         <i class="fa-solid fa-chevron-right"></i>
       </button>
     </div>
 
-    <!-- Swipe Hint Caption -->
-    <div class="text-[11px] text-amber-100/75 flex items-center gap-2 drop-shadow">
-      <i class="fa-solid fa-hand-pointer text-amber-300 animate-bounce"></i>
-      <span>Vuốt nhẹ trái / phải trực tiếp trên trang sách hoặc dùng phím mũi tên để lật trang</span>
-    </div>
   </footer>
 
   <!-- ==========================================================================
@@ -872,10 +920,10 @@
       <div class="flex items-center justify-between pb-3 border-b border-white/20">
         <div>
           <h3 class="text-lg sm:text-xl font-display font-bold text-amber-300">
-            Mục Lục Tập San Điện Tử (12 Trang)
+            Mục Lục Tập San Điện Tử 12C4
           </h3>
           <p class="text-xs text-amber-100/80">
-            Chủ đề: Tôn Sư Trọng Đạo • Thiết kế bởi Thanh Long ❤️‍🩹
+            Chủ đề: 20/11 • Thiết kế bởi Thanh Long ❤️‍🩹
           </p>
         </div>
         <button onclick="toggleTocModal()" class="liquid-btn px-3 py-1.5 text-xs">
@@ -887,9 +935,15 @@
         <!-- Populated dynamically -->
       </div>
 
-      <div class="pt-2 border-t border-white/15 flex items-center justify-between text-xs text-amber-200/80">
-        <span>🎵 Nhạc nền: YouTube Tự Động (ciYlljR7BEM)</span>
-        <span>✨ Hiệu ứng 3D Flipbook + Liquid Glass</span>
+      <div class="pt-3 border-t border-white/15">
+        <div class="social-container justify-center w-full">
+          <a href="https://facebook.com/htl165" target="_blank" class="liquid-social-link fb">
+            <span>📘 Facebook:</span> <span class="name-text font-bold">Thanh Long ❤️‍🩹</span>
+          </a>
+          <a href="https://tiktok.com/@tlongmmo" target="_blank" class="liquid-social-link tk">
+            <span>🎵 TikTok:</span> <span class="name-text font-bold">Thanh Long ❤️‍🩹</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
