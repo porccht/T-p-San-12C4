@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Thanh Long ❤️‍🩹</title>
+  <title>Tập San Chi Đoàn 12C4 • Thanh Long ❤️‍🩹</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Fonts: Trang trọng, hoài niệm & tôn sư trọng đạo -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Dancing+Script:wght@500;600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
@@ -64,7 +64,6 @@
       overflow: hidden;
     }
 
-    /* Subtle floating dust motes in warm sunlight */
     .sunlight-rays {
       position: absolute;
       inset: -20%;
@@ -133,7 +132,6 @@
       border-radius: 28px;
     }
 
-    /* Bright modern liquid buttons */
     .liquid-btn {
       position: relative;
       display: inline-flex;
@@ -190,7 +188,6 @@
         inset 0 1.5px 2px rgba(255, 255, 255, 0.9);
     }
 
-    /* Animated Equalizer Bars for Music Button */
     .eq-bars {
       display: inline-flex;
       align-items: flex-end;
@@ -217,9 +214,6 @@
       50% { height: 14px; }
     }
 
-    /* ==========================================================================
-       LIQUID SOCIAL LINKS (TLong MMO Style)
-       ========================================================================== */
     .social-container {
       display: flex;
       gap: 12px;
@@ -247,48 +241,17 @@
       overflow: hidden;
     }
 
-    .liquid-social-link::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.25),
-        transparent
-      );
-      transition: 0.5s ease;
-    }
-
-    .liquid-social-link:hover::after {
-      left: 100%;
-    }
-
-    /* Hiệu ứng Neon riêng cho Facebook */
     .liquid-social-link.fb:hover {
       background: rgba(24, 119, 242, 0.12);
       border-color: rgba(24, 119, 242, 0.6);
-      box-shadow: 0 0 20px rgba(24, 119, 242, 0.35), inset 0 0 10px rgba(24, 119, 242, 0.15);
+      box-shadow: 0 0 20px rgba(24, 119, 242, 0.35);
       transform: translateY(-2px);
     }
-    .liquid-social-link.fb:hover .name-text {
-      color: #4da3ff;
-      text-shadow: 0 0 8px rgba(77, 163, 255, 0.6);
-    }
-
-    /* Hiệu ứng Neon riêng cho TikTok */
     .liquid-social-link.tk:hover {
       background: rgba(254, 44, 85, 0.12);
       border-color: rgba(254, 44, 85, 0.6);
-      box-shadow: 0 0 20px rgba(254, 44, 85, 0.35), inset 0 0 10px rgba(254, 44, 85, 0.15);
+      box-shadow: 0 0 20px rgba(254, 44, 85, 0.35);
       transform: translateY(-2px);
-    }
-    .liquid-social-link.tk:hover .name-text {
-      color: #ff5c7c;
-      text-shadow: 0 0 8px rgba(255, 92, 124, 0.6);
     }
 
     /* ==========================================================================
@@ -308,7 +271,6 @@
       touch-action: pan-y;
     }
 
-    /* Desktop 2-Page Spread Book Container */
     .book-scene {
       position: relative;
       width: 960px;
@@ -319,15 +281,9 @@
       transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    .book-scene.closed-front {
-      transform: translateX(-25%) rotateX(3deg);
-    }
-    .book-scene.open-spread {
-      transform: translateX(0%) rotateX(4deg);
-    }
-    .book-scene.closed-back {
-      transform: translateX(25%) rotateX(3deg);
-    }
+    .book-scene.closed-front { transform: translateX(-25%) rotateX(3deg); }
+    .book-scene.open-spread { transform: translateX(0%) rotateX(4deg); }
+    .book-scene.closed-back { transform: translateX(25%) rotateX(3deg); }
 
     .book-table-shadow {
       position: absolute;
@@ -336,7 +292,6 @@
       filter: blur(22px);
       transform: translateZ(-28px);
       pointer-events: none;
-      transition: all 0.65s ease;
     }
 
     .book-spine-3d {
@@ -346,26 +301,14 @@
       bottom: -3px;
       width: 30px;
       transform: translateX(-50%) translateZ(-4px);
-      background: linear-gradient(90deg,
-        #3b1c14 0%,
-        #6b3322 22%,
-        #8e4830 48%,
-        #d49b4b 50%,
-        #7c3d28 54%,
-        #4a2218 85%,
-        #2b120c 100%
-      );
+      background: linear-gradient(90deg, #3b1c14, #6b3322, #8e4830, #d49b4b 50%, #7c3d28, #4a2218, #2b120c);
       border-radius: 6px;
-      box-shadow:
-        0 10px 25px rgba(0,0,0,0.6),
-        inset 0 12px 0 -8px rgba(243, 210, 140, 0.45),
-        inset 0 -12px 0 -8px rgba(243, 210, 140, 0.45);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
       z-index: 2;
       pointer-events: none;
     }
 
-    .paper-stack-left,
-    .paper-stack-right {
+    .paper-stack-left, .paper-stack-right {
       position: absolute;
       top: 6px;
       bottom: 6px;
@@ -374,26 +317,8 @@
       pointer-events: none;
       transition: opacity 0.4s ease;
     }
-
-    .paper-stack-left {
-      left: 0.5%;
-      border-radius: 12px 0 0 12px;
-      box-shadow:
-        -3px 2px 0 #ebe0cc,
-        -6px 4px 0 #dfd1b8,
-        -9px 6px 0 #d4c3a5,
-        -12px 8px 18px rgba(0,0,0,0.45);
-    }
-
-    .paper-stack-right {
-      right: 0.5%;
-      border-radius: 0 12px 12px 0;
-      box-shadow:
-        3px 2px 0 #ebe0cc,
-        6px 4px 0 #dfd1b8,
-        9px 6px 0 #d4c3a5,
-        12px 8px 18px rgba(0,0,0,0.45);
-    }
+    .paper-stack-left { left: 0.5%; border-radius: 12px 0 0 12px; box-shadow: -12px 8px 18px rgba(0,0,0,0.45); }
+    .paper-stack-right { right: 0.5%; border-radius: 0 12px 12px 0; box-shadow: 12px 8px 18px rgba(0,0,0,0.45); }
 
     .book-sheet {
       position: absolute;
@@ -407,14 +332,8 @@
       cursor: grab;
       will-change: transform;
     }
-
-    .book-sheet:active {
-      cursor: grabbing;
-    }
-
-    .book-sheet.flipped {
-      transform: rotateY(-180deg);
-    }
+    .book-sheet:active { cursor: grabbing; }
+    .book-sheet.flipped { transform: rotateY(-180deg); }
 
     .sheet-face {
       position: absolute;
@@ -435,20 +354,13 @@
     .sheet-front {
       border-radius: 0 14px 14px 0;
       border-left: 1px solid rgba(92, 67, 50, 0.18);
-      box-shadow:
-        inset 28px 0 38px -12px rgba(44, 30, 22, 0.22),
-        inset 5px 0 10px -2px rgba(44, 30, 22, 0.18),
-        inset -2px 0 4px rgba(255, 255, 255, 0.6);
+      box-shadow: inset 28px 0 38px -12px rgba(44, 30, 22, 0.22);
     }
-
     .sheet-back {
       transform: rotateY(180deg);
       border-radius: 14px 0 0 14px;
       border-right: 1px solid rgba(92, 67, 50, 0.18);
-      box-shadow:
-        inset -28px 0 38px -12px rgba(44, 30, 22, 0.22),
-        inset -5px 0 10px -2px rgba(44, 30, 22, 0.18),
-        inset 2px 0 4px rgba(255, 255, 255, 0.6);
+      box-shadow: inset -28px 0 38px -12px rgba(44, 30, 22, 0.22);
     }
 
     .page-turn-lighting {
@@ -460,10 +372,7 @@
       background: linear-gradient(90deg, rgba(0,0,0,0.28) 0%, rgba(255,255,255,0.18) 45%, rgba(0,0,0,0.12) 100%);
       z-index: 30;
     }
-
-    .book-sheet.turning .page-turn-lighting {
-      opacity: 1;
-    }
+    .book-sheet.turning .page-turn-lighting { opacity: 1; }
 
     .corner-curl-hint {
       position: absolute;
@@ -478,18 +387,12 @@
       transition: width 0.3s ease, height 0.3s ease;
       z-index: 25;
     }
-
-    .sheet-front:hover .corner-curl-hint {
-      width: 58px;
-      height: 58px;
-    }
-
+    .sheet-front:hover .corner-curl-hint { width: 58px; height: 58px; }
     .sheet-back .corner-curl-hint {
       right: auto;
       left: 0;
       background: linear-gradient(225deg, transparent 48%, rgba(212, 189, 152, 0.65) 50%, #fdf8ef 62%, #d8c29d 100%);
       border-radius: 0 10px 0 14px;
-      box-shadow: 3px -3px 8px rgba(0, 0, 0, 0.15);
     }
 
     /* ==========================================================================
@@ -505,32 +408,22 @@
       perspective: 1800px;
       transform-style: preserve-3d;
     }
-
     .mobile-spine-edge {
       position: absolute;
-      left: -6px;
-      top: 4px;
-      bottom: 4px;
+      left: -6px; top: 4px; bottom: 4px;
       width: 14px;
       background: linear-gradient(90deg, #3b1c14, #8e4830, #d49b4b, #4a2218);
       border-radius: 8px 0 0 8px;
       box-shadow: -3px 4px 14px rgba(0,0,0,0.55);
       z-index: 40;
-      pointer-events: none;
     }
-
     .mobile-paper-stack {
       position: absolute;
       inset: 4px -6px 4px 4px;
       background: #efe3ce;
       border-radius: 4px 18px 18px 4px;
-      box-shadow:
-        3px 2px 0 #e2d2b5,
-        6px 4px 0 #d2bfa0,
-        8px 8px 24px rgba(0,0,0,0.55);
-      pointer-events: none;
+      box-shadow: 8px 8px 24px rgba(0,0,0,0.55);
     }
-
     .mobile-page-card {
       position: absolute;
       inset: 0;
@@ -541,66 +434,37 @@
         radial-gradient(rgba(139, 98, 59, 0.045) 1px, transparent 0),
         radial-gradient(rgba(139, 98, 59, 0.035) 1px, transparent 0);
       background-size: 24px 24px;
-      background-position: 0 0, 12px 12px;
       border-radius: 6px 18px 18px 6px;
       transform-origin: left center;
       transform-style: preserve-3d;
-      transition: transform 0.68s cubic-bezier(0.25, 1, 0.35, 1), opacity 0.45s ease, box-shadow 0.45s ease;
-      box-shadow:
-        inset 22px 0 32px -12px rgba(44, 30, 22, 0.24),
-        inset 4px 0 8px -2px rgba(44, 30, 22, 0.2),
-        0 14px 34px rgba(0, 0, 0, 0.45);
+      transition: transform 0.68s cubic-bezier(0.25, 1, 0.35, 1), opacity 0.45s ease;
+      box-shadow: inset 22px 0 32px -12px rgba(44, 30, 22, 0.24), 0 14px 34px rgba(0, 0, 0, 0.45);
       overflow-y: auto;
       overflow-x: hidden;
       -webkit-overflow-scrolling: touch;
-      will-change: transform;
     }
-
-    .mobile-page-card.past-page {
-      transform: rotateY(-112deg);
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    .mobile-page-card.active-page {
-      transform: rotateY(0deg);
-      opacity: 1;
-      z-index: 20;
-      pointer-events: auto;
-    }
-
-    .mobile-page-card.future-page {
-      transform: rotateY(0deg) scale(0.99);
-      opacity: 0;
-      z-index: 10;
-      pointer-events: none;
-    }
+    .mobile-page-card.past-page { transform: rotateY(-112deg); opacity: 0; pointer-events: none; }
+    .mobile-page-card.active-page { transform: rotateY(0deg); opacity: 1; z-index: 20; }
+    .mobile-page-card.future-page { transform: rotateY(0deg) scale(0.99); opacity: 0; z-index: 10; pointer-events: none; }
 
     @media (max-width: 920px) {
-      .book-scene {
-        display: none !important;
-      }
-      .mobile-book-stage {
-        display: block !important;
-      }
-      .stage-wrapper {
-        padding: 62px 12px 74px 16px;
-      }
+      .book-scene { display: none !important; }
+      .mobile-book-stage { display: block !important; }
+      .stage-wrapper { padding: 62px 12px 74px 16px; }
     }
 
     /* ==========================================================================
-       NOSTALGIC SCRAPBOOK & MAGAZINE DECORATION ELEMENTS
+       HANDMADE SCRAPBOOK STYLES (MỤC LỤC, LỜI NGỎ, LỊCH SỬ, PULL-DOWN)
        ========================================================================== */
     .font-display { font-family: var(--font-display); }
     .font-editorial { font-family: var(--font-editorial); }
     .font-script { font-family: var(--font-script); }
-    .font-sans-vn { font-family: var(--font-sans); }
 
     .page-inner {
       position: relative;
       width: 100%;
       height: 100%;
-      padding: 22px 24px 26px 24px;
+      padding: 20px 22px 24px 22px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -610,117 +474,369 @@
       scrollbar-color: rgba(168, 128, 82, 0.4) transparent;
     }
 
-    .page-inner::-webkit-scrollbar {
-      width: 4px;
+    /* Cutout 3D Title Effect (Mục Lục / Lời Ngỏ / Lịch Sử / Nhà Trường) */
+    .cutout-3d-title {
+      display: inline-block;
+      background: #fffdf9;
+      padding: 4px 18px 8px 18px;
+      border-radius: 26px 20px 28px 22px;
+      box-shadow:
+        0 6px 12px rgba(44, 24, 16, 0.25),
+        0 2px 4px rgba(44, 24, 16, 0.18),
+        inset 0 0 0 2px #f3ead8;
+      font-family: var(--font-script);
+      font-weight: 700;
+      color: #432314;
+      text-shadow: 2px 2px 0px #d4b07b;
+      position: relative;
     }
-    .page-inner::-webkit-scrollbar-thumb {
-      background: rgba(168, 128, 82, 0.4);
-      border-radius: 99px;
+
+    .cutout-3d-red {
+      display: inline-block;
+      background: #fffdf9;
+      padding: 2px 16px 6px 16px;
+      border-radius: 24px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      font-family: var(--font-script);
+      font-weight: 700;
+      color: #c93b2b;
+      text-shadow: 1.5px 1.5px 0px #f4c2b8;
+    }
+
+    /* Kraft Torn Paper for Mục Lục (Image 1) */
+    .kraft-torn-patch {
+      position: relative;
+      background:
+        radial-gradient(circle at 30% 25%, rgba(255,245,225,0.22) 0%, transparent 50%),
+        linear-gradient(145deg, #cbb089 0%, #bfa074 52%, #b39265 100%);
+      border-radius: 18px 28px 22px 26px;
+      box-shadow:
+        0 6px 16px rgba(60, 38, 18, 0.18),
+        inset 0 0 24px rgba(85, 52, 24, 0.18);
+      border: 2px dashed rgba(255, 250, 240, 0.45);
+    }
+
+    /* Pill Sticker for TOC Items */
+    .toc-sticker-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-align: left;
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+      cursor: pointer;
+    }
+    .toc-sticker-btn:hover {
+      transform: scale(1.06) rotate(-1deg);
+    }
+    .toc-num-circle {
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: #231f20;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      flex-shrink: 0;
+    }
+    .toc-pill-label {
+      background: #ffffff;
+      color: #1f1612;
+      font-family: var(--font-script);
+      font-size: 17px;
+      font-weight: 700;
+      padding: 1px 11px 2px 11px;
+      border-radius: 999px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+      border: 1px solid #ece3d5;
+      white-space: nowrap;
+    }
+
+    /* Grid Notebook Paper for Lời Ngỏ (Image 2) */
+    .grid-notebook-sheet {
+      background-color: #fcfaf5;
+      background-image:
+        linear-gradient(to right, rgba(148, 163, 184, 0.25) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(148, 163, 184, 0.25) 1px, transparent 1px);
+      background-size: 18px 18px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    /* Blue Cutout Letters for TRUNG HỌC PHỔ THÔNG / THIỆU HÓA (Image 4) */
+    .blue-cutout-word {
+      background-color: #fcfaf5;
+      background-image:
+        linear-gradient(to right, rgba(148, 163, 184, 0.22) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(148, 163, 184, 0.22) 1px, transparent 1px);
+      background-size: 12px 12px;
+      color: #2b59c3;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      padding: 4px 8px;
+      border-radius: 6px;
+      box-shadow: 2px 3px 6px rgba(0,0,0,0.16);
+      border: 1px solid #d8e2dc;
+      text-align: center;
     }
 
     .washi-tape {
       position: absolute;
-      width: 88px;
-      height: 24px;
+      width: 82px;
+      height: 22px;
       background: rgba(235, 198, 142, 0.58);
-      background-image: repeating-linear-gradient(
-        45deg,
-        rgba(255, 255, 255, 0.35),
-        rgba(255, 255, 255, 0.35) 6px,
-        transparent 6px,
-        transparent 12px
-      );
+      background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.35), rgba(255,255,255,0.35) 6px, transparent 6px, transparent 12px);
       box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-      border-left: 2px dashed rgba(255,255,255,0.6);
-      border-right: 2px dashed rgba(255,255,255,0.6);
       z-index: 15;
       pointer-events: none;
     }
-
-    .washi-rose {
-      background-color: rgba(226, 135, 125, 0.52);
-    }
-
-    .washi-sage {
-      background-color: rgba(114, 158, 133, 0.52);
-    }
+    .washi-rose { background-color: rgba(226, 135, 125, 0.52); }
+    .washi-sage { background-color: rgba(114, 158, 133, 0.52); }
 
     .polaroid-card {
       background: #ffffff;
-      padding: 8px 8px 22px 8px;
+      padding: 8px 8px 20px 8px;
       border-radius: 4px;
-      box-shadow:
-        0 8px 20px rgba(44, 30, 22, 0.16),
-        0 2px 5px rgba(44, 30, 22, 0.1);
+      box-shadow: 0 8px 20px rgba(44, 30, 22, 0.16);
       border: 1px solid rgba(215, 200, 180, 0.7);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease;
     }
-
     .polaroid-card:hover {
       transform: scale(1.03) rotate(0deg) !important;
-      box-shadow: 0 12px 26px rgba(44, 30, 22, 0.25);
       z-index: 20;
     }
 
     .lined-paper {
       background-color: #fffdf7;
-      background-image: linear-gradient(transparent 95%, rgba(105, 148, 198, 0.28) 95%);
-      background-size: 100% 24px;
-      line-height: 24px;
+      background-image: linear-gradient(transparent 95%, rgba(105, 148, 198, 0.25) 95%);
+      background-size: 100% 22px;
+      line-height: 22px;
     }
 
     .drop-cap::first-letter {
       float: left;
       font-family: var(--font-display);
-      font-size: 2.8rem;
+      font-size: 2.5rem;
       line-height: 0.85;
-      padding-top: 4px;
-      padding-right: 8px;
-      padding-bottom: 2px;
+      padding-top: 3px;
+      padding-right: 7px;
       color: var(--crimson-seal);
       font-weight: 800;
     }
 
     .cover-luxury {
-      background:
-        radial-gradient(circle at 50% 22%, rgba(235, 185, 102, 0.22) 0%, transparent 60%),
-        linear-gradient(155deg, #4a1c17 0%, #2d110e 52%, #1d0b09 100%);
+      background: radial-gradient(circle at 50% 22%, rgba(235, 185, 102, 0.22) 0%, transparent 60%), linear-gradient(155deg, #4a1c17 0%, #2d110e 52%, #1d0b09 100%);
       color: #f9ebd2;
+    }
+
+    /* ==========================================================================
+       NEW 3D MULTI-LAYERED SCRAPBOOK & WATERCOLOR SPLATTER BACKGROUNDS
+       ========================================================================== */
+    /* Inner Spiral Ring Strip on Left Edge of Scrapbook Pages */
+    .spiral-edge-strip {
+      position: absolute;
+      left: 4px;
+      top: 12px;
+      bottom: 12px;
+      width: 18px;
+      z-index: 30;
+      pointer-events: none;
+      background-image: radial-gradient(circle at 11px 10px, #2b211c 4.2px, rgba(0,0,0,0.18) 5px, transparent 5.5px);
+      background-size: 18px 26px;
+    }
+    .spiral-edge-strip::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(180deg, transparent 5px, #d4d9e2 5px, #ffffff 7.5px, #7b8494 10.5px, transparent 12px);
+      background-size: 12px 26px;
+      background-repeat: repeat-y;
+      filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.45));
+    }
+
+    /* Watercolor Paint Splatter Page Backgrounds (Matching Reference Photos) */
+    .splatter-pink-bg {
+      background-color: #fbf7f0;
+      background-image:
+        radial-gradient(circle at 14% 18%, rgba(232, 118, 148, 0.42) 0 3px, transparent 4px),
+        radial-gradient(circle at 84% 12%, rgba(232, 118, 148, 0.35) 0 5px, transparent 6px),
+        radial-gradient(circle at 26% 78%, rgba(225, 95, 132, 0.38) 0 4px, transparent 5px),
+        radial-gradient(circle at 76% 84%, rgba(235, 130, 158, 0.45) 0 8px, transparent 9px),
+        radial-gradient(circle at 62% 36%, rgba(232, 118, 148, 0.28) 0 2.5px, transparent 3.5px),
+        radial-gradient(circle at 18% 48%, rgba(232, 118, 148, 0.32) 0 3.5px, transparent 4.5px),
+        radial-gradient(circle at 88% 54%, rgba(225, 95, 132, 0.32) 0 4.5px, transparent 5.5px),
+        radial-gradient(rgba(228, 108, 140, 0.36) 1.35px, transparent 1.8px),
+        radial-gradient(rgba(238, 145, 170, 0.28) 2.2px, transparent 2.8px);
+      background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 28px 28px, 46px 46px;
+      background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 4px 8px, 17px 23px;
+    }
+
+    .splatter-green-bg {
+      background-color: #f8f6ee;
+      background-image:
+        radial-gradient(circle at 16% 14%, rgba(108, 152, 76, 0.42) 0 4px, transparent 5px),
+        radial-gradient(circle at 85% 20%, rgba(108, 152, 76, 0.36) 0 6px, transparent 7px),
+        radial-gradient(circle at 20% 84%, rgba(92, 138, 62, 0.45) 0 5px, transparent 6px),
+        radial-gradient(circle at 82% 88%, rgba(108, 152, 76, 0.48) 0 9px, transparent 10px),
+        radial-gradient(circle at 48% 12%, rgba(108, 152, 76, 0.32) 0 3px, transparent 4px),
+        radial-gradient(rgba(104, 148, 72, 0.38) 1.4px, transparent 1.9px),
+        radial-gradient(rgba(132, 172, 98, 0.3) 2.3px, transparent 2.9px);
+      background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 26px 26px, 42px 42px;
+      background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 6px 10px, 19px 14px;
+    }
+
+    .splatter-orange-bg {
+      background-color: #fcf7f1;
+      background-image:
+        radial-gradient(circle at 15% 22%, rgba(238, 126, 82, 0.38) 0 4px, transparent 5px),
+        radial-gradient(circle at 84% 16%, rgba(238, 126, 82, 0.36) 0 5px, transparent 6px),
+        radial-gradient(circle at 72% 90%, rgba(244, 148, 98, 0.48) 0 18px, transparent 22px),
+        radial-gradient(circle at 22% 82%, rgba(238, 126, 82, 0.36) 0 4.5px, transparent 5.5px),
+        radial-gradient(rgba(235, 118, 74, 0.35) 1.4px, transparent 1.9px),
+        radial-gradient(rgba(242, 152, 112, 0.28) 2.4px, transparent 3px);
+      background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 27px 27px, 44px 44px;
+    }
+
+    .splatter-emerald-bg {
+      background-color: #f6f8f2;
+      background-image:
+        radial-gradient(circle at 18% 16%, rgba(62, 158, 102, 0.42) 0 4px, transparent 5px),
+        radial-gradient(circle at 84% 24%, rgba(62, 158, 102, 0.38) 0 5.5px, transparent 6.5px),
+        radial-gradient(circle at 24% 84%, rgba(52, 142, 90, 0.42) 0 5px, transparent 6px),
+        radial-gradient(circle at 80% 86%, rgba(62, 158, 102, 0.4) 0 7px, transparent 8px),
+        radial-gradient(rgba(58, 152, 96, 0.36) 1.45px, transparent 1.95px),
+        radial-gradient(rgba(88, 178, 122, 0.28) 2.3px, transparent 2.9px);
+      background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 25px 25px, 40px 40px;
+    }
+
+    /* Die-cut Grid Paper Patches (Scissor-cut irregular edges + multi-layer 3D shadow) */
+    .grid-cutout-patch {
+      position: relative;
+      background-color: #fffef9;
+      background-image:
+        linear-gradient(to right, rgba(135, 152, 174, 0.28) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(135, 152, 174, 0.28) 1px, transparent 1px);
+      background-size: 14px 14px;
+      border-radius: 12px 18px 14px 20px;
+      border: 1.5px solid #ffffff;
+      box-shadow:
+        0 6px 12px rgba(36, 20, 12, 0.18),
+        0 2px 4px rgba(36, 20, 12, 0.14),
+        2px 3px 0px rgba(235, 224, 205, 0.9);
+    }
+
+    .diecut-sticker {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      padding: 4px 8px;
+      border-radius: 12px;
+      border: 2px solid #ffffff;
+      box-shadow:
+        0 5px 10px rgba(28, 16, 10, 0.22),
+        0 1.5px 3px rgba(28, 16, 10, 0.16);
+    }
+
+    /* Sheet Music Stave Lines for Page 9 (Bụi Phấn) */
+    .music-stave-row {
+      position: relative;
+      height: 24px;
+      width: 100%;
+      background-image: repeating-linear-gradient(
+        to bottom,
+        rgba(234, 198, 118, 0.85) 0px,
+        rgba(234, 198, 118, 0.85) 1px,
+        transparent 1px,
+        transparent 4.5px
+      );
+      background-size: 100% 19px;
+      background-repeat: no-repeat;
+      margin-bottom: 1px;
+    }
+
+    /* Ultra-detailed Hand-cut Stepped Grid Paper (Giống cắt kéo theo từng dòng thơ) */
+    .stepped-grid-poem {
+      position: relative;
+      background-color: #fffef9;
+      background-image:
+        linear-gradient(to right, rgba(110, 132, 160, 0.34) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(110, 132, 160, 0.34) 1px, transparent 1px);
+      background-size: 11px 11px;
+      border: 2px solid #ffffff;
+      box-shadow:
+        0 6px 12px rgba(28, 14, 8, 0.24),
+        0 2px 4px rgba(28, 14, 8, 0.18),
+        2.5px 3.5px 0px rgba(215, 200, 176, 0.95);
+      border-radius: 8px 14px 10px 16px;
+    }
+
+    /* Individual Scissor-Cut Line Strip on Grid Paper (Cắt bậc thang sát từng câu thơ) */
+    .grid-line-strip {
+      display: inline-block;
+      background-color: #fffef9;
+      background-image:
+        linear-gradient(to right, rgba(110, 132, 160, 0.34) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(110, 132, 160, 0.34) 1px, transparent 1px);
+      background-size: 10px 10px;
+      padding: 1px 10px;
+      margin: -1px 0;
+      border-left: 2px solid #ffffff;
+      border-right: 2px solid #ffffff;
+      box-shadow: 2px 2px 4px rgba(30, 16, 10, 0.14);
+      border-radius: 4px;
+    }
+
+    /* Crumpled Kraft Paper Texture */
+    .kraft-crumpled-surface {
+      background-color: #c5a880;
+      background-image:
+        radial-gradient(ellipse at 20% 30%, rgba(255, 245, 228, 0.35) 0%, transparent 45%),
+        radial-gradient(ellipse at 80% 25%, rgba(105, 72, 38, 0.25) 0%, transparent 40%),
+        radial-gradient(ellipse at 35% 75%, rgba(115, 80, 42, 0.28) 0%, transparent 45%),
+        radial-gradient(ellipse at 75% 70%, rgba(255, 242, 220, 0.28) 0%, transparent 40%),
+        linear-gradient(135deg, rgba(255,255,255,0.14) 0%, rgba(0,0,0,0.1) 50%, rgba(255,255,255,0.12) 100%),
+        linear-gradient(160deg, #ccb18b 0%, #bea076 48%, #ad8d62 100%);
+    }
+
+    /* Overlapping Translucent Washi Dots (Left edge of Page 3 Lời Ngỏ) */
+    .washi-dot-circle {
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      margin-top: -7px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+      border: 1px solid rgba(255,255,255,0.45);
+      opacity: 0.85;
     }
 
     .page-footer-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-top: 8px;
+      padding-top: 6px;
       margin-top: auto;
       border-top: 1px solid rgba(139, 98, 59, 0.22);
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       color: var(--ink-muted);
-      letter-spacing: 0.04em;
     }
 
-    /* Hidden Audio Host */
     #audio-hidden-container {
-      position: fixed;
-      width: 1px;
-      height: 1px;
-      bottom: -10px;
-      right: -10px;
-      opacity: 0.01;
-      pointer-events: none;
-      z-index: -1;
+      position: fixed; width: 1px; height: 1px; bottom: -10px; right: -10px; opacity: 0.01; pointer-events: none; z-index: -1;
     }
   </style>
 </head>
 <body>
 
   <!-- ==========================================================================
-       GLOBAL SHARED SVG DEFS
+       GLOBAL SHARED SVG DEFS (1:1 LOGOS, ROSES, FEATHERS, SUNFLOWERS, STAMPS)
        ========================================================================== -->
   <svg style="position:fixed; width:0; height:0; overflow:hidden; pointer-events:none;" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <!-- 1. Logo THPT Thiệu Hóa -->
+      <!-- 1. Định nghĩa cho Logo Trường THPT Thiệu Hóa (Tỉ lệ 1:1) -->
       <clipPath id="thpt-clip">
         <circle cx="224" cy="224" r="199" />
       </clipPath>
@@ -745,13 +861,144 @@
         <line x1="0" y1="-2" x2="0" y2="-21" stroke="#3aa844" stroke-width="0.9" />
       </g>
 
-      <!-- 2. Logo Đoàn TNCS Hồ Chí Minh -->
+      <!-- Trọn bộ Logo Trường THPT Thiệu Hóa (Gốc 448x448) dùng <use> trực tiếp không lệch -->
+      <g id="full-logo-thpt">
+        <circle cx="224" cy="224" r="220" fill="#ffffff" stroke="#e6dec8" stroke-width="4" />
+        <circle cx="224" cy="224" r="211" fill="#fdfaf2" />
+        <g clip-path="url(#thpt-clip)" opacity="0.58">
+          <circle cx="224" cy="224" r="194" fill="none" stroke="#e5c797" stroke-width="2" />
+          <circle cx="224" cy="224" r="178" fill="none" stroke="#e5c797" stroke-width="1.5" stroke-dasharray="4 3" />
+          <circle cx="224" cy="224" r="162" fill="none" stroke="#e5c797" stroke-width="2" />
+          <circle cx="224" cy="224" r="146" fill="none" stroke="#e5c797" stroke-width="1.5" />
+          <circle cx="224" cy="224" r="126" fill="none" stroke="#dfb980" stroke-width="2.2" />
+          <circle cx="224" cy="224" r="114" fill="none" stroke="#dfb980" stroke-width="1.5" />
+          <circle cx="224" cy="224" r="96" fill="none" stroke="#dfb980" stroke-width="2" />
+          <circle cx="224" cy="224" r="72" fill="#f7deb0" opacity="0.45" />
+          <use href="#dong-son-sector" transform="rotate(0 224 224)" />
+          <use href="#dong-son-sector" transform="rotate(30 224 224)" />
+          <use href="#dong-son-sector" transform="rotate(60 224 224)" />
+          <use href="#dong-son-sector" transform="rotate(90 224 224)" />
+          <use href="#dong-son-sector" transform="rotate(120 224 224)" />
+          <use href="#dong-son-sector" transform="rotate(150 224 224)" />
+          <use href="#dong-son-sector" transform="rotate(180 224 224)" />
+          <use href="#dong-son-sector" transform="rotate(210 224 224)" />
+          <use href="#dong-son-sector" transform="rotate(240 224 224)" />
+          <use href="#dong-son-sector" transform="rotate(270 224 224)" />
+          <use href="#dong-son-sector" transform="rotate(300 224 224)" />
+          <use href="#dong-son-sector" transform="rotate(330 224 224)" />
+        </g>
+        <circle cx="224" cy="224" r="211" fill="none" stroke="#3b56d4" stroke-width="6.5" />
+        <circle cx="224" cy="224" r="201" fill="none" stroke="#3b56d4" stroke-width="2.2" />
+        <text font-family="'Times New Roman', Times, serif" font-size="33" font-weight="bold" fill="#de1212" stroke="#ffffff" stroke-width="1.2" paint-order="stroke" letter-spacing="1.5">
+          <textPath href="#thpt-title-arc" startOffset="50%" text-anchor="middle">TRƯỜNG THPT THIỆU HÓA</textPath>
+        </text>
+        <use href="#thpt-chain-arc" fill="none" stroke="#3b56d4" stroke-width="6" stroke-dasharray="8 3.5" stroke-linecap="round" />
+        <use href="#thpt-chain-arc" fill="none" stroke="#fdfaf2" stroke-width="2.6" stroke-dasharray="8 3.5" stroke-linecap="round" />
+        <use href="#thpt-chain-arc" fill="none" stroke="#3b56d4" stroke-width="1.6" stroke-dasharray="3.5 8" stroke-dashoffset="5" stroke-linecap="round" />
+        <g>
+          <path d="M 208,278 C 165,264 140,210 158,144" fill="none" stroke="#096b12" stroke-width="3.2" stroke-linecap="round" />
+          <circle cx="215" cy="278" r="4.5" fill="#0d8217" stroke="#064e0c" stroke-width="1" />
+          <use href="#laurel-leaf" transform="translate(158,146) rotate(16)" />
+          <use href="#laurel-leaf" transform="translate(153,157) rotate(-24) scale(0.95)" />
+          <use href="#laurel-leaf" transform="translate(149,172) rotate(-36) scale(1.02)" />
+          <use href="#laurel-leaf" transform="translate(148,189) rotate(-46) scale(1.06)" />
+          <use href="#laurel-leaf" transform="translate(150,206) rotate(-55) scale(1.08)" />
+          <use href="#laurel-leaf" transform="translate(155,223) rotate(-63) scale(1.08)" />
+          <use href="#laurel-leaf" transform="translate(163,239) rotate(-70) scale(1.05)" />
+          <use href="#laurel-leaf" transform="translate(174,254) rotate(-76) scale(1.02)" />
+          <use href="#laurel-leaf" transform="translate(187,267) rotate(-82) scale(0.96)" />
+          <use href="#laurel-leaf" transform="translate(202,276) rotate(-86) scale(0.88)" />
+          <use href="#laurel-leaf" transform="translate(155,158) rotate(38) scale(0.92)" />
+          <use href="#laurel-leaf" transform="translate(152,174) rotate(32) scale(1.0)" />
+          <use href="#laurel-leaf" transform="translate(151,191) rotate(26) scale(1.04)" />
+          <use href="#laurel-leaf" transform="translate(154,208) rotate(20) scale(1.05)" />
+          <use href="#laurel-leaf" transform="translate(159,225) rotate(14) scale(1.04)" />
+          <use href="#laurel-leaf" transform="translate(167,241) rotate(8) scale(1.0)" />
+          <use href="#laurel-leaf" transform="translate(178,255) rotate(2) scale(0.96)" />
+          <use href="#laurel-leaf" transform="translate(191,267) rotate(-5) scale(0.90)" />
+        </g>
+        <g>
+          <path d="M 233,285 Q 272,271 306,283 L 326,189 L 316,188 L 298,274 Q 266,265 233,285 Z" fill="#ffffff" stroke="#0022aa" stroke-width="2" stroke-linejoin="round" />
+          <path d="M 233,285 Q 270,268 302,278 L 321,184 L 312,183 L 295,270 Q 264,262 233,285 Z" fill="#ffffff" stroke="#0022aa" stroke-width="2" stroke-linejoin="round" />
+          <path d="M 239,187 C 263,174 291,173 316,178 L 297,272 C 275,264 252,268 232,285 Z" fill="#ffffff" stroke="#0022aa" stroke-width="2.3" stroke-linejoin="round" />
+          <g transform="translate(273, 224)" stroke="#1b2b5e" stroke-width="1.8" fill="none">
+            <ellipse rx="18" ry="6.2" transform="rotate(-12)" />
+            <ellipse rx="18" ry="6.2" transform="rotate(48)" />
+            <ellipse rx="18" ry="6.2" transform="rotate(108)" />
+            <circle cx="0" cy="0" r="3" fill="#1b2b5e" stroke="none" />
+            <circle cx="-15" cy="-1" r="2.2" fill="#1b2b5e" stroke="none" />
+            <circle cx="10" cy="-12" r="2.2" fill="#1b2b5e" stroke="none" />
+            <circle cx="7" cy="14" r="2.2" fill="#1b2b5e" stroke="none" />
+          </g>
+        </g>
+        <g>
+          <polygon points="212,185 240,185 232,298 221,298" fill="#0022cc" />
+          <line x1="188" y1="170" x2="262" y2="170" stroke="#dc1414" stroke-width="3.2" stroke-linecap="round" />
+          <line x1="194" y1="176" x2="256" y2="176" stroke="#dc1414" stroke-width="3" stroke-linecap="round" />
+          <line x1="201" y1="182" x2="249" y2="182" stroke="#dc1414" stroke-width="2.8" stroke-linecap="round" />
+          <path d="M 224,164 C 201,164 191,144 202,128 C 211,116 226,118 219,102 C 237,108 244,124 231,139 C 221,150 218,158 224,164 Z" fill="#e01616" />
+          <path d="M 227,164 C 221,155 225,144 235,137 C 244,131 245,125 244,119 C 254,125 256,139 245,149 C 237,156 236,161 227,164 Z" fill="#e01616" />
+          <path d="M 233,164 C 236,158 242,154 249,149 C 256,144 258,139 257,135 C 264,142 263,154 252,160 C 245,164 238,164 233,164 Z" fill="#e01616" />
+        </g>
+        <g fill="#9db5f9" stroke="#2c4cd4" stroke-width="2.5" stroke-linejoin="round">
+          <path d="M 65,271 L 90,278 L 114,306 L 86,294 L 116,320 L 92,313 L 128,334 L 173,326 C 185,326 187,344 176,352 L 175,356 L 166,355 L 168,348 C 174,344 173,335 164,335 L 123,341 L 138,348 L 101,355 L 123,342 L 94,327 Z" />
+          <g transform="translate(448, 0) scale(-1, 1)">
+            <path d="M 65,271 L 90,278 L 114,306 L 86,294 L 116,320 L 92,313 L 128,334 L 173,326 C 185,326 187,344 176,352 L 175,356 L 166,355 L 168,348 C 174,344 173,335 164,335 L 123,341 L 138,348 L 101,355 L 123,342 L 94,327 Z" />
+          </g>
+        </g>
+        <text x="224" y="348" text-anchor="middle" font-family="'Times New Roman', Times, serif" font-size="37" font-weight="bold" fill="#de1212" stroke="#ffffff" stroke-width="0.8" paint-order="stroke" textLength="72" lengthAdjust="spacingAndGlyphs">1972</text>
+        <text x="224" y="376" text-anchor="middle" font-family="'Times New Roman', Times, serif" font-size="20.5" font-weight="bold" fill="#de1212" stroke="#ffffff" stroke-width="0.6" paint-order="stroke" textLength="136" lengthAdjust="spacingAndGlyphs">TỈNH THANH HÓA</text>
+      </g>
+
+      <!-- 2. Định nghĩa cho Logo Đoàn TNCS Hồ Chí Minh (Tỉ lệ 1:1 - Gốc 500x572) -->
       <clipPath id="doan-green-clip">
         <circle cx="236" cy="350" r="134" />
       </clipPath>
       <path id="doan-title-arc" d="M 90,262 A 170,170 0 1,0 398,402" />
+      <g id="full-logo-doan">
+        <g stroke="#ffffff" stroke-width="24" stroke-linejoin="round" fill="#ffffff">
+          <circle cx="236" cy="350" r="196" />
+          <path d="M 15,20 L 39,34 L 42,54 L 274,478 L 250,483 L 18,52 Z" />
+          <path d="M 40,52 C 74,68 106,54 166,30 C 225,6 266,18 302,36 C 338,54 388,36 466,62 C 425,92 412,126 446,170 C 482,216 490,275 462,326 C 436,292 385,294 328,312 C 266,332 222,334 184,312 Z" />
+        </g>
+        <circle cx="236" cy="350" r="196" fill="#ffffff" stroke="#006633" stroke-width="7" />
+        <circle cx="236" cy="350" r="142" fill="#ffffff" stroke="#006633" stroke-width="4.5" />
+        <circle cx="236" cy="350" r="134" fill="#006633" />
+        <g clip-path="url(#doan-green-clip)" stroke="#ffffff" stroke-width="6">
+          <line x1="75" y1="305" x2="265" y2="460" />
+          <line x1="82" y1="260" x2="312" y2="446" />
+          <line x1="98" y1="222" x2="352" y2="425" />
+          <line x1="128" y1="196" x2="378" y2="396" />
+          <line x1="172" y1="182" x2="395" y2="360" />
+        </g>
+        <text font-family="Arial, Helvetica, sans-serif" font-size="30.5" font-weight="bold" fill="#d91920" letter-spacing="0.2">
+          <textPath href="#doan-title-arc" startOffset="50%" text-anchor="middle">ĐOÀN THANH NIÊN CỘNG SẢN HỒ CHÍ MINH</textPath>
+        </text>
+        <path d="M 15,20 L 39,34 L 42,54 L 274,478 L 250,483 L 18,52 Z" fill="#e21a22" stroke="#ffffff" stroke-width="3.5" stroke-linejoin="round" />
+        <path d="M 40,52 C 74,68 106,54 166,30 C 225,6 266,18 302,36 C 338,54 388,36 466,62 C 425,92 412,126 446,170 C 482,216 490,275 462,326 C 436,292 385,294 328,312 C 266,332 222,334 184,312 Z" fill="#e21a22" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" />
+        <polygon points="240,86 267,150 342,152 282,190 314,250 255,214 204,260 225,193 172,152 235,152" fill="#ffea00" />
+        <g>
+          <path d="M 340,312 C 378,292 436,302 454,352 C 452,382 440,404 420,414 L 376,406 C 382,374 368,342 340,312 Z" fill="#006633" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" />
+          <path d="M 380,308 C 406,322 420,356 416,404" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" />
+          <path d="M 412,316 C 428,326 436,342 436,362" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" />
+        </g>
+        <g>
+          <path d="M 244,344 L 346,324 C 372,340 384,370 378,400 L 254,416 C 238,416 230,398 232,378 Z" fill="#ffffff" stroke="#e21a22" stroke-width="5" stroke-linejoin="round" />
+          <path d="M 192,334 C 194,320 218,318 242,328 C 256,334 264,348 256,360 C 244,368 214,366 196,356 C 190,350 190,342 192,334 Z" fill="#ffffff" stroke="#e21a22" stroke-width="4.8" stroke-linejoin="round" />
+          <path d="M 208,336 L 210,352 M 224,334 C 228,342 228,350 222,358" fill="none" stroke="#e21a22" stroke-width="3.8" stroke-linecap="round" />
+          <rect x="166" y="356" width="54" height="20" rx="10" transform="rotate(-14 193 366)" fill="#ffffff" stroke="#e21a22" stroke-width="4.8" />
+          <path d="M 198,358 C 202,363 202,369 198,373" fill="none" stroke="#e21a22" stroke-width="3.5" stroke-linecap="round" />
+          <rect x="172" y="376" width="58" height="20" rx="10" transform="rotate(-14 201 386)" fill="#ffffff" stroke="#e21a22" stroke-width="4.8" />
+          <path d="M 208,378 C 212,383 212,389 208,393" fill="none" stroke="#e21a22" stroke-width="3.5" stroke-linecap="round" />
+          <rect x="180" y="396" width="56" height="19" rx="9.5" transform="rotate(-14 208 405)" fill="#ffffff" stroke="#e21a22" stroke-width="4.8" />
+          <path d="M 215,398 C 219,403 219,408 215,412" fill="none" stroke="#e21a22" stroke-width="3.5" stroke-linecap="round" />
+          <rect x="194" y="415" width="48" height="18" rx="9" transform="rotate(-14 218 424)" fill="#ffffff" stroke="#e21a22" stroke-width="4.8" />
+          <path d="M 222,417 C 225,421 225,426 222,429" fill="none" stroke="#e21a22" stroke-width="3.5" stroke-linecap="round" />
+          <path d="M 244,358 C 258,368 258,390 242,402" fill="none" stroke="#e21a22" stroke-width="4.5" stroke-linecap="round" />
+        </g>
+      </g>
 
-      <!-- 3. Hoa Hồng Cổ Điển & Lá 3D -->
+      <!-- 3. Định nghĩa các lớp Hoa Hồng Cổ Điển, Nụ Hoa & Lá Cắt Dán 3D (Die-cut Paper-craft) -->
       <g id="vintage-rose">
         <path d="M0,-44 C14,-46 28,-38 38,-26 C46,-14 48,4 42,18 C36,32 22,42 6,44 C-10,46 -26,40 -36,28 C-46,16 -48,-2 -42,-18 C-36,-32 -18,-42 0,-44 Z" fill="#fdfaf5" />
         <path d="M-2,-40 C12,-42 26,-34 34,-22 C40,-10 40,6 32,18 C24,30 8,38 -8,38 C-22,38 -34,28 -38,14 C-42,0 -36,-18 -26,-28 C-18,-36 -10,-39 -2,-40 Z" fill="#f5dad3" stroke="#e6bfb5" stroke-width="0.8" />
@@ -792,6 +1039,89 @@
         <path d="M0,0 C16,-10 29,-5 33,9 C18,14 5,9 0,0 Z" fill="#89a78d" stroke="#5d7b62" stroke-width="0.9" />
         <path d="M2,1 L26,7" fill="none" stroke="#c3d7c4" stroke-width="1" stroke-linecap="round" />
       </g>
+
+      <!-- 4. Lông vũ vằn đen trắng chi tiết (Dùng trên Trang 2 Mục Lục & Trang 6) -->
+      <g id="striped-feather">
+        <path d="M0,0 C-18,-18 -24,-52 -8,-82 C10,-62 18,-28 0,0 Z" fill="#ffffff" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" />
+        <path d="M0,0 C-16,-18 -21,-50 -7,-78 C8,-60 15,-26 0,0 Z" fill="#e6e2dc" stroke="#6c6560" stroke-width="0.8" />
+        <path d="M-12,-28 L2,-22 M-14,-42 L4,-35 M-13,-56 L3,-48 M-9,-68 L1,-62" stroke="#2b2624" stroke-width="3.5" stroke-linecap="round" />
+        <path d="M0,4 L-7,-76" stroke="#4a423e" stroke-width="1.4" stroke-linecap="round" />
+      </g>
+
+      <!-- 5. Hoa hướng dương SVG nhiều cánh (Dùng trên Trang 4 & 5) -->
+      <g id="detailed-sunflower">
+        <circle cx="0" cy="0" r="22" fill="#ffffff" />
+        <g fill="#f59f00" stroke="#d97706" stroke-width="0.6">
+          <ellipse rx="5" ry="18" transform="rotate(0)" />
+          <ellipse rx="5" ry="18" transform="rotate(30)" />
+          <ellipse rx="5" ry="18" transform="rotate(60)" />
+          <ellipse rx="5" ry="18" transform="rotate(90)" />
+          <ellipse rx="5" ry="18" transform="rotate(120)" />
+          <ellipse rx="5" ry="18" transform="rotate(150)" />
+        </g>
+        <g fill="#fcc419">
+          <ellipse rx="3.8" ry="15" transform="rotate(15)" />
+          <ellipse rx="3.8" ry="15" transform="rotate(45)" />
+          <ellipse rx="3.8" ry="15" transform="rotate(75)" />
+          <ellipse rx="3.8" ry="15" transform="rotate(105)" />
+          <ellipse rx="3.8" ry="15" transform="rotate(135)" />
+          <ellipse rx="3.8" ry="15" transform="rotate(165)" />
+        </g>
+        <circle cx="0" cy="0" r="7.5" fill="#4a2511" stroke="#2b1206" stroke-width="1" />
+        <circle cx="-2" cy="-2" r="1" fill="#d97706" />
+        <circle cx="2" cy="-1" r="1" fill="#d97706" />
+        <circle cx="0" cy="2" r="1" fill="#d97706" />
+      </g>
+
+      <!-- 6. Sticker Đồng Hồ Cổ & Hoa Khô (Dùng trên Trang 8 Ca Dao) -->
+      <g id="vintage-pocket-watch">
+        <circle cx="0" cy="0" r="22" fill="#ffffff" />
+        <circle cx="0" cy="-19" r="4" fill="none" stroke="#8c6239" stroke-width="2" />
+        <circle cx="0" cy="0" r="16" fill="#fcf5e5" stroke="#7c532b" stroke-width="2.2" />
+        <circle cx="0" cy="0" r="13" fill="none" stroke="#a67c52" stroke-width="0.7" stroke-dasharray="2 2" />
+        <line x1="0" y1="0" x2="0" y2="-9" stroke="#2b1d12" stroke-width="1.6" stroke-linecap="round" />
+        <line x1="0" y1="0" x2="7" y2="3" stroke="#2b1d12" stroke-width="1.4" stroke-linecap="round" />
+        <circle cx="0" cy="0" r="1.8" fill="#8c2d19" />
+        <circle cx="11" cy="9" r="6" fill="#e6a296" stroke="#b56557" stroke-width="0.8" />
+        <circle cx="-11" cy="-8" r="4.5" fill="#d88c7e" />
+      </g>
+
+      <!-- 7. Sticker Chim Sẻ Đậu Cành Hoa (Dùng trên Trang 8 Ca Dao) -->
+      <g id="vintage-bird-branch">
+        <path d="M-22,12 Q0,4 22,10" fill="none" stroke="#5c3d28" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M-10,8 C-14,-4 -4,-14 6,-10 C12,-7 14,0 18,6 L-6,8 Z" fill="#a67b5b" stroke="#4a3222" stroke-width="1" />
+        <circle cx="5" cy="-6" r="1.5" fill="#1a120b" />
+        <polygon points="10,-7 16,-5 10,-3" fill="#d97706" />
+        <path d="M-8,4 L-18,14 L-12,16 L-4,6" fill="#7c583e" />
+        <circle cx="-14" cy="4" r="4" fill="#f3c6bd" />
+        <circle cx="14" cy="11" r="3.5" fill="#f3c6bd" />
+      </g>
+
+      <!-- 8. Sticker Nấm Rừng Cổ Điển (Dùng trên Trang 8 Ca Dao) -->
+      <g id="vintage-mushroom">
+        <ellipse cx="0" cy="12" rx="14" ry="4" fill="#d5c7b8" />
+        <path d="M-4,12 L-3,-4 L3,-4 L4,12 Z" fill="#efe5d8" stroke="#8c7a6b" stroke-width="1" />
+        <path d="M-18,-2 C-18,-14 18,-14 18,-2 Z" fill="#b84a39" stroke="#6e261c" stroke-width="1" />
+        <circle cx="-7" cy="-7" r="2" fill="#fcf5eb" opacity="0.85" />
+        <circle cx="2" cy="-9" r="2.5" fill="#fcf5eb" opacity="0.85" />
+        <circle cx="9" cy="-5" r="1.8" fill="#fcf5eb" opacity="0.85" />
+        <!-- Nấm nhỏ bên cạnh -->
+        <path d="M8,12 L9,3 L12,3 L13,12 Z" fill="#efe5d8" stroke="#8c7a6b" stroke-width="0.8" />
+        <path d="M3,4 C3,-3 18,-3 18,4 Z" fill="#c9644a" stroke="#6e261c" stroke-width="0.8" />
+      </g>
+
+      <!-- 9. Sticker Đồng Hồ Cát Cổ Điển (Dùng trên Trang 6 & 10) -->
+      <g id="vintage-hourglass">
+        <rect x="-14" y="-22" width="28" height="44" rx="4" fill="#ffffff" />
+        <rect x="-11" y="-18" width="22" height="3.5" rx="1" fill="#5c3a21" />
+        <rect x="-11" y="14.5" width="22" height="3.5" rx="1" fill="#5c3a21" />
+        <line x1="-9" y1="-15" x2="-9" y2="15" stroke="#7c5233" stroke-width="1.8" />
+        <line x1="9" y1="-15" x2="9" y2="15" stroke="#7c5233" stroke-width="1.8" />
+        <path d="M-7,-14 C-7,-4 -2,-1 0,0 C2,-1 7,-4 7,-14 Z" fill="#e6ccb2" stroke="#8c6d53" stroke-width="1" />
+        <path d="M-7,14 C-7,4 -2,1 0,0 C2,1 7,4 7,14 Z" fill="#e6ccb2" stroke="#8c6d53" stroke-width="1" />
+        <path d="M-5,-7 L5,-7 L0,0 Z" fill="#c9933b" />
+        <path d="M-6,13 L6,13 L0,5 Z" fill="#c9933b" />
+      </g>
     </defs>
   </svg>
 
@@ -815,7 +1145,7 @@
       </div>
       <div class="truncate">
         <div class="flex items-center gap-1.5">
-          <span class="text-xs sm:text-sm font-bold text-white tracking-wide truncate">Tập San Điện Tử</span>
+          <span class="text-xs sm:text-sm font-bold text-white tracking-wide truncate">Tập San Điện Tử 12C4</span>
         </div>
         <p class="text-[10px] sm:text-[11px] text-amber-100/85 truncate">
           Thiết kế bởi <strong class="text-amber-300 font-semibold">Thanh Long ❤️‍🩹</strong>
@@ -941,11 +1271,11 @@
   </div>
 
   <!-- ==========================================================================
-       JAVASCRIPT
+       JAVASCRIPT: 12 PAGES (PHIÊN BẢN SIÊU CHI TIẾT 10/10 GIỐNG ẢNH MẪU)
        ========================================================================== -->
   <script>
     const PAGES_DATA = [
-      // TRANG 1
+      // ================= TRANG 1: BÌA TRƯỚC (1:1 NHIỀU LỚP 3D + 2 LOGO CHUẨN VỊ TRÍ + NGƯỜI GIEO HẠT NẮNG) =================
       {
         number: 1,
         title: "Bìa Trước: Người Gieo Hạt Nắng",
@@ -953,6 +1283,7 @@
         html: `
           <div class="page-inner relative select-none overflow-hidden" style="padding: 0; background: #4a101d;">
             <svg viewBox="0 0 480 640" preserveAspectRatio="xMidYMid slice" class="w-full h-full block" xmlns="http://www.w3.org/2000/svg">
+              <!-- LỚP 1: XẤP GIẤY RUỘT TRẮNG DÀY LỘ RA Ở ĐÁY & CẠNH PHẢI -->
               <rect x="18" y="618" width="448" height="18" rx="2" fill="#dcd6c8" />
               <rect x="16" y="613" width="450" height="16" rx="2" fill="#eae5da" />
               <rect x="14" y="608" width="452" height="14" rx="2" fill="#f7f4ed" />
@@ -960,12 +1291,14 @@
               <rect x="464" y="14" width="12" height="606" fill="#ebe6dc" />
               <rect x="460" y="12" width="10" height="606" fill="#f8f5ef" />
 
+              <!-- LỚP 2: BÌA ĐỎ ĐÔ (BURGUNDY CARDSTOCK) -->
               <g style="filter: drop-shadow(0 6px 12px rgba(0,0,0,0.45));">
                 <rect x="8" y="8" width="456" height="608" rx="4" fill="#681829" />
                 <rect x="8" y="8" width="456" height="608" rx="4" fill="none" stroke="#7d2236" stroke-width="2" />
                 <line x1="22" y1="8" x2="22" y2="616" stroke="#470d19" stroke-width="1.5" opacity="0.55" />
               </g>
 
+              <!-- LỚP 3: 3 TẦNG GIẤY KEM CỔ ĐIỂN KHOÉT VÒM CHỮ C XẾP BẬC THANG 3D -->
               <path d="M 318,12 L 456,12 L 456,608 L 320,608 C 218,552 178,435 186,312 C 194,188 242,82 318,12 Z" fill="#dfd0b4" style="filter: drop-shadow(-5px 4px 6px rgba(25, 4, 9, 0.48));" />
               <path d="M 325,12 L 460,12 L 460,606 L 328,606 C 228,550 188,434 196,312 C 204,190 250,84 325,12 Z" fill="#eee2c9" style="filter: drop-shadow(-3px 2px 4px rgba(40, 10, 16, 0.32));" />
               <path d="M 332,12 L 463,12 L 463,604 L 335,604 C 238,548 198,432 206,312 C 214,192 258,86 332,12 Z" fill="#fbf5e8" style="filter: drop-shadow(-2px 1px 3px rgba(55, 16, 22, 0.25));" />
@@ -973,219 +1306,115 @@
               <line x1="455" y1="14" x2="455" y2="602" stroke="#d5c2a1" stroke-width="1.2" />
               <line x1="459" y1="14" x2="459" y2="602" stroke="#b99f78" stroke-width="1" />
 
-              <g transform="translate(358, 258) rotate(-7)" fill="#3b1518" style="filter: drop-shadow(0 1px 1px rgba(255,255,255,0.7));">
+              <!-- LỚP 4: CHỮ THƯ PHÁP "Người Gieo Hạt Nắng" & CHỮ DỌC "chi đoàn 12C4" -->
+              <g transform="translate(362, 256) rotate(-7)" fill="#3b1518" style="filter: drop-shadow(0 1px 1px rgba(255,255,255,0.7));">
                 <text x="0" y="0" text-anchor="middle" font-family="'Great Vibes', 'Dancing Script', cursive" font-size="54" stroke="#3b1518" stroke-width="0.4">Người</text>
                 <text x="4" y="56" text-anchor="middle" font-family="'Great Vibes', 'Dancing Script', cursive" font-size="51" stroke="#3b1518" stroke-width="0.4">Gieo Hạt</text>
                 <text x="16" y="114" text-anchor="middle" font-family="'Great Vibes', 'Dancing Script', cursive" font-size="55" stroke="#3b1518" stroke-width="0.4">Nắng</text>
               </g>
 
-              <g transform="translate(88, 344) rotate(86)">
-                <text x="0" y="0" text-anchor="middle" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" font-size="44" font-style="italic" font-weight="600" fill="#fdf7f2" letter-spacing="1.5" style="filter: drop-shadow(1px 2px 3px rgba(28, 4, 10, 0.55));">chi đoàn 12C4</text>
+              <!-- Chữ dọc "chi đoàn 12C4" chạy từ dưới bảng mây xuống ngay đỉnh Logo THPT Thiệu Hóa -->
+              <g transform="translate(96, 336) rotate(85)">
+                <text x="0" y="0" text-anchor="middle" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" font-size="45" font-style="italic" font-weight="600" fill="#fdf7f2" letter-spacing="1.5" style="filter: drop-shadow(1px 2px 3px rgba(28, 4, 10, 0.55));">chi đoàn 12C4</text>
               </g>
 
+              <!-- LỚP 5: HƠN 25 NHÁNH LÁ KHUYNH DIỆP & LÁ HỒNG XANH RÊU DIE-CUT DÀY ĐẶC -->
               <g style="filter: drop-shadow(0 5px 7px rgba(28, 6, 12, 0.42));">
-                <use href="#double-leaf" transform="translate(260, 56) rotate(-42) scale(0.95)" />
-                <use href="#sage-leaf-cluster" transform="translate(220, 92) rotate(-55) scale(0.92)" />
-                <use href="#double-leaf" transform="translate(342, 62) rotate(135) scale(0.88)" />
-                <use href="#sage-leaf-cluster" transform="translate(292, 114) rotate(118) scale(0.85)" />
+                <!-- Cụm lá sát góc đỉnh phải -->
+                <use href="#double-leaf" transform="translate(298, 28) rotate(-25) scale(0.92)" />
+                <use href="#sage-leaf-cluster" transform="translate(348, 22) rotate(45) scale(0.88)" />
+                <use href="#double-leaf" transform="translate(260, 56) rotate(-42) scale(0.98)" />
+                <use href="#sage-leaf-cluster" transform="translate(220, 92) rotate(-55) scale(0.95)" />
+                <use href="#double-leaf" transform="translate(342, 62) rotate(135) scale(0.9)" />
+                <use href="#sage-leaf-cluster" transform="translate(292, 114) rotate(118) scale(0.88)" />
+                <use href="#double-leaf" transform="translate(268, 152) rotate(108) scale(0.85)" />
 
-                <use href="#double-leaf" transform="translate(184, 168) rotate(-65) scale(0.95)" />
-                <use href="#sage-leaf-cluster" transform="translate(165, 232) rotate(-78) scale(1.05)" />
-                <use href="#double-leaf" transform="translate(252, 206) rotate(102) scale(0.9)" />
-                <use href="#sage-leaf-cluster" transform="translate(256, 272) rotate(84) scale(0.92)" />
-                <use href="#double-leaf" transform="translate(162, 314) rotate(-88) scale(1.05)" />
-                <use href="#sage-leaf-cluster" transform="translate(258, 346) rotate(72) scale(0.95)" />
-                <use href="#double-leaf" transform="translate(178, 392) rotate(-108) scale(1.0)" />
+                <!-- Cụm lá dọc thân vòm giữa (Thò ra cả 2 bên trái & phải của dải hoa) -->
+                <use href="#double-leaf" transform="translate(184, 168) rotate(-65) scale(0.98)" />
+                <use href="#sage-leaf-cluster" transform="translate(165, 232) rotate(-78) scale(1.06)" />
+                <use href="#double-leaf" transform="translate(152, 278) rotate(-95) scale(0.92)" />
+                <use href="#double-leaf" transform="translate(252, 206) rotate(102) scale(0.94)" />
+                <use href="#sage-leaf-cluster" transform="translate(258, 256) rotate(84) scale(0.95)" />
+                <use href="#double-leaf" transform="translate(262, 304) rotate(78) scale(0.9)" />
+                <use href="#double-leaf" transform="translate(162, 314) rotate(-88) scale(1.06)" />
+                <use href="#sage-leaf-cluster" transform="translate(258, 346) rotate(72) scale(0.96)" />
+                <use href="#double-leaf" transform="translate(264, 388) rotate(64) scale(0.9)" />
+                <use href="#double-leaf" transform="translate(174, 392) rotate(-108) scale(1.02)" />
+                <use href="#sage-leaf-cluster" transform="translate(188, 434) rotate(-115) scale(0.95)" />
 
-                <use href="#sage-leaf-cluster" transform="translate(202, 468) rotate(-122) scale(1.05)" />
-                <use href="#double-leaf" transform="translate(286, 434) rotate(48) scale(0.96)" />
+                <!-- Cụm lá dày đặc ở đáy lượn sang góc dưới phải -->
+                <use href="#sage-leaf-cluster" transform="translate(202, 468) rotate(-122) scale(1.06)" />
+                <use href="#double-leaf" transform="translate(286, 434) rotate(48) scale(0.98)" />
                 <use href="#sage-leaf-cluster" transform="translate(254, 535) rotate(-145) scale(1.08)" />
-                <use href="#double-leaf" transform="translate(332, 568) rotate(162) scale(1.05)" />
-                <use href="#sage-leaf-cluster" transform="translate(396, 548) rotate(38) scale(1.08)" />
-                <use href="#double-leaf" transform="translate(436, 512) rotate(18) scale(1.02)" />
-                <use href="#sage-leaf-cluster" transform="translate(442, 576) rotate(98) scale(0.95)" />
+                <use href="#double-leaf" transform="translate(292, 578) rotate(-165) scale(1.0)" />
+                <use href="#double-leaf" transform="translate(332, 568) rotate(162) scale(1.06)" />
+                <use href="#sage-leaf-cluster" transform="translate(376, 582) rotate(140) scale(0.98)" />
+                <use href="#sage-leaf-cluster" transform="translate(396, 548) rotate(38) scale(1.1)" />
+                <use href="#double-leaf" transform="translate(436, 512) rotate(18) scale(1.05)" />
+                <use href="#sage-leaf-cluster" transform="translate(446, 576) rotate(98) scale(1.0)" />
               </g>
 
-              <g style="filter: drop-shadow(0 4px 6px rgba(32, 8, 14, 0.36));">
-                <use href="#small-blossom" transform="translate(324, 34) scale(1.15)" />
-                <use href="#small-blossom" transform="translate(298, 72) scale(0.95)" />
-                <use href="#small-blossom" transform="translate(238, 128) scale(1.0)" />
-                <use href="#small-blossom" transform="translate(242, 378) scale(0.95)" />
-                <use href="#small-blossom" transform="translate(310, 444) scale(0.92)" />
-                <use href="#small-blossom" transform="translate(364, 514) scale(1.22)" />
-                <use href="#small-blossom" transform="translate(340, 562) scale(0.98)" />
-                <use href="#small-blossom" transform="translate(418, 545) scale(0.88)" />
+              <!-- LỚP 6: 12 HOA ĐÀO 5 CÁNH NHỎ & NỤ HỒNG XẾP ĐAN XEN -->
+              <g style="filter: drop-shadow(0 4px 6px rgba(32, 8, 14, 0.38));">
+                <use href="#small-blossom" transform="translate(324, 34) scale(1.18)" />
+                <use href="#small-blossom" transform="translate(296, 72) scale(0.96)" />
+                <use href="#small-blossom" transform="translate(236, 126) scale(1.02)" />
+                <use href="#small-blossom" transform="translate(184, 286) scale(0.78)" />
+                <use href="#small-blossom" transform="translate(238, 376) scale(0.98)" />
+                <use href="#small-blossom" transform="translate(306, 442) scale(0.94)" />
+                <use href="#small-blossom" transform="translate(362, 512) scale(1.24)" />
+                <use href="#small-blossom" transform="translate(336, 562) scale(1.0)" />
+                <use href="#small-blossom" transform="translate(418, 545) scale(0.92)" />
+                <use href="#small-blossom" transform="translate(442, 522) scale(0.75)" />
               </g>
 
-              <g style="filter: drop-shadow(0 7px 10px rgba(25, 5, 10, 0.48));">
-                <use href="#vintage-rose" transform="translate(268, 64) rotate(15) scale(0.76)" />
-                <use href="#vintage-rose" transform="translate(226, 165) rotate(-18) scale(0.82)" />
-                <use href="#vintage-rose" transform="translate(216, 242) rotate(8) scale(0.98)" />
-                <use href="#vintage-rose" transform="translate(218, 326) rotate(-12) scale(0.96)" />
-                <use href="#vintage-rose" transform="translate(248, 446) rotate(22) scale(1.04)" />
-                <use href="#vintage-rose" transform="translate(314, 512) rotate(-8) scale(1.12)" />
+              <!-- LỚP 7: 6 BÔNG HOA HỒNG CỔ ĐIỂN CHÍNH NỔI KHỐI 3D CAO -->
+              <g style="filter: drop-shadow(0 7px 10px rgba(25, 5, 10, 0.5));">
+                <use href="#vintage-rose" transform="translate(268, 64) rotate(15) scale(0.78)" />
+                <use href="#vintage-rose" transform="translate(226, 165) rotate(-18) scale(0.84)" />
+                <use href="#vintage-rose" transform="translate(216, 242) rotate(8) scale(1.0)" />
+                <use href="#vintage-rose" transform="translate(218, 326) rotate(-12) scale(0.98)" />
+                <use href="#vintage-rose" transform="translate(248, 446) rotate(22) scale(1.06)" />
+                <use href="#vintage-rose" transform="translate(314, 512) rotate(-8) scale(1.14)" />
               </g>
 
+              <!-- LỚP 8: BẢNG TÊN ĐÁM MÂY 4 LỚP GIẤY XẾP CHỒNG 3D (GÓC TRÊN TRÁI) -->
               <g transform="translate(128, 108) rotate(-10)" style="filter: drop-shadow(0 8px 12px rgba(20, 3, 8, 0.55));">
                 <path d="M-92,12 C-102,-4 -92,-24 -72,-26 C-62,-42 -32,-48 -8,-40 C16,-48 48,-42 62,-26 C86,-24 98,-6 90,12 C98,28 84,46 62,46 C42,56 12,56 -8,48 C-32,56 -64,52 -76,38 C-94,36 -100,24 -92,12 Z" fill="#4e221b" transform="translate(-4, 7)" />
                 <path d="M-92,12 C-102,-4 -92,-24 -72,-26 C-62,-42 -32,-48 -8,-40 C16,-48 48,-42 62,-26 C86,-24 98,-6 90,12 C98,28 84,46 62,46 C42,56 12,56 -8,48 C-32,56 -64,52 -76,38 C-94,36 -100,24 -92,12 Z" fill="#d8ba92" stroke="#6c392b" stroke-width="1.2" transform="translate(-2, 4)" />
                 <path d="M-92,12 C-102,-4 -92,-24 -72,-26 C-62,-42 -32,-48 -8,-40 C16,-48 48,-42 62,-26 C86,-24 98,-6 90,12 C98,28 84,46 62,46 C42,56 12,56 -8,48 C-32,56 -64,52 -76,38 C-94,36 -100,24 -92,12 Z" fill="#f1e3c8" stroke="#7d4636" stroke-width="1.2" transform="translate(-1, 2)" />
                 <path d="M-92,12 C-102,-4 -92,-24 -72,-26 C-62,-42 -32,-48 -8,-40 C16,-48 48,-42 62,-26 C86,-24 98,-6 90,12 C98,28 84,46 62,46 C42,56 12,56 -8,48 C-32,56 -64,52 -76,38 C-94,36 -100,24 -92,12 Z" fill="#fdf8ee" stroke="#693628" stroke-width="1.8" />
                 <path d="M-86,11 C-95,-3 -86,-20 -68,-22 C-58,-36 -30,-42 -8,-35 C14,-42 44,-36 57,-22 C79,-20 90,-4 83,11 C90,25 77,41 57,41 C38,50 10,50 -8,43 C-30,50 -59,46 -70,34 C-87,32 -92,22 -86,11 Z" fill="none" stroke="#a06b56" stroke-width="1" stroke-dasharray="3 2" />
-
                 <text x="0" y="-13" text-anchor="middle" font-family="'Dancing Script', cursive" font-size="25" font-weight="700" fill="#4d1f16">Chào mừng</text>
                 <text x="0" y="12" text-anchor="middle" font-family="'Dancing Script', cursive" font-size="24" font-weight="700" fill="#4d1f16">Ngày Nhà Giáo</text>
                 <text x="2" y="36" text-anchor="middle" font-family="'Dancing Script', cursive" font-size="23" font-weight="700" fill="#682419">Việt Nam 20/11</text>
               </g>
 
-              <g transform="translate(56, 488) rotate(-4)" style="filter: drop-shadow(0 6px 10px rgba(15, 2, 6, 0.55));">
-                <circle cx="55" cy="55" r="56" fill="#ffffff" stroke="#e6dec8" stroke-width="1.5" />
-                <svg x="2" y="2" width="106" height="106" viewBox="0 0 448 448">
-                  <circle cx="224" cy="224" r="211" fill="#fdfaf2" />
-                  <g clip-path="url(#thpt-clip)" opacity="0.58">
-                    <circle cx="224" cy="224" r="194" fill="none" stroke="#e5c797" stroke-width="2" />
-                    <circle cx="224" cy="224" r="178" fill="none" stroke="#e5c797" stroke-width="1.5" stroke-dasharray="4 3" />
-                    <circle cx="224" cy="224" r="162" fill="none" stroke="#e5c797" stroke-width="2" />
-                    <circle cx="224" cy="224" r="146" fill="none" stroke="#e5c797" stroke-width="1.5" />
-                    <circle cx="224" cy="224" r="126" fill="none" stroke="#dfb980" stroke-width="2.2" />
-                    <circle cx="224" cy="224" r="114" fill="none" stroke="#dfb980" stroke-width="1.5" />
-                    <circle cx="224" cy="224" r="96" fill="none" stroke="#dfb980" stroke-width="2" />
-                    <circle cx="224" cy="224" r="72" fill="#f7deb0" opacity="0.45" />
-                    <use href="#dong-son-sector" transform="rotate(0 224 224)" />
-                    <use href="#dong-son-sector" transform="rotate(30 224 224)" />
-                    <use href="#dong-son-sector" transform="rotate(60 224 224)" />
-                    <use href="#dong-son-sector" transform="rotate(90 224 224)" />
-                    <use href="#dong-son-sector" transform="rotate(120 224 224)" />
-                    <use href="#dong-son-sector" transform="rotate(150 224 224)" />
-                    <use href="#dong-son-sector" transform="rotate(180 224 224)" />
-                    <use href="#dong-son-sector" transform="rotate(210 224 224)" />
-                    <use href="#dong-son-sector" transform="rotate(240 224 224)" />
-                    <use href="#dong-son-sector" transform="rotate(270 224 224)" />
-                    <use href="#dong-son-sector" transform="rotate(300 224 224)" />
-                    <use href="#dong-son-sector" transform="rotate(330 224 224)" />
-                  </g>
-                  <circle cx="224" cy="224" r="211" fill="none" stroke="#3b56d4" stroke-width="6.5" />
-                  <circle cx="224" cy="224" r="201" fill="none" stroke="#3b56d4" stroke-width="2.2" />
-                  <text font-family="'Times New Roman', Times, serif" font-size="33" font-weight="bold" fill="#de1212" stroke="#ffffff" stroke-width="1.2" paint-order="stroke" letter-spacing="1.5">
-                    <textPath href="#thpt-title-arc" startOffset="50%" text-anchor="middle">TRƯỜNG THPT THIỆU HÓA</textPath>
-                  </text>
-                  <use href="#thpt-chain-arc" fill="none" stroke="#3b56d4" stroke-width="6" stroke-dasharray="8 3.5" stroke-linecap="round" />
-                  <use href="#thpt-chain-arc" fill="none" stroke="#fdfaf2" stroke-width="2.6" stroke-dasharray="8 3.5" stroke-linecap="round" />
-                  <use href="#thpt-chain-arc" fill="none" stroke="#3b56d4" stroke-width="1.6" stroke-dasharray="3.5 8" stroke-dashoffset="5" stroke-linecap="round" />
-                  <g>
-                    <path d="M 208,278 C 165,264 140,210 158,144" fill="none" stroke="#096b12" stroke-width="3.2" stroke-linecap="round" />
-                    <circle cx="215" cy="278" r="4.5" fill="#0d8217" stroke="#064e0c" stroke-width="1" />
-                    <use href="#laurel-leaf" transform="translate(158,146) rotate(16)" />
-                    <use href="#laurel-leaf" transform="translate(153,157) rotate(-24) scale(0.95)" />
-                    <use href="#laurel-leaf" transform="translate(149,172) rotate(-36) scale(1.02)" />
-                    <use href="#laurel-leaf" transform="translate(148,189) rotate(-46) scale(1.06)" />
-                    <use href="#laurel-leaf" transform="translate(150,206) rotate(-55) scale(1.08)" />
-                    <use href="#laurel-leaf" transform="translate(155,223) rotate(-63) scale(1.08)" />
-                    <use href="#laurel-leaf" transform="translate(163,239) rotate(-70) scale(1.05)" />
-                    <use href="#laurel-leaf" transform="translate(174,254) rotate(-76) scale(1.02)" />
-                    <use href="#laurel-leaf" transform="translate(187,267) rotate(-82) scale(0.96)" />
-                    <use href="#laurel-leaf" transform="translate(202,276) rotate(-86) scale(0.88)" />
-                    <use href="#laurel-leaf" transform="translate(155,158) rotate(38) scale(0.92)" />
-                    <use href="#laurel-leaf" transform="translate(152,174) rotate(32) scale(1.0)" />
-                    <use href="#laurel-leaf" transform="translate(151,191) rotate(26) scale(1.04)" />
-                    <use href="#laurel-leaf" transform="translate(154,208) rotate(20) scale(1.05)" />
-                    <use href="#laurel-leaf" transform="translate(159,225) rotate(14) scale(1.04)" />
-                    <use href="#laurel-leaf" transform="translate(167,241) rotate(8) scale(1.0)" />
-                    <use href="#laurel-leaf" transform="translate(178,255) rotate(2) scale(0.96)" />
-                    <use href="#laurel-leaf" transform="translate(191,267) rotate(-5) scale(0.90)" />
-                  </g>
-                  <g>
-                    <path d="M 233,285 Q 272,271 306,283 L 326,189 L 316,188 L 298,274 Q 266,265 233,285 Z" fill="#ffffff" stroke="#0022aa" stroke-width="2" stroke-linejoin="round" />
-                    <path d="M 233,285 Q 270,268 302,278 L 321,184 L 312,183 L 295,270 Q 264,262 233,285 Z" fill="#ffffff" stroke="#0022aa" stroke-width="2" stroke-linejoin="round" />
-                    <path d="M 239,187 C 263,174 291,173 316,178 L 297,272 C 275,264 252,268 232,285 Z" fill="#ffffff" stroke="#0022aa" stroke-width="2.3" stroke-linejoin="round" />
-                    <g transform="translate(273, 224)" stroke="#1b2b5e" stroke-width="1.8" fill="none">
-                      <ellipse rx="18" ry="6.2" transform="rotate(-12)" />
-                      <ellipse rx="18" ry="6.2" transform="rotate(48)" />
-                      <ellipse rx="18" ry="6.2" transform="rotate(108)" />
-                      <circle cx="0" cy="0" r="3" fill="#1b2b5e" stroke="none" />
-                      <circle cx="-15" cy="-1" r="2.2" fill="#1b2b5e" stroke="none" />
-                      <circle cx="10" cy="-12" r="2.2" fill="#1b2b5e" stroke="none" />
-                      <circle cx="7" cy="14" r="2.2" fill="#1b2b5e" stroke="none" />
-                    </g>
-                  </g>
-                  <g>
-                    <polygon points="212,185 240,185 232,298 221,298" fill="#0022cc" />
-                    <line x1="188" y1="170" x2="262" y2="170" stroke="#dc1414" stroke-width="3.2" stroke-linecap="round" />
-                    <line x1="194" y1="176" x2="256" y2="176" stroke="#dc1414" stroke-width="3" stroke-linecap="round" />
-                    <line x1="201" y1="182" x2="249" y2="182" stroke="#dc1414" stroke-width="2.8" stroke-linecap="round" />
-                    <path d="M 224,164 C 201,164 191,144 202,128 C 211,116 226,118 219,102 C 237,108 244,124 231,139 C 221,150 218,158 224,164 Z" fill="#e01616" />
-                    <path d="M 227,164 C 221,155 225,144 235,137 C 244,131 245,125 244,119 C 254,125 256,139 245,149 C 237,156 236,161 227,164 Z" fill="#e01616" />
-                    <path d="M 233,164 C 236,158 242,154 249,149 C 256,144 258,139 257,135 C 264,142 263,154 252,160 C 245,164 238,164 233,164 Z" fill="#e01616" />
-                  </g>
-                  <g fill="#9db5f9" stroke="#2c4cd4" stroke-width="2.5" stroke-linejoin="round">
-                    <path d="M 65,271 L 90,278 L 114,306 L 86,294 L 116,320 L 92,313 L 128,334 L 173,326 C 185,326 187,344 176,352 L 175,356 L 166,355 L 168,348 C 174,344 173,335 164,335 L 123,341 L 138,348 L 101,355 L 123,342 L 94,327 Z" />
-                    <g transform="translate(448, 0) scale(-1, 1)">
-                      <path d="M 65,271 L 90,278 L 114,306 L 86,294 L 116,320 L 92,313 L 128,334 L 173,326 C 185,326 187,344 176,352 L 175,356 L 166,355 L 168,348 C 174,344 173,335 164,335 L 123,341 L 138,348 L 101,355 L 123,342 L 94,327 Z" />
-                    </g>
-                  </g>
-                  <text x="224" y="348" text-anchor="middle" font-family="'Times New Roman', Times, serif" font-size="37" font-weight="bold" fill="#de1212" stroke="#ffffff" stroke-width="0.8" paint-order="stroke" textLength="72" lengthAdjust="spacingAndGlyphs">1972</text>
-                  <text x="224" y="376" text-anchor="middle" font-family="'Times New Roman', Times, serif" font-size="20.5" font-weight="bold" fill="#de1212" stroke="#ffffff" stroke-width="0.6" paint-order="stroke" textLength="136" lengthAdjust="spacingAndGlyphs">TỈNH THANH HÓA</text>
-                </svg>
+              <!-- =================================================================
+                   LỚP 9: 2 LOGO ĐÃ DỊCH SANG TRÁI CHUẨN XÁC THEO YÊU CẦU
+                   - Dịch sang trái sát dưới dòng chữ "chi đoàn 12C4" và gần khoen còng số 4
+                   - Logo THPT Thiệu Hóa: translate(34, 492)
+                   - Logo Đoàn TNCS Hồ Chí Minh: translate(132, 464)
+                   ================================================================= -->
+              <g transform="translate(34, 492) rotate(-5) scale(0.228)" style="filter: drop-shadow(0 8px 14px rgba(12, 2, 5, 0.62));">
+                <use href="#full-logo-thpt" />
               </g>
 
-              <g transform="translate(154, 462) rotate(-3)" style="filter: drop-shadow(0 7px 11px rgba(15, 2, 6, 0.58));">
-                <svg x="0" y="0" width="112" height="128" viewBox="0 0 500 572">
-                  <g stroke="#ffffff" stroke-width="20" stroke-linejoin="round" fill="#ffffff">
-                    <circle cx="236" cy="350" r="196" />
-                    <path d="M 15,20 L 39,34 L 42,54 L 274,478 L 250,483 L 18,52 Z" />
-                    <path d="M 40,52 C 74,68 106,54 166,30 C 225,6 266,18 302,36 C 338,54 388,36 466,62 C 425,92 412,126 446,170 C 482,216 490,275 462,326 C 436,292 385,294 328,312 C 266,332 222,334 184,312 Z" />
-                  </g>
-                  <circle cx="236" cy="350" r="196" fill="#ffffff" stroke="#006633" stroke-width="7" />
-                  <circle cx="236" cy="350" r="142" fill="#ffffff" stroke="#006633" stroke-width="4.5" />
-                  <circle cx="236" cy="350" r="134" fill="#006633" />
-                  <g clip-path="url(#doan-green-clip)" stroke="#ffffff" stroke-width="6">
-                    <line x1="75" y1="305" x2="265" y2="460" />
-                    <line x1="82" y1="260" x2="312" y2="446" />
-                    <line x1="98" y1="222" x2="352" y2="425" />
-                    <line x1="128" y1="196" x2="378" y2="396" />
-                    <line x1="172" y1="182" x2="395" y2="360" />
-                  </g>
-                  <text font-family="Arial, Helvetica, sans-serif" font-size="30.5" font-weight="bold" fill="#d91920" letter-spacing="0.2">
-                    <textPath href="#doan-title-arc" startOffset="50%" text-anchor="middle">ĐOÀN THANH NIÊN CỘNG SẢN HỒ CHÍ MINH</textPath>
-                  </text>
-                  <path d="M 15,20 L 39,34 L 42,54 L 274,478 L 250,483 L 18,52 Z" fill="#e21a22" stroke="#ffffff" stroke-width="3.5" stroke-linejoin="round" />
-                  <path d="M 40,52 C 74,68 106,54 166,30 C 225,6 266,18 302,36 C 338,54 388,36 466,62 C 425,92 412,126 446,170 C 482,216 490,275 462,326 C 436,292 385,294 328,312 C 266,332 222,334 184,312 Z" fill="#e21a22" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" />
-                  <polygon points="240,86 267,150 342,152 282,190 314,250 255,214 204,260 225,193 172,152 235,152" fill="#ffea00" />
-                  <g>
-                    <path d="M 340,312 C 378,292 436,302 454,352 C 452,382 440,404 420,414 L 376,406 C 382,374 368,342 340,312 Z" fill="#006633" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" />
-                    <path d="M 380,308 C 406,322 420,356 416,404" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" />
-                    <path d="M 412,316 C 428,326 436,342 436,362" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" />
-                  </g>
-                  <g>
-                    <path d="M 244,344 L 346,324 C 372,340 384,370 378,400 L 254,416 C 238,416 230,398 232,378 Z" fill="#ffffff" stroke="#e21a22" stroke-width="5" stroke-linejoin="round" />
-                    <path d="M 192,334 C 194,320 218,318 242,328 C 256,334 264,348 256,360 C 244,368 214,366 196,356 C 190,350 190,342 192,334 Z" fill="#ffffff" stroke="#e21a22" stroke-width="4.8" stroke-linejoin="round" />
-                    <path d="M 208,336 L 210,352 M 224,334 C 228,342 228,350 222,358" fill="none" stroke="#e21a22" stroke-width="3.8" stroke-linecap="round" />
-                    <rect x="166" y="356" width="54" height="20" rx="10" transform="rotate(-14 193 366)" fill="#ffffff" stroke="#e21a22" stroke-width="4.8" />
-                    <path d="M 198,358 C 202,363 202,369 198,373" fill="none" stroke="#e21a22" stroke-width="3.5" stroke-linecap="round" />
-                    <rect x="172" y="376" width="58" height="20" rx="10" transform="rotate(-14 201 386)" fill="#ffffff" stroke="#e21a22" stroke-width="4.8" />
-                    <path d="M 208,378 C 212,383 212,389 208,393" fill="none" stroke="#e21a22" stroke-width="3.5" stroke-linecap="round" />
-                    <rect x="180" y="396" width="56" height="19" rx="9.5" transform="rotate(-14 208 405)" fill="#ffffff" stroke="#e21a22" stroke-width="4.8" />
-                    <path d="M 215,398 C 219,403 219,408 215,412" fill="none" stroke="#e21a22" stroke-width="3.5" stroke-linecap="round" />
-                    <rect x="194" y="415" width="48" height="18" rx="9" transform="rotate(-14 218 424)" fill="#ffffff" stroke="#e21a22" stroke-width="4.8" />
-                    <path d="M 222,417 C 225,421 225,426 222,429" fill="none" stroke="#e21a22" stroke-width="3.5" stroke-linecap="round" />
-                    <path d="M 244,358 C 258,368 258,390 242,402" fill="none" stroke="#e21a22" stroke-width="4.5" stroke-linecap="round" />
-                  </g>
-                </svg>
+              <g transform="translate(132, 464) rotate(-3) scale(0.212)" style="filter: drop-shadow(0 9px 15px rgba(12, 2, 5, 0.65));">
+                <use href="#full-logo-doan" />
               </g>
 
+              <!-- LỚP 10: 4 KHOEN CÒNG KIM LOẠI INOX DỌC GÁY TRÁI -->
               <g style="filter: drop-shadow(1px 3px 4px rgba(0,0,0,0.55));">
                 <circle cx="28" cy="126" r="5.5" fill="#2a0810" stroke="#4d1522" stroke-width="1.5" />
                 <path d="M 28,125 C 12,118 2,132 10,145" fill="none" stroke="#d8dde6" stroke-width="4" stroke-linecap="round" />
                 <path d="M 27,125 C 13,119 4,132 11,144" fill="none" stroke="#ffffff" stroke-width="1.3" stroke-linecap="round" />
-
                 <circle cx="28" cy="252" r="5.5" fill="#2a0810" stroke="#4d1522" stroke-width="1.5" />
                 <path d="M 28,251 C 12,244 2,258 10,271" fill="none" stroke="#d8dde6" stroke-width="4" stroke-linecap="round" />
                 <path d="M 27,251 C 13,245 4,258 11,270" fill="none" stroke="#ffffff" stroke-width="1.3" stroke-linecap="round" />
-
                 <circle cx="28" cy="388" r="5.5" fill="#2a0810" stroke="#4d1522" stroke-width="1.5" />
                 <path d="M 28,387 C 12,380 2,394 10,407" fill="none" stroke="#d8dde6" stroke-width="4" stroke-linecap="round" />
                 <path d="M 27,387 C 13,381 4,394 11,406" fill="none" stroke="#ffffff" stroke-width="1.3" stroke-linecap="round" />
-
                 <circle cx="28" cy="534" r="5.5" fill="#2a0810" stroke="#4d1522" stroke-width="1.5" />
                 <path d="M 28,533 C 12,526 2,540 10,553" fill="none" stroke="#d8dde6" stroke-width="4" stroke-linecap="round" />
                 <path d="M 27,533 C 13,527 4,540 11,552" fill="none" stroke="#ffffff" stroke-width="1.3" stroke-linecap="round" />
@@ -1195,503 +1424,1103 @@
           </div>
         `
       },
-      // TRANG 2
+
+      // ================= TRANG 2 (TRÁI): MỤC LỤC (SIÊU CHI TIẾT 10/10 GIỐNG ẢNH MẪU 1) =================
       {
         number: 2,
-        title: "Lời Ngỏ: Khúc Tự Tình Tháng Mười Một",
-        badge: "Lời Tựa",
+        title: "Mục Lục Tập San 12C4",
+        badge: "Mục Lục",
         html: `
-          <div class="page-inner relative">
-            <div class="flex items-center justify-between border-b border-[#c9933b]/40 pb-1.5">
-              <span class="text-[10px] uppercase tracking-widest text-[#9e2a2b] font-bold">Chuyên Mục Mở Đầu</span>
-              <span class="font-editorial italic text-xs text-[#5c4332]">Tháng 11 — Mùa nhớ thương</span>
-            </div>
-            <div class="relative my-auto bg-[#fffdf7] border border-[#dcc59e] rounded-xl p-4 sm:p-5 shadow-md" style="transform: rotate(-0.6deg);">
-              <div class="washi-tape -top-3 left-6 -rotate-6"></div>
-              <div class="washi-tape washi-rose -top-3 right-6 rotate-6"></div>
-              <div class="flex items-center justify-between mb-2">
-                <div>
-                  <span class="text-[10px] uppercase tracking-widest text-[#8c5828] font-semibold">Lá thư ban biên tập</span>
-                  <h2 class="font-display text-xl sm:text-2xl font-bold text-[#2c1e16]">Lời Ngỏ Tri Ân</h2>
-                </div>
-                <div class="w-10 h-12 border border-[#c9933b] bg-[#fbf2e0] p-1 rounded flex flex-col items-center justify-center text-[9px] text-[#9e2a2b] font-bold shadow-sm">
-                  <i class="fa-solid fa-stamp text-sm mb-0.5"></i>
-                  <span>20•11</span>
-                </div>
-              </div>
-              <div class="font-editorial text-[14.5px] sm:text-[15.5px] leading-relaxed text-[#2c1e16] space-y-2.5 text-justify">
-                <p class="drop-cap">Có những mùa đi qua để lại lá vàng rơi trên hiên lớp cũ, và có những con người đi qua năm tháng để lại cả một bầu trời tri thức cùng tình yêu thương bao la trong tâm hồn bao thế hệ học trò.</p>
-                <p>Tháng Mười Một về mang theo cơn gió se lạnh đầu đông và sắc nắng dịu dàng như ánh mắt của thầy, nụ cười ấm áp của cô. Giữa nhịp sống số hóa sôi động hôm nay, truyền thống <strong>“Tôn sư trọng đạo”</strong>, <strong>“Uống nước nhớ nguồn”</strong> vẫn luôn là sợi chỉ đỏ thiêng liêng kết nối quá khứ, hiện tại và tương lai.</p>
-                <p>Quyển tập san điện tử 3D này được <strong>Thanh Long ❤️‍🩹</strong> ấp ủ và kiến tạo như một cuốn nhật ký hoài niệm kết hợp công nghệ đa phương tiện hiện đại — nơi mỗi trang giấy lật mở là một lời cảm ơn chân thành nhất gửi tới quý thầy cô giáo và mái trường thân yêu.</p>
-              </div>
-              <div class="mt-3 pt-2.5 border-t border-dashed border-[#c9933b]/50 flex items-center justify-between">
-                <div class="text-xs text-[#5c4332] italic font-editorial">“Dưới ánh mặt trời, không có nghề nào cao quý hơn nghề dạy học.”</div>
-                <div class="text-right">
-                  <p class="font-script text-lg text-[#9e2a2b] font-bold">Thanh Long ❤️‍🩹</p>
-                  <p class="text-[10px] text-[#5c4332]">Biên tập & Thiết kế</p>
-                </div>
+          <div class="page-inner relative select-none" style="background: #f6f3ea; padding: 12px 14px 16px 26px;" onmousedown="event.stopPropagation()" ontouchstart="event.stopPropagation()">
+            <!-- Gáy lò xo kim loại dọc mép trái giống ảnh chụp -->
+            <div class="spiral-edge-strip"></div>
+
+            <!-- Tiêu đề Mục Lục cắt viền giấy trắng 3 tầng bồi nổi 3D đè lên mép trên giấy Kraft -->
+            <div class="text-center mt-0.5 relative z-30">
+              <div class="inline-block bg-[#fffdf9] px-7 py-1 rounded-[34px] shadow-[0_8px_16px_rgba(40,22,12,0.32),0_3px_0_#d8be94,0_5px_0_#5c3818] border-2 border-white transform -rotate-1">
+                <span class="font-script text-4xl sm:text-5xl font-extrabold tracking-wide" style="color: #432314; text-shadow: 2.5px 2.5px 0px #c9a66b, 4px 5px 8px rgba(0,0,0,0.22);">
+                  Mục Lục
+                </span>
               </div>
             </div>
-            <div class="page-footer-bar">
-              <span>Tập San Người Gieo Hạt Nắng</span>
+
+            <!-- Nền giấy Kraft nâu nhăn & xé viền thủ công 3D ở trung tâm + các sticker đè lên mép -->
+            <div class="relative flex-1 my-1 mx-1 flex flex-col justify-between z-10">
+
+              <!-- Bó hoa khô cổ điển góc trên trái đè lên mép giấy Kraft -->
+              <div class="absolute -top-3 left-1 z-30 pointer-events-none transform -rotate-12" style="filter: drop-shadow(0 4px 6px rgba(0,0,0,0.28));">
+                <svg width="68" height="68" viewBox="0 0 100 100">
+                  <use href="#double-leaf" transform="translate(55,65) rotate(-35) scale(0.9)" />
+                  <use href="#sage-leaf-cluster" transform="translate(38,70) rotate(-65) scale(0.85)" />
+                  <use href="#vintage-rose" transform="translate(52,48) scale(0.55)" />
+                  <use href="#small-blossom" transform="translate(30,42) scale(0.85)" />
+                  <circle cx="22" cy="28" r="3" fill="#8d6e63" />
+                  <circle cx="32" cy="22" r="2.5" fill="#a1887f" />
+                  <circle cx="42" cy="26" r="3" fill="#6d4c41" />
+                </svg>
+              </div>
+
+              <!-- Lông vũ vằn đen-trắng góc trên phải đè lên mép giấy Kraft -->
+              <div class="absolute -top-5 right-1 z-30 pointer-events-none transform rotate-16" style="filter: drop-shadow(0 5px 8px rgba(0,0,0,0.3));">
+                <svg width="56" height="82" viewBox="-30 -90 60 95">
+                  <use href="#striped-feather" />
+                </svg>
+              </div>
+
+              <!-- Cột chấm màu & hoa hồng leo dọc mép phải giấy Kraft giống mẫu 1 -->
+              <div class="absolute top-16 -right-1.5 z-30 pointer-events-none flex flex-col items-center">
+                <div class="w-6 h-6 rounded-full bg-[#d8a48f]/85 shadow-sm"></div>
+                <div class="w-7 h-7 rounded-full bg-[#e6ccb2]/90 -mt-2 shadow-sm flex items-center justify-center text-xs">🌹</div>
+                <div class="w-7 h-7 rounded-full bg-[#f3d5b5]/90 -mt-2 shadow-sm flex items-center justify-center text-xs">🌼</div>
+                <div class="w-6 h-6 rounded-full bg-[#f9e28c]/90 -mt-1.5 shadow-sm"></div>
+              </div>
+
+              <!-- Lớp Giấy Kraft Nhăn Xé Viền Chính -->
+              <div class="kraft-crumpled-surface w-full h-full p-4 flex flex-col justify-between"
+                   style="clip-path: polygon(3% 5%, 10% 1%, 22% 3%, 36% 0%, 52% 2%, 68% 0%, 84% 2%, 93% 1%, 97% 7%, 99% 20%, 96% 36%, 99% 52%, 95% 68%, 98% 84%, 94% 95%, 82% 99%, 66% 97%, 48% 100%, 30% 98%, 14% 100%, 4% 96%, 1% 82%, 3% 64%, 0% 46%, 3% 26%, 1% 12%);
+                          filter: drop-shadow(0 8px 16px rgba(52, 32, 14, 0.32));">
+
+                <!-- Chữ 'tập san' ánh bạc bên dưới chữ Lục giống hệt ảnh mẫu 1 -->
+                <div class="flex justify-end pr-8 pt-1">
+                  <span class="font-editorial italic font-black text-sm tracking-widest text-[#524d49] bg-white/55 px-3 py-0.5 rounded-full shadow-2xs border border-white/80">
+                    tập san
+                  </span>
+                </div>
+
+                <!-- 2 Cột Mục Lục cắt rời từng nhãn trắng lượn theo chữ + số tròn đen giống hệt ảnh mẫu 1 -->
+                <div class="grid grid-cols-2 gap-x-2 gap-y-2.5 my-auto py-1 z-20">
+                  <!-- Cột Trái (1 -> 6) -->
+                  <div class="space-y-2.5 flex flex-col items-start pl-1">
+                    <button onclick="jumpToPage(4)" class="toc-sticker-btn" title="Lật tới Trang 4: Lịch sử trường">
+                      <span class="toc-num-circle">1</span>
+                      <span class="toc-pill-label">Lịch sử trường</span>
+                    </button>
+
+                    <button onclick="jumpToPage(3)" class="toc-sticker-btn" title="Lật tới Trang 3: Lời ngỏ">
+                      <span class="toc-num-circle">2</span>
+                      <span class="toc-pill-label">Lời ngỏ</span>
+                    </button>
+
+                    <button onclick="jumpToPage(6)" class="toc-sticker-btn relative" title="Lật tới Trang 6: Thơ">
+                      <span class="absolute -left-3.5 -top-1 text-xs pointer-events-none">🍄</span>
+                      <span class="toc-num-circle">3</span>
+                      <span class="toc-pill-label">Thơ</span>
+                    </button>
+
+                    <button onclick="jumpToPage(7)" class="toc-sticker-btn" title="Lật tới Trang 7: Văn xuôi">
+                      <span class="toc-num-circle">4</span>
+                      <span class="toc-pill-label">Văn xuôi</span>
+                    </button>
+
+                    <button onclick="jumpToPage(6)" class="toc-sticker-btn" title="Lật tới Trang 6: Vè 12C4">
+                      <span class="toc-num-circle">5</span>
+                      <span class="toc-pill-label">Vè 12C4</span>
+                    </button>
+
+                    <button onclick="jumpToPage(8)" class="toc-sticker-btn" title="Lật tới Trang 8: Ca dao">
+                      <span class="toc-num-circle">6</span>
+                      <span class="toc-pill-label">Ca dao</span>
+                    </button>
+                  </div>
+
+                  <!-- Cột Phải (7 -> 11) -->
+                  <div class="space-y-2.5 flex flex-col items-start justify-center">
+                    <button onclick="jumpToPage(9)" class="toc-sticker-btn" title="Lật tới Trang 9: Bài hát Bụi Phấn">
+                      <span class="toc-num-circle">7</span>
+                      <span class="toc-pill-label">Bài hát</span>
+                    </button>
+
+                    <button onclick="jumpToPage(10)" class="toc-sticker-btn" title="Lật tới Trang 10: Truyện vui 12C4">
+                      <span class="toc-num-circle">8</span>
+                      <span class="toc-pill-label text-[15px]!">Truyện tranh cười</span>
+                    </button>
+
+                    <button onclick="jumpToPage(4)" class="toc-sticker-btn" title="Lật tới Trang 4: Phóng sự">
+                      <span class="toc-num-circle">9</span>
+                      <span class="toc-pill-label">Phóng sự</span>
+                    </button>
+
+                    <button onclick="jumpToPage(10)" class="toc-sticker-btn" title="Lật tới Trang 10: Tranh ảnh 12C4">
+                      <span class="toc-num-circle">10</span>
+                      <span class="toc-pill-label">Tranh ảnh</span>
+                    </button>
+
+                    <button onclick="jumpToPage(11)" class="toc-sticker-btn" title="Lật tới Trang 11: Lời kết">
+                      <span class="px-1.5 py-0.5 rounded bg-slate-800 text-white text-[10px] font-black shadow">11</span>
+                      <span class="toc-pill-label">Lời kết</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Cụm Sticker đáy giấy Kraft: Lông vũ trái + Tem xe đạp CLEMENT & C° + Bình hoa hồng 'her vibe is pretty' -->
+                <div class="flex items-end justify-between pt-1">
+                  <div class="flex items-end gap-1">
+                    <svg width="46" height="42" viewBox="-30 -90 60 95" class="transform -rotate-55 -ml-2 -mb-2 drop-shadow">
+                      <use href="#striped-feather" />
+                    </svg>
+                    <div class="bg-[#fcfaf2] px-2 py-1 rounded border border-[#6e5a44] shadow-md font-mono text-[7.5px] text-[#2b2118] leading-tight transform rotate-1">
+                      <div class="font-black tracking-tighter bg-[#d8cbb8] px-1 -mt-2 mb-0.5 border border-[#6e5a44]">CORSET SANS BUS</div>
+                      <div class="font-bold">BICYCLETTES • CLEMENT & C°</div>
+                      <div class="flex justify-between items-center mt-0.5">
+                        <span>A. CLEMENT</span>
+                        <span class="text-[10px]">🚲 5</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bg-[#f7ede2] p-1.5 rounded-lg border border-[#c89d8c] shadow-md flex items-center gap-1.5 transform -rotate-2 -mr-1 -mb-1">
+                    <div class="text-left">
+                      <p class="font-script text-[11px] text-[#5c2b22] font-bold leading-none">her vibe is pretty</p>
+                      <p class="text-[7px] font-mono text-[#7c5248] mt-0.5">VINTAGE ROSE • 12C4</p>
+                    </div>
+                    <svg width="32" height="32" viewBox="-50 -50 100 100">
+                      <circle cx="0" cy="22" r="20" fill="#5c3a21" />
+                      <use href="#vintage-rose" transform="translate(-8,-8) scale(0.45)" />
+                      <use href="#vintage-rose" transform="translate(12,-4) scale(0.4)" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="page-footer-bar pl-2">
+              <span>Ấn vào mục bất kỳ để lật tới trang đó</span>
               <span class="font-bold text-[#9e2a2b]">Trang 02</span>
             </div>
             <div class="corner-curl-hint"></div>
           </div>
         `
       },
-      // TRANG 3
+
+      // ================= TRANG 3 (PHẢI): LỜI NGỎ (SIÊU CHI TIẾT 10/10 GIỐNG ẢNH MẪU 2) =================
       {
         number: 3,
-        title: "I. Mục Đích – Yêu Cầu",
-        badge: "Điều Lệ & Định Hướng",
+        title: "2. Lời Ngỏ: Thắp Sáng Ước Mơ",
+        badge: "Mục 2 • Lời Ngỏ",
         html: `
-          <div class="page-inner relative">
-            <div class="bg-gradient-to-r from-[#9e2a2b] to-[#7a1e1f] text-[#fdf8ef] rounded-xl p-3 shadow-sm flex items-center justify-between">
-              <div>
-                <span class="text-[10px] uppercase tracking-widest text-amber-200 font-semibold">Chuyên Trang Công Tác Đoàn & Phong Trào Thanh Niên</span>
-                <h2 class="font-display text-base sm:text-lg font-bold tracking-wide">I. MỤC ĐÍCH – YÊU CẦU</h2>
-              </div>
-              <div class="w-9 h-9 rounded-lg bg-white/15 flex items-center justify-center text-amber-300 shrink-0">
-                <i class="fa-solid fa-star text-base"></i>
-              </div>
-            </div>
-            <div class="mt-2.5 bg-[#fffdf8] border-l-4 border-[#9e2a2b] rounded-r-xl p-3 shadow-sm">
-              <div class="flex items-center gap-2 mb-1.5">
-                <span class="w-6 h-6 rounded-full bg-[#9e2a2b] text-white text-xs font-bold flex items-center justify-center">1</span>
-                <h3 class="font-display font-bold text-sm sm:text-base text-[#9e2a2b]">Mục đích</h3>
-              </div>
-              <ul class="space-y-1.5 text-[11.5px] sm:text-xs text-[#2c1e16] leading-relaxed">
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-heart text-[#9e2a2b] mt-1 text-[10px]"></i>
-                  <span>Tôn vinh truyền thống <strong>“Tôn sư trọng đạo”</strong>, <strong>“Uống nước nhớ nguồn”</strong>, bày tỏ lòng tri ân sâu sắc của học sinh đối với các thế hệ thầy cô giáo và nhà trường.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-laptop-code text-[#3d6b58] mt-1 text-[10px]"></i>
-                  <span>Đẩy mạnh phong trào <strong>chuyển đổi số trong công tác Đoàn</strong>; rèn luyện kỹ năng tin học, tư duy thiết kế đa phương tiện và kỹ năng làm việc nhóm cho đoàn viên, thanh niên trường.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="fa-solid fa-users text-[#c9933b] mt-1 text-[10px]"></i>
-                  <span>Tạo sân chơi lành mạnh, bổ ích, tăng cường sự gắn kết giữa các đoàn viên, thanh niên toàn trường.</span>
-                </li>
-              </ul>
-            </div>
-            <div class="mt-2.5 bg-[#fffdf8] border-l-4 border-[#3d6b58] rounded-r-xl p-3 shadow-sm">
-              <div class="flex items-center gap-2 mb-1.5">
-                <span class="w-6 h-6 rounded-full bg-[#3d6b58] text-white text-xs font-bold flex items-center justify-center">2</span>
-                <h3 class="font-display font-bold text-sm sm:text-base text-[#3d6b58]">Yêu cầu</h3>
-              </div>
-              <div class="grid grid-cols-1 gap-2 text-[11.5px] sm:text-xs text-[#2c1e16] leading-relaxed">
-                <div class="p-2 rounded-lg bg-[#f6ecd7]/60 border border-[#c9933b]/30">
-                  <strong class="text-[#9e2a2b]"><i class="fa-solid fa-check-double mr-1"></i>Giá trị & Bản quyền:</strong>
-                  Sản phẩm mang tính giáo dục cao, nội dung trong sáng, tôn trọng bản quyền hình ảnh, âm thanh và bài viết; có tính thẩm mỹ và ứng dụng công nghệ hiệu quả.
+          <div class="page-inner relative select-none" style="background: #cbb08c; padding: 12px 14px 16px 24px;">
+            <!-- Gáy lò xo kim loại dọc mép trái giống ảnh chụp -->
+            <div class="spiral-edge-strip"></div>
+
+            <!-- NỀN GHÉP TỪ NHIỀU MẢNH BÁO CŨ, TEM SỐ 56, XE HƠI CỔ & DẢI HÌNH TRÒN MÀU CHỒNG NHAU BÊN TRÁI GIỐNG HỆT ẢNH MẪU 2 -->
+            <div class="absolute inset-1.5 pointer-events-none overflow-hidden rounded-lg">
+              <!-- Mảnh báo cũ góc trên trái + Xe hơi cổ -->
+              <div class="absolute top-1 left-4 bg-[#f4ead5] p-1.5 border border-[#8c7355] shadow-sm w-36 transform -rotate-2 font-mono text-[6.5px] leading-tight text-[#33261a]">
+                <div class="font-bold border-b border-[#8c7355] mb-0.5 flex justify-between">
+                  <span>VIET NAM</span><span>Opportunity knocks</span>
                 </div>
-                <div class="p-2 rounded-lg bg-[#f6ecd7]/60 border border-[#c9933b]/30">
-                  <strong class="text-[#3d6b58]"><i class="fa-solid fa-scale-balanced mr-1"></i>Tổ chức & Hiệu quả:</strong>
-                  Đảm bảo tính công bằng, khách quan, đúng tiến độ thời gian và tiết kiệm chi phí.
+                <div class="flex items-center gap-1">
+                  <span class="text-base">🚙</span>
+                  <span>me is coming. SUN 25 • Classic Vintage Motor</span>
                 </div>
               </div>
+
+              <!-- Mảnh báo cũ & Tem 56 góc trên phải -->
+              <div class="absolute top-1 right-1 bg-[#efe2c6] p-1.5 border border-[#8c7355] shadow-sm w-44 transform rotate-1 font-mono text-[6.5px] leading-tight text-[#33261a] flex justify-between items-start">
+                <div>
+                  <span class="bg-[#2b2118] text-amber-100 px-1 font-bold">Special</span>
+                  <span class="font-bold ml-0.5">Awkward</span>
+                  <p class="mt-0.5">The Boston Cooking-School Magazine • 20c</p>
+                </div>
+                <div class="border border-[#5c4328] bg-[#fbf5e6] px-1.5 py-0.5 font-display font-black text-base text-[#1f1610]">
+                  56<span class="text-[7px] align-top">50</span>
+                </div>
+              </div>
+
+              <!-- Dải 5 hình tròn bán trong suốt chồng nhau dọc lề trái giống hệt ảnh mẫu 2 -->
+              <div class="absolute left-3 top-48 flex flex-col items-center z-20">
+                <div class="washi-dot-circle bg-[#b5654d]"></div>
+                <div class="washi-dot-circle bg-[#c97b58]"></div>
+                <div class="washi-dot-circle bg-[#d8956a]"></div>
+                <div class="washi-dot-circle bg-[#8c523a]"></div>
+                <div class="washi-dot-circle bg-[#d4a373]"></div>
+              </div>
+
+              <!-- Mảnh báo dọc bên phải (EXPRESS / ASPARAGUS) -->
+              <div class="absolute right-0.5 top-36 bottom-14 w-9 bg-[#ebd9b7] border-l border-[#8c7355] p-0.5 font-mono text-[6.5px] text-[#3b2a1a] flex flex-col justify-between items-center">
+                <span class="writing-vertical font-bold tracking-widest">EXPRESS • NO.3</span>
+                <span class="text-sm">🍄</span>
+                <span class="font-black text-xs border border-[#3b2a1a] px-0.5">? C</span>
+                <span class="writing-vertical">ASPARAGUS</span>
+              </div>
+
+              <!-- Mảnh báo & Chữ F lớn + Tem cổng vòm góc dưới -->
+              <div class="absolute bottom-5 left-4 right-1 flex items-end justify-between">
+                <div class="flex items-center gap-1.5">
+                  <span class="font-display font-black text-2xl text-[#2b2623] bg-[#e6d5b8] px-2 py-0.5 border border-[#7c6548] shadow-xs">F</span>
+                  <div class="bg-[#f5ebd6] px-2 py-0.5 border border-[#7c6548] shadow-xs font-mono text-[7.5px] text-[#2b1e12]">
+                    <div class="font-bold">I need to remember</div>
+                    <div class="italic font-script text-[10px]">hometown • own way</div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-1">
+                  <span class="bg-[#5c3d28] text-amber-100 font-mono text-[7.5px] px-1.5 py-0.5 rounded shadow-xs">Expense Tracker</span>
+                  <div class="bg-[#dfd3c3] border border-[#6e5d4f] p-1 rounded shadow-xs text-[7px] font-mono text-[#2b2520] text-center">
+                    🏛️ ARCH
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="mt-2 px-3 py-1.5 rounded-lg bg-[#e9d9be]/60 flex items-center justify-between text-[11px] text-[#5c4332]">
-              <span class="font-editorial italic">“Tuổi trẻ tiên phong chuyển đổi số — Giữ trọn đạo nghĩa thầy trò”</span>
-              <span class="font-bold text-[#9e2a2b]">Đoàn TNCS</span>
+
+            <!-- TIÊU ĐỀ 'Lời Ngỏ' CẮT VIỀN GIẤY TRẮNG DÀY NỔI KHỐI 3D ĐÈ LÊN TRÊN (GIỐNG 100% ẢNH MẪU 2) -->
+            <div class="text-center mt-1 relative z-30">
+              <div class="inline-block bg-[#fffdf9] px-6 py-1 rounded-[32px] shadow-[0_8px_18px_rgba(25,12,6,0.38),0_3px_0_#d8be94] border-2 border-white transform -rotate-1">
+                <span class="font-script text-4xl sm:text-5xl font-black tracking-wide" style="color: #26150d; text-shadow: 2.5px 2.5px 0px #cfa86e;">
+                  Lời Ngỏ
+                </span>
+              </div>
             </div>
-            <div class="page-footer-bar">
-              <span>Phần I: Mục Đích – Yêu Cầu</span>
+
+            <!-- TỜ GIẤY VỞ KẺ Ô VUÔNG VIẾT TAY CẮT VIỀN BẬC THANG Ở TRUNG TÂM + NHÃN -k2k56 / 12C4- -->
+            <div class="stepped-grid-poem relative z-20 my-1.5 ml-3 mr-4 p-2.5 flex-1 overflow-y-auto text-[#1a202c]">
+              <div class="flex items-center justify-between border-b border-slate-300/80 pb-0.5 mb-1">
+                <span class="font-script text-lg font-bold text-[#2d1810]">Lời ngỏ</span>
+                <span class="font-mono text-[10px] font-black text-[#4a3520] bg-[#e9edc9] px-2 py-0.5 rounded-full border border-[#a3b18a] shadow-2xs">
+                  - 12C4 • K53 -
+                </span>
+              </div>
+
+              <div class="font-editorial text-[11.6px] sm:text-[12.1px] leading-[1.42] space-y-1 text-justify">
+                <p class="italic font-bold text-center text-[#7c1d1d]">
+                  “Ánh đèn soi rọi tác thành<br/>Thầy cô soi sáng bước đường tương lai.”
+                </p>
+                <p>
+                  Kính thưa quý thầy cô giáo! Khi những cơn gió heo may se lạnh báo hiệu một mùa thu mới về, trong lòng em lại tràn ngập những cảm xúc khó tả. Đó là sự biết ơn sâu sắc, lòng kính trọng vô hạn dành cho những người thầy, người cô kính yêu.
+                </p>
+                <p>
+                  Nhớ lại những ngày đầu tiên bước vào ngôi trường <strong>THPT Thiệu Hóa</strong> mới, em đã vô cùng bỡ ngỡ và lo lắng. Nhưng rồi, với sự tận tình của thầy cô, em đã nhanh chóng hòa nhập và tìm được niềm vui trong học tập. Thầy cô không chỉ là người truyền đạt kiến thức mà còn là những người cha, người mẹ thứ hai luôn quan tâm, động viên chúng em vượt qua bao thử thách.
+                </p>
+                <p>
+                  Nhân dịp 20 - 11, ngày “Tôn sư trọng đạo” tôn vinh “những người đưa đò thầm lặng”, tập thể <strong>Chi đoàn 12C4</strong> chúng em đã làm tập san với chủ đề <strong>“Người Gieo Hạt Nắng – Thắp Sáng Ước Mơ”</strong> để thể hiện thành ý, lòng biết ơn sâu sắc đến quý thầy cô giáo.
+                </p>
+                <p>
+                  Nhân ngày Nhà giáo Việt Nam 20 - 11, tập thể lớp <strong>12C4</strong> xin gửi tới thầy cô lời chúc sức khỏe, luôn trẻ trung, nhiệt huyết để tiếp tục sự nghiệp trồng người cao cả!
+                </p>
+              </div>
+            </div>
+
+            <div class="page-footer-bar relative z-30 pl-2">
+              <span>Mục 2: Lời Ngỏ Tập San 12C4</span>
               <span class="font-bold text-[#9e2a2b]">Trang 03</span>
             </div>
             <div class="corner-curl-hint"></div>
           </div>
         `
       },
-      // TRANG 4
+
+      // ================= TRANG 4 (TRÁI): LỊCH SỬ TRƯỜNG THPT THIỆU HÓA (SIÊU CHI TIẾT 10/10 GIỐNG MẪU 4) =================
       {
         number: 4,
-        title: "II & III. Hình Thức Dự Thi & Quy Cách",
-        badge: "Quy Cách Kỹ Thuật",
+        title: "1. Lịch Sử Trường THPT Thiệu Hóa",
+        badge: "Mục 1 • Lịch Sử",
         html: `
-          <div class="page-inner relative">
-            <div class="flex items-center justify-between border-b-2 border-[#2c1e16] pb-1.5">
-              <div>
-                <span class="text-[10px] uppercase tracking-widest text-[#3d6b58] font-bold">Tiêu Chuẩn Ấn Phẩm Số</span>
-                <h2 class="font-display text-base sm:text-lg font-bold text-[#2c1e16]">II. HÌNH THỨC & III. NỘI DUNG QUY CÁCH</h2>
-              </div>
-              <span class="px-2 py-0.5 rounded bg-[#2c1e16] text-[#fdf8ef] text-[10px] font-bold">Digital Spec</span>
-            </div>
-            <div class="mt-2 bg-[#fffdf7] border border-[#d6c19e] rounded-xl p-3 shadow-sm relative">
-              <div class="washi-tape washi-sage -top-2.5 right-6"></div>
-              <h3 class="font-display font-bold text-xs sm:text-sm text-[#9e2a2b] uppercase tracking-wide flex items-center gap-1.5">
-                <i class="fa-solid fa-layer-group"></i> II. Hình Thức Dự Thi
-              </h3>
-              <p class="text-[11.5px] text-[#2c1e16] mt-1 leading-relaxed">
-                <strong>Hình thức sản phẩm:</strong> Sản phẩm thiết kế dạng <strong>ấn phẩm số lật trang (flipbook điện tử)</strong>, <strong>website mini dạng tạp chí</strong> hoặc tệp PDF tương tác đa phương tiện (nhúng văn bản, hình ảnh, video/audio lời chúc).
-              </p>
-              <div class="mt-2 flex flex-wrap gap-1">
-                <span class="text-[10px] px-2 py-0.5 rounded-md bg-amber-100 text-amber-900 font-semibold border border-amber-300">HTML5 / CSS3 3D</span>
-                <span class="text-[10px] px-2 py-0.5 rounded-md bg-rose-100 text-rose-900 font-semibold border border-rose-300">Canva / Heyzine</span>
-                <span class="text-[10px] px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-900 font-semibold border border-emerald-300">AnyFlip / Book Creator</span>
-                <span class="text-[10px] px-2 py-0.5 rounded-md bg-sky-100 text-sky-900 font-semibold border border-sky-300">Adobe Express</span>
-              </div>
-            </div>
-            <div class="mt-2 bg-[#fffdf7] border border-[#d6c19e] rounded-xl p-3 shadow-sm">
-              <h3 class="font-display font-bold text-xs sm:text-sm text-[#3d6b58] uppercase tracking-wide flex items-center gap-1.5">
-                <i class="fa-solid fa-compass-drafting"></i> III. Nội Dung Và Quy Cách Sản Phẩm
-              </h3>
-              <div class="grid grid-cols-2 gap-2 mt-1.5 text-[11px]">
-                <div class="p-2 rounded-lg bg-[#fbf4e4] border border-[#e2cfa8]">
-                  <p class="font-bold text-[#9e2a2b]">1. Nội dung chủ đạo</p>
-                  <p class="text-[#5c4332] mt-0.5">Lời ngỏ, bài viết tri ân, thơ văn, góc ảnh kỷ niệm, phỏng vấn thầy cô và lưu bút đoàn viên.</p>
+          <div class="page-inner relative grid-notebook-sheet" style="padding: 12px 14px 16px 26px;">
+            <div class="spiral-edge-strip"></div>
+
+            <!-- Cụm Sticker Hoa Hướng Dương, Bướm, Lá Khô + Tiêu đề 'Lịch sử' cắt nổi đỏ cam góc trên giống mẫu 4 -->
+            <div class="flex items-center justify-between mb-1 relative z-20">
+              <div class="flex flex-col items-start">
+                <div class="flex items-center gap-1 bg-[#fdf8ed] px-2 py-0.5 rounded-lg border border-[#d4b88c] shadow-xs">
+                  <svg width="22" height="22" viewBox="-24 -24 48 48"><use href="#detailed-sunflower" /></svg>
+                  <span class="text-xs">🦋🍂🌿</span>
                 </div>
-                <div class="p-2 rounded-lg bg-[#fbf4e4] border border-[#e2cfa8]">
-                  <p class="font-bold text-[#3d6b58]">2. Đa phương tiện</p>
-                  <p class="text-[#5c4332] mt-0.5">Tích hợp nhạc nền MP3, âm thanh lật trang 3D, tương tác cảm ứng đa nền tảng.</p>
+                <span class="font-script text-xl font-extrabold text-[#d9381e] bg-white px-2.5 py-0.5 rounded-full shadow-sm border border-rose-200 mt-0.5">
+                  • Lịch sử trường •
+                </span>
+              </div>
+
+              <div class="bg-white px-4 py-1 rounded-[24px] shadow-[0_6px_14px_rgba(180,35,24,0.28)] border-2 border-white transform rotate-3">
+                <span class="font-script text-3xl sm:text-4xl font-black text-[#d9381e]" style="text-shadow: 2px 2px 0px #f8b4a8;">
+                  Lịch sử
+                </span>
+              </div>
+            </div>
+
+            <!-- Nội dung Lịch sử trường THPT Thiệu Hóa + Cổng trường cắt dán die-cut nổi khối giống hệt mẫu 4 -->
+            <div class="space-y-1 text-[11.4px] sm:text-[11.8px] leading-[1.38] text-[#1a202c] font-editorial overflow-y-auto pr-1 flex-1 relative z-10">
+              <div class="grid grid-cols-12 gap-1.5 items-center">
+                <ul class="col-span-6 space-y-1 list-disc pl-3.5 text-justify">
+                  <li><strong>Trường THPT Thiệu Hóa</strong> được thành lập vào <strong>năm 1972</strong>.</li>
+                  <li>Trường đã trải qua hơn 50 năm xây dựng và trưởng thành vẻ vang.</li>
+                  <li>Nhà trường đã được tu sửa khang trang nhiều lần, gần nhất là giai đoạn 2023 – 2026.</li>
+                </ul>
+
+                <!-- Sticker Cổng Trường THPT Thiệu Hóa cắt viền đen-trắng die-cut giống hệt mẫu cổng trường trong ảnh 4 -->
+                <div class="col-span-6 bg-[#262626] p-1 rounded-2xl shadow-[0_6px_14px_rgba(0,0,0,0.35)] transform rotate-2">
+                  <div class="bg-[#fcfaf5] rounded-xl p-1.5 text-center border border-slate-400">
+                    <div class="w-4 h-4 rounded-full mx-auto bg-red-600/20 border border-red-600 flex items-center justify-center text-[7px] font-bold text-red-700 mb-0.5">🔥</div>
+                    <p class="font-sans font-black text-[9.5px] text-[#1e3a8a] tracking-tight leading-none">
+                      TRƯỜNG THPT THIỆU HÓA
+                    </p>
+                    <p class="font-sans font-bold text-[6.5px] text-slate-700 tracking-tighter mt-0.5">
+                      THIEU HOA HIGH SCHOOL • THANH HOA
+                    </p>
+                    <p class="font-sans font-extrabold text-[7px] text-[#c92a2a] mt-0.5">
+                      Đạo đức - Tri thức - Sáng tạo
+                    </p>
+                    <div class="mt-1 h-4 bg-gradient-to-r from-slate-700 via-slate-500 to-slate-700 rounded-xs flex items-center justify-around text-[6px] text-amber-200 font-mono">
+                      <span>Thành lập năm 1972</span>
+                      <span>★ Chuẩn Quốc Gia ★</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="mt-2 p-2.5 rounded-xl bg-gradient-to-r from-[#2c1e16] to-[#4a3123] text-[#fdf8ef] flex items-center justify-between shadow">
-              <div class="text-[11px]">
-                <p class="text-amber-300 font-bold"><i class="fa-solid fa-wand-magic-sparkles mr-1"></i>Điểm nhấn công nghệ phiên bản này:</p>
-                <p class="text-amber-100/90 text-[10.5px]">Code thuần HTML/CSS/JS + iOS Liquid Glass + 3D Engine bởi <strong>Thanh Long ❤️‍🩹</strong></p>
+
+              <ul class="space-y-1 list-disc pl-3.5 text-justify">
+                <li>Trường thật tự hào khi có nhiều học sinh đạt giải Học sinh giỏi cấp Quốc gia, cấp Tỉnh ở các bộ môn Toán, Văn, Anh, Lý, Hóa, Sinh, Sử, Địa... thuộc top đầu khối THPT toàn tỉnh.</li>
+                <li>Trường có gần 100% giáo viên dạy giỏi cấp trường và nhiều giáo viên, chiến sĩ thi đua các ngành cấp tỉnh; vinh dự đón nhận nhiều Bằng khen cao quý.</li>
+              </ul>
+
+              <!-- Mục: Phiến đá khát vọng (Giống nửa dưới trang trái ảnh mẫu 4) -->
+              <div class="pt-1 border-t border-dashed border-rose-400">
+                <div class="flex items-center justify-center gap-1.5 mb-0.5">
+                  <span class="bg-[#6b4c35] text-amber-100 text-[9px] px-1.5 py-0.5 rounded-full shadow-2xs">🪨 Khát vọng</span>
+                  <span class="font-script text-lg font-extrabold text-[#d9381e] bg-white px-2.5 rounded-full shadow-xs border border-rose-200">
+                    • (phiến đá khát vọng) •
+                  </span>
+                </div>
+                <p class="text-justify leading-[1.38] text-[11.2px]">
+                  Phiến đá mang tên <em>“Khát vọng”</em> gửi gắm ước mơ không chỉ của riêng cá nhân mà còn là của tập thể <strong>12C4</strong> hướng về những điều tốt đẹp hơn. Đầu tiên là chất lượng chuyên môn, thầy cô giáo luôn gương mẫu, chăm lo cho học sinh. Thứ hai, về phần học sinh, hãy tiếp nối truyền thống hiếu học của trường <strong>THPT Thiệu Hóa</strong> qua nhiều thế hệ. Hãy mạnh dạn đặt ra mục tiêu, ước mơ riêng của mình và cố gắng hết mình để đạt được nó, hãy nhớ rằng <strong class="text-[#d9381e]">“thất bại là mẹ thành công”</strong> và hẹn gặp lại ở đỉnh vinh quang!
+                </p>
               </div>
-              <i class="fa-solid fa-mobile-screen-button text-xl text-amber-300"></i>
             </div>
-            <div class="page-footer-bar">
-              <span>Phần II & III: Hình Thức – Quy Cách</span>
+
+            <div class="page-footer-bar pl-2">
+              <span>Mục 1: Lịch Sử Trường THPT Thiệu Hóa</span>
               <span class="font-bold text-[#9e2a2b]">Trang 04</span>
             </div>
             <div class="corner-curl-hint"></div>
           </div>
         `
       },
-      // TRANG 5
+
+      // ================= TRANG 5 (PHẢI): NHÀ TRƯỜNG THPT THIỆU HÓA + THẺ KÉO PULL ↓ (SIÊU CHI TIẾT 10/10 GIỐNG MẪU 4) =================
       {
         number: 5,
-        title: "Góc Hoài Niệm: Khung Ảnh Polaroid",
-        badge: "Album Ký Ức",
+        title: "Trung Học Phổ Thông Thiệu Hóa (Thẻ Kéo PULL ↓)",
+        badge: "PULL ↓ Xổ Ảnh",
         html: `
-          <div class="page-inner relative">
-            <div class="text-center border-b border-[#c9933b]/40 pb-1">
-              <span class="text-[10px] uppercase tracking-widest text-[#9e2a2b] font-bold">Scrapbook Kỷ Niệm</span>
-              <h2 class="font-display text-lg font-bold text-[#2c1e16]">Góc Nhớ Dưới Mái Trường</h2>
-            </div>
-            <div class="grid grid-cols-2 gap-3 my-auto pt-2">
-              <div class="polaroid-card relative" style="transform: rotate(-2.5deg);">
-                <div class="washi-tape -top-2.5 left-1/2 -translate-x-1/2 w-16 h-4"></div>
-                <div class="h-24 sm:h-28 rounded bg-gradient-to-br from-[#2d4a3e] to-[#1e332a] p-2 flex flex-col items-center justify-center text-center relative overflow-hidden">
-                  <p class="font-script text-amber-200 text-base">“Tiên học lễ, hậu học văn”</p>
-                  <div class="w-16 h-1 bg-white/70 rounded mt-2"></div>
-                  <span class="text-[9px] text-emerald-100/80 mt-1">Bảng xanh & Bụi phấn trắng</span>
-                </div>
-                <p class="font-script text-center text-sm text-[#2c1e16] mt-1.5 font-bold">Bài giảng đầu tiên</p>
+          <div class="page-inner relative grid-notebook-sheet" style="padding: 12px 14px 16px 24px;" onmousedown="event.stopPropagation()" ontouchstart="event.stopPropagation()">
+            <div class="spiral-edge-strip"></div>
+
+            <!-- Tiêu đề 'nhà trường' cắt nổi đỏ cam + Tem thảo mộc góc trái + Khóm hoa hướng dương góc phải giống hệt mẫu 4 -->
+            <div class="flex items-center justify-between relative z-20">
+              <div class="bg-[#fcfaf5] p-1 rounded border border-slate-600 shadow-sm text-[7.5px] text-center font-mono text-slate-800 transform -rotate-3">
+                <span class="block font-bold border-b border-slate-400">HERBARIUM</span>
+                <span class="text-xs">🌱🍄</span>
               </div>
-              <div class="polaroid-card relative" style="transform: rotate(2.2deg);">
-                <div class="washi-tape washi-rose -top-2.5 left-1/2 -translate-x-1/2 w-16 h-4"></div>
-                <div class="h-24 sm:h-28 rounded bg-gradient-to-br from-[#f8d5a3] via-[#efa86b] to-[#d96b43] p-2 flex flex-col items-center justify-center text-center relative overflow-hidden">
-                  <i class="fa-solid fa-sun text-2xl text-amber-100 mb-1"></i>
-                  <p class="text-[10px] font-bold text-[#2c1e16] bg-white/80 px-2 py-0.5 rounded-full">Nắng sân trường</p>
-                  <span class="text-[9px] text-white mt-1">Hàng cây ghế đá thân quen</span>
-                </div>
-                <p class="font-script text-center text-sm text-[#2c1e16] mt-1.5 font-bold">Chiều thu nhớ mãi</p>
+
+              <div class="bg-white px-5 py-1 rounded-[26px] shadow-[0_6px_14px_rgba(180,35,24,0.28)] border-2 border-white transform -rotate-2">
+                <span class="font-script text-3xl sm:text-4xl font-black text-[#d9381e]" style="text-shadow: 2px 2px 0px #f8b4a8;">
+                  nhà trường
+                </span>
               </div>
-              <div class="polaroid-card col-span-2 relative flex items-center gap-3 p-2.5" style="transform: rotate(-0.8deg);">
-                <div class="washi-tape washi-sage -top-2.5 left-10 w-16 h-4"></div>
-                <div class="w-24 h-20 rounded bg-gradient-to-br from-[#9e2a2b] to-[#d46a4e] flex flex-col items-center justify-center text-amber-100 shrink-0 p-1 text-center">
-                  <i class="fa-solid fa-graduation-cap text-xl mb-1"></i>
-                  <span class="text-[9px] font-semibold">Chuyến Đò Tri Thức</span>
-                </div>
-                <div class="text-left">
-                  <p class="font-script text-base text-[#9e2a2b] font-bold">Khoảnh khắc thầy trò bên nhau</p>
-                  <p class="text-[11px] text-[#5c4332] leading-snug">Mỗi bức hình là một mảnh ghép thanh xuân tươi đẹp không bao giờ phai nhạt trong tim lớp lớp đoàn viên.</p>
-                </div>
+
+              <div class="flex items-center -space-x-2 transform rotate-6">
+                <svg width="34" height="34" viewBox="-24 -24 48 48"><use href="#detailed-sunflower" /></svg>
+                <svg width="28" height="28" viewBox="-24 -24 48 48"><use href="#detailed-sunflower" /></svg>
               </div>
             </div>
-            <div class="page-footer-bar">
-              <span>Góc Ảnh Hoài Niệm Polaroid</span>
+
+            <!-- Dải vườn hoa hướng dương cắt dán trải ngang phía trên hộp kéo đỏ giống hệt mẫu 4 -->
+            <div class="flex items-center justify-around my-1 py-1 px-2 rounded-xl bg-white/85 border border-amber-300/80 shadow-xs relative z-10">
+              <svg width="26" height="26" viewBox="-24 -24 48 48"><use href="#detailed-sunflower" /></svg>
+              <span class="text-sm">🌿🌻🪴</span>
+              <svg width="30" height="30" viewBox="-24 -24 48 48"><use href="#detailed-sunflower" /></svg>
+              <span class="text-sm">🌻🐝🌿</span>
+              <svg width="26" height="26" viewBox="-24 -24 48 48"><use href="#detailed-sunflower" /></svg>
+            </div>
+
+            <!-- Bố cục 3 cột giống hệt ảnh mẫu 4:
+                 Trái: TRUNG / HỌC / PHỔ / THÔNG + Ngôi nhà hoa hướng dương góc dưới trái
+                 Giữa: Hộp thẻ đỏ PULL ↓ (kéo xuống) nhẹ tay ♡ có 5 khe rãnh trắng xổ ảnh
+                 Phải: THIỆU / HÓA + Bình tưới cây hoa hướng dương góc dưới phải -->
+            <div class="grid grid-cols-12 gap-1.5 items-center my-auto relative z-10">
+              <!-- Cột chữ cắt rời bên trái -->
+              <div class="col-span-3 flex flex-col gap-2 pr-0.5">
+                <div class="blue-cutout-word transform -rotate-2">TRUNG</div>
+                <div class="blue-cutout-word transform rotate-1">HỌC</div>
+                <div class="blue-cutout-word transform -rotate-1">PHỔ</div>
+                <div class="blue-cutout-word transform rotate-2">THÔNG</div>
+                <!-- Ngôi nhà hoa hướng dương góc dưới trái giống mẫu 4 -->
+                <div class="bg-white p-1 rounded-xl border border-amber-300 shadow-md text-center mt-0.5">
+                  <div class="text-base leading-none">🌻🏡🌻</div>
+                  <span class="text-[7.5px] font-mono font-bold text-amber-900">1972 - 2026</span>
+                </div>
+              </div>
+
+              <!-- Cột giữa: Cơ cấu Hộp Thẻ Kéo Đỏ PULL ↓ (Waterfall Card) -->
+              <div class="col-span-6 flex flex-col items-center">
+                <div class="w-full bg-[#c92a2a] rounded-xl p-2 shadow-[0_10px_24px_rgba(150,20,20,0.5)] border-2 border-[#a61e1e] flex flex-col items-center relative">
+                  <!-- Khung ảnh chính trên mặt hộp đỏ -->
+                  <div class="w-full bg-white p-1.5 rounded shadow-md border border-slate-300">
+                    <img
+                      src="https://placehold.co/320x190/8b1e24/ffffff?text=Le+Khai+Giang+THPT+Thieu+Hoa"
+                      alt="Ảnh chính THPT Thiệu Hóa"
+                      class="w-full h-24 sm:h-26 object-cover rounded border border-slate-200"
+                    />
+                  </div>
+
+                  <!-- 5 Thanh xếp tầng Waterfall màu trắng đan đỏ giống hệt ảnh mẫu 4 -->
+                  <div class="w-full space-y-1.5 mt-1.5 px-0.5">
+                    <div class="h-2 bg-[#fcfaf5] rounded-xs shadow-xs border border-slate-300"></div>
+                    <div class="h-2 bg-[#fcfaf5] rounded-xs shadow-xs border border-slate-300"></div>
+                    <div class="h-2 bg-[#fcfaf5] rounded-xs shadow-xs border border-slate-300"></div>
+                    <div class="h-2 bg-[#fcfaf5] rounded-xs shadow-xs border border-slate-300"></div>
+                    <div class="h-2 bg-[#fcfaf5] rounded-xs shadow-xs border border-slate-300"></div>
+                  </div>
+
+                  <!-- DẢI 4 BỨC ẢNH XỔ XUỐNG KHI BẤM HOẶC KÉO PULL ↓ -->
+                  <div id="thieuhoa-pull-drawer" class="w-full overflow-hidden transition-all duration-500 max-h-0 bg-[#b02020] rounded-b-lg px-1.5 space-y-2">
+                    <div class="pt-1.5 text-[9px] font-bold text-amber-200 text-center uppercase tracking-wider">
+                      ✨ Chuỗi Ảnh Kỷ Niệm THPT Thiệu Hóa ✨
+                    </div>
+                    <div class="bg-white p-1 rounded shadow">
+                      <img src="https://placehold.co/300x160/1e3a8a/ffffff?text=Anh+1:+Cong+Truong+THPT+Thieu+Hoa" class="w-full h-20 object-cover rounded" alt="Ảnh 1" />
+                      <p class="text-[9px] text-center font-bold text-slate-700 mt-0.5">1. Cổng trường THPT Thiệu Hóa thân yêu</p>
+                    </div>
+                    <div class="bg-white p-1 rounded shadow">
+                      <img src="https://placehold.co/300x160/0f5132/ffffff?text=Anh+2:+San+Truong+Rop+Bong+Nang" class="w-full h-20 object-cover rounded" alt="Ảnh 2" />
+                      <p class="text-[9px] text-center font-bold text-slate-700 mt-0.5">2. Sân trường rợp bóng nắng thu</p>
+                    </div>
+                    <div class="bg-white p-1 rounded shadow">
+                      <img src="https://placehold.co/300x160/9e2a2b/ffffff?text=Anh+3:+Thay+Co+Va+Tap+The+12C4" class="w-full h-20 object-cover rounded" alt="Ảnh 3" />
+                      <p class="text-[9px] text-center font-bold text-slate-700 mt-0.5">3. Thầy cô cùng tập thể Chi đoàn 12C4</p>
+                    </div>
+                    <div class="bg-white p-1 rounded shadow mb-1">
+                      <img src="https://placehold.co/300x160/b45309/ffffff?text=Anh+4:+Ky+Niem+20-11+Mai+Nho" class="w-full h-20 object-cover rounded" alt="Ảnh 4" />
+                      <p class="text-[9px] text-center font-bold text-slate-700 mt-0.5">4. Thanh xuân 12C4 rực rỡ dưới mái trường</p>
+                    </div>
+                  </div>
+
+                  <!-- Dải tab kéo màu đỏ in chữ viền đen rỗng 'PULL ↓ (kéo xuống) nhẹ tay ♡' giống hệt ảnh mẫu 4 -->
+                  <button
+                    onclick="togglePullDrawer(event)"
+                    class="w-full mt-2 py-1.5 px-2 rounded-lg bg-[#d62828] hover:bg-[#e03131] border-t-2 border-red-900/40 shadow-md transition flex flex-col items-center justify-center cursor-pointer group"
+                  >
+                    <span class="pull-main-text font-sans font-black text-xl sm:text-2xl tracking-widest text-transparent group-hover:scale-105 transition"
+                          style="-webkit-text-stroke: 1.8px #1a0808; letter-spacing: 0.12em;">
+                      PULL ↓
+                    </span>
+                    <span class="pull-sub-text font-script text-xs font-bold text-[#1a0808] -mt-1">
+                      (kéo xuống) <span class="font-normal text-[10px]">nhẹ tay ♡</span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Cột chữ cắt rời bên phải: THIỆU HÓA + Bình tưới hoa hướng dương góc dưới phải -->
+              <div class="col-span-3 flex flex-col gap-2.5 pl-0.5">
+                <div class="blue-cutout-word transform rotate-2">THIỆU</div>
+                <div class="blue-cutout-word transform -rotate-2">HÓA</div>
+                <div class="blue-cutout-word transform rotate-1 text-[#c92a2a]!">12C4</div>
+                <!-- Bình tưới cây xanh cắm hoa hướng dương góc dưới phải giống mẫu 4 -->
+                <div class="bg-white p-1 rounded-xl border border-emerald-300 shadow-md text-center mt-1">
+                  <div class="text-base leading-none">🌻🪣🌻</div>
+                  <span class="text-[7.5px] font-mono font-bold text-emerald-900">12C4 Garden</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="page-footer-bar pl-2">
+              <span>Ấn vào PULL ↓ để xổ hoặc thu chuỗi 4 ảnh</span>
               <span class="font-bold text-[#9e2a2b]">Trang 05</span>
             </div>
             <div class="corner-curl-hint"></div>
           </div>
         `
       },
-      // TRANG 6
+
+      // ================= TRANG 6: MỤC 3 — THƠ: NGÀY NHÀ GIÁO & MÙI HOA SỮA (SIÊU CHI TIẾT 10/10 GIỐNG MẪU 5 & 7) =================
       {
         number: 6,
-        title: "Thời Báo Tri Ân: Người Lái Đò Thầm Lặng",
-        badge: "Trang Báo Cũ",
+        title: "3. Thơ: Ngày Nhà Giáo & Mùi Hoa Sữa",
+        badge: "Mục 3 • Thơ",
         html: `
-          <div class="page-inner relative" style="background-color: #f5ebd6;">
-            <div class="border-y-2 border-[#2c1e16] py-1 text-center">
-              <div class="flex items-center justify-between text-[9px] uppercase tracking-widest text-[#5c4332] border-b border-[#2c1e16]/40 pb-0.5 mb-1">
-                <span>Số Đặc Biệt 20/11</span>
-                <span>Cơ Quan Ngôn Luận Tuổi Trẻ Học Đường</span>
-                <span>Giá: Trọn Tấm Lòng</span>
-              </div>
-              <h2 class="font-display text-xl sm:text-2xl font-black tracking-tight text-[#2c1e16]">THỜI BÁO TRI ÂN</h2>
-            </div>
-            <div class="mt-2 text-center">
-              <h3 class="font-display font-bold text-sm sm:text-base text-[#9e2a2b] leading-snug">“NGƯỜI LÁI ĐÒ THẦM LẶNG GIỮA DÒNG THỜI GIAN”</h3>
-              <p class="text-[10.5px] italic font-editorial text-[#5c4332]">Phóng sự đặc biệt về những đêm trắng bên trang giáo án và hành trình đổi mới sáng tạo</p>
-            </div>
-            <div class="grid grid-cols-2 gap-3 mt-2 text-[11px] leading-relaxed text-justify text-[#2c1e16] font-editorial">
-              <div class="border-r border-[#2c1e16]/25 pr-2.5">
-                <p class="drop-cap">Khi tiếng trống trường lắng xuống sau mỗi buổi chiều tà, ánh đèn nơi bàn làm việc của thầy cô lại lặng lẽ thắp sáng. Không chỉ truyền dạy kiến thức trong sách vở, thầy cô còn dạy chúng em cách làm người, cách đứng dậy sau vấp ngã.</p>
-                <p class="mt-1.5">Trong kỷ nguyên số hôm nay, người thầy lại miệt mài làm quen với bài giảng điện tử, phần mềm mô phỏng để mỗi tiết học thêm sinh động.</p>
-              </div>
-              <div class="flex flex-col justify-between">
-                <div class="p-2 rounded border border-[#5c4332]/50 bg-[#ead8b8] text-center">
-                  <i class="fa-solid fa-pen-nib text-lg text-[#9e2a2b]"></i>
-                  <p class="text-[10px] font-bold uppercase tracking-wider text-[#2c1e16] mt-0.5">Góc Suy Ngẫm</p>
-                  <p class="text-[10px] italic text-[#5c4332]">“Bụi phấn rơi cho tóc thầy thêm bạc, nhưng thắp sáng triệu ước mơ xanh.”</p>
-                </div>
-                <p class="mt-1.5">Dù công nghệ có tiến xa đến đâu, tình yêu thương và sự tận tụy của thầy cô vẫn là ngọn hải đăng vĩnh cửu dẫn lối cho bao thế hệ học trò cập bến ước mơ.</p>
+          <div class="page-inner relative splatter-pink-bg" style="padding: 10px 14px 14px 26px;">
+            <div class="spiral-edge-strip"></div>
+
+            <!-- Tiêu đề cắt dán trên giấy ô ly 'ngày Nhà Giáo' chữ Brush Calligraphy hồng đỏ 2 lớp + 3 giọt mực bắn bên phải giống hệt ảnh mẫu 5 -->
+            <div class="text-center mt-0.5 relative z-20">
+              <div class="stepped-grid-poem inline-block px-5 py-1 rounded-[26px] transform -rotate-1 shadow-lg">
+                <svg viewBox="0 0 320 74" class="w-60 sm:w-68 h-14 mx-auto overflow-visible">
+                  <!-- Chữ 'ngày' nối hai đường gạch ngang phía trên -->
+                  <line x1="58" y1="14" x2="124" y2="12" stroke="#8a1c4a" stroke-width="1.8" stroke-linecap="round" />
+                  <text x="158" y="17" text-anchor="middle" font-family="'Dancing Script', cursive" font-size="22" font-weight="700" fill="#8a1c4a">ngày</text>
+                  <line x1="192" y1="12" x2="256" y2="14" stroke="#8a1c4a" stroke-width="1.8" stroke-linecap="round" />
+
+                  <!-- Chữ 'Nhà Giáo' Brush Calligraphy 2 lớp màu hồng phấn & đỏ hồng đậm -->
+                  <text x="155" y="60" text-anchor="middle" font-family="'Great Vibes', 'Dancing Script', cursive" font-size="56" font-weight="700" fill="#f294b0" stroke="#f294b0" stroke-width="3" transform="translate(2, 2)">Nhà Giáo</text>
+                  <text x="155" y="60" text-anchor="middle" font-family="'Great Vibes', 'Dancing Script', cursive" font-size="56" font-weight="700" fill="#c2185b" stroke="#880e4f" stroke-width="0.6">Nhà Giáo</text>
+
+                  <!-- 3 Giọt nước/cánh hoa hồng bắn ra ở góc trên phải chữ 'o' giống hệt ảnh mẫu -->
+                  <path d="M 276,22 C 282,10 294,8 296,16 C 298,24 284,28 276,22 Z" fill="#d81b60" />
+                  <path d="M 284,30 C 292,24 302,26 302,32 C 302,38 290,38 284,30 Z" fill="#ec407a" />
+                  <circle cx="270" cy="26" r="2.8" fill="#c2185b" />
+                </svg>
               </div>
             </div>
-            <div class="page-footer-bar">
-              <span>Thời Báo Tri Ân — Ấn Bản Hoài Niệm</span>
+
+            <!-- 3 Khổ thơ cắt viền bậc thang sát từng dòng trên giấy ô ly giống hệt ảnh mẫu 'Ngày Nhà Giáo' -->
+            <div class="my-auto space-y-2.5 relative z-10 py-1 flex flex-col items-center">
+              <!-- Khổ 1 (Cắt viền bậc thang theo từng dòng thơ) -->
+              <div class="flex flex-col items-center font-editorial text-[12.2px] sm:text-[12.8px] leading-[1.45] text-[#1f1614] filter drop-shadow-[0_4px_6px_rgba(40,15,20,0.16)]">
+                <span class="grid-line-strip">Tháng Mười một, nắng vàng rực rỡ,</span>
+                <span class="grid-line-strip">Ngày tri ân, lòng kính mến dâng.</span>
+                <span class="grid-line-strip">Thầy cô ơi, như dòng suối mát,</span>
+                <span class="grid-line-strip">Nuôi dưỡng tâm hồn, ước mơ vươn.</span>
+              </div>
+
+              <!-- Khổ 2 -->
+              <div class="flex flex-col items-center font-editorial text-[12.2px] sm:text-[12.8px] leading-[1.45] text-[#1f1614] filter drop-shadow-[0_4px_6px_rgba(40,15,20,0.16)]">
+                <span class="grid-line-strip">Những mùa thi, thầy cô bên cạnh,</span>
+                <span class="grid-line-strip">Động viên em vượt mọi thử thách.</span>
+                <span class="grid-line-strip">Với tấm lòng trao đi kiến thức,</span>
+                <span class="grid-line-strip">Thắp sáng tương lai, ánh lửa hồng.</span>
+              </div>
+
+              <!-- Khổ 3 -->
+              <div class="flex flex-col items-center font-editorial text-[12.2px] sm:text-[12.8px] leading-[1.45] text-[#1f1614] filter drop-shadow-[0_4px_6px_rgba(40,15,20,0.16)]">
+                <span class="grid-line-strip">Mái trường xưa, kỷ niệm ùa về,</span>
+                <span class="grid-line-strip">Tiếng thầy giảng, cô dạy ân cần.</span>
+                <span class="grid-line-strip">Mỗi trang sách, chứa bao điều đẹp,</span>
+                <span class="grid-line-strip">Chắp cánh cho em vững bước chân.</span>
+              </div>
+
+              <!-- Nhãn tên tác giả cắt viền trắng lượn sát chữ + Vệt màu hồng loang góc dưới phải giống hệt ảnh mẫu 5 -->
+              <div class="w-full flex items-center justify-end pr-4 pt-1 relative">
+                <div class="w-16 h-8 rounded-full bg-[#f4a2b8]/45 blur-xs absolute right-2 -bottom-2 pointer-events-none"></div>
+                <span class="relative z-10 inline-block bg-white px-3.5 py-0.5 rounded-full shadow-md border-2 border-white font-script text-lg font-extrabold text-[#1f1412] transform -rotate-1">
+                  Nguyễn Bảo Thy
+                </span>
+              </div>
+            </div>
+
+            <div class="page-footer-bar pl-2">
+              <span>Mục 3: Thơ Tri Ân — Ngày Nhà Giáo</span>
               <span class="font-bold text-[#9e2a2b]">Trang 06</span>
             </div>
             <div class="corner-curl-hint"></div>
           </div>
         `
       },
-      // TRANG 7
+
+      // ================= TRANG 7: MỤC 4 — VĂN XUÔI: CHUYẾN ĐÒ TRI ÂN (SIÊU CHI TIẾT 10/10 GIỐNG MẪU 6) =================
       {
         number: 7,
-        title: "Phỏng Vấn: Trò Chuyện Cùng Thầy Cô",
-        badge: "Phỏng Vấn",
+        title: "4. Văn Xuôi: Chuyến Đò Tri Ân",
+        badge: "Mục 4 • Văn Xuôi",
         html: `
-          <div class="page-inner relative">
-            <div class="flex items-center justify-between border-b border-[#c9933b]/50 pb-1.5">
-              <div>
-                <span class="text-[10px] uppercase tracking-widest text-[#9e2a2b] font-bold">Chuyên Mục Đối Thoại</span>
-                <h2 class="font-display text-base sm:text-lg font-bold text-[#2c1e16]">Trò Chuyện Cùng Thầy Cô</h2>
-              </div>
-              <i class="fa-solid fa-microphone-lines text-lg text-[#9e2a2b]"></i>
-            </div>
-            <div class="space-y-2.5 my-auto text-xs">
-              <div class="bg-[#fffdf8] rounded-xl p-2.5 border border-[#e0cca8] shadow-sm">
-                <div class="flex items-center gap-2 text-[#9e2a2b] font-bold text-[11px]">
-                  <span class="px-1.5 py-0.5 rounded bg-[#9e2a2b] text-white text-[9px]">Phóng viên Đoàn</span>
-                  <span>Điều gì giữ lửa đam mê trong thầy cô suốt nhiều năm đứng lớp?</span>
+          <div class="page-inner relative splatter-green-bg" style="padding: 12px 16px 16px 26px;">
+            <div class="spiral-edge-strip"></div>
+
+            <!-- Tiêu đề 'Chuyến đò tri ân' cắt dán trên giấy ô ly kèm khung kẻ xanh lá 2 nét giống hệt ảnh mẫu 6 -->
+            <div class="text-center mt-1 relative z-20">
+              <div class="stepped-grid-poem inline-block px-5 py-1.5 rounded-2xl transform -rotate-1">
+                <div class="border-2 border-[#3b6e38] rounded-md px-5 py-0.5 relative">
+                  <span class="font-script text-3xl sm:text-4xl font-black text-[#2b5829]" style="text-shadow: 2.5px 2.5px 0px #b7d7b0;">
+                    Chuyến đò
+                  </span>
+                  <span class="block text-right font-script text-sm font-bold text-[#3b6e38] -mt-1.5 bg-[#fffef9] px-1 inline-block float-right">
+                    ─ tri ân ─
+                  </span>
                 </div>
-                <p class="mt-1.5 text-[11.5px] text-[#2c1e16] italic font-editorial pl-2 border-l-2 border-[#c9933b]">“Đó chính là ánh mắt lấp lánh của các em khi hiểu một bài toán khó, hay lời chào lễ phép mỗi khi gặp lại học trò cũ. Với thầy cô, sự trưởng thành của các em là phần thưởng vô giá nhất.”</p>
-              </div>
-              <div class="bg-[#fffdf8] rounded-xl p-2.5 border border-[#e0cca8] shadow-sm">
-                <div class="flex items-center gap-2 text-[#3d6b58] font-bold text-[11px]">
-                  <span class="px-1.5 py-0.5 rounded bg-[#3d6b58] text-white text-[9px]">Phóng viên Đoàn</span>
-                  <span>Thầy cô kỳ vọng gì ở thế hệ học sinh trong thời đại chuyển đổi số?</span>
-                </div>
-                <p class="mt-1.5 text-[11.5px] text-[#2c1e16] italic font-editorial pl-2 border-l-2 border-[#3d6b58]">“Thầy cô mong các em làm chủ công nghệ bằng trí tuệ sáng tạo, nhưng luôn giữ một trái tim nhân hậu, biết yêu thương gia đình, trân trọng cội nguồn và sống có trách nhiệm với Tổ quốc.”</p>
-              </div>
-              <div class="p-2.5 rounded-xl bg-gradient-to-r from-[#f5e3c3] to-[#edd2a4] border border-[#c9933b] flex items-center gap-2.5">
-                <div class="w-9 h-9 rounded-full bg-[#9e2a2b] text-amber-100 flex items-center justify-center shrink-0 font-display font-bold">“ ”</div>
-                <p class="text-[11px] text-[#2c1e16] font-medium"><strong>Lời nhắn gửi:</strong> Hãy cứ ước mơ thật lớn và kiên trì bước tới, phía sau các em luôn có ánh mắt dõi theo của thầy cô!</p>
               </div>
             </div>
-            <div class="page-footer-bar">
-              <span>Chuyên Mục Phỏng Vấn Thầy Cô</span>
-              <span class="font-bold text-[#9e2a2b]">Trang 07</span>
+
+            <!-- 2 Đoạn Văn Xuôi cắt viền bậc thang trên giấy kẻ ô vuông giống hệt ảnh mẫu 6 -->
+            <div class="my-auto space-y-2 relative z-10 py-1">
+              <!-- Đoạn 1 -->
+              <div class="stepped-grid-poem p-2.5 text-justify font-editorial text-[11.8px] sm:text-[12.2px] leading-[1.44] text-[#1a2419] transform rotate-0.5">
+                Là một người con Việt Nam, chúng ta biết rằng mảnh đất hình chữ S này luôn mang đậm bản sắc dân tộc mà ai trong số chúng ta cũng không được phép quên đi. Sự tri ân thầy cô cũng như thế, cùng đi cùng ta vượt qua những năm tháng lịch sử khó phai. Nếu như mỗi năm học là một chuyến đò, thì học trò là khách qua sông còn thầy cô là những người lái đò thầm lặng lặng lẽ đưa con đò ấy đến bến bờ tri thức. Hằng năm, cứ mỗi độ thu qua, giữa cái tiết trời se lạnh khi chớm đông chúng ta lại có dịp để nói những lời tri ân sâu sắc đến người dẫn lối thầm lặng.
+              </div>
+
+              <!-- Đoạn 2 -->
+              <div class="stepped-grid-poem p-2.5 text-justify font-editorial text-[11.8px] sm:text-[12.2px] leading-[1.44] text-[#1a2419] transform -rotate-0.5">
+                Thầy cô - hai tiếng gọi thiêng liêng mà bao thế hệ học trò luôn kính trọng và yêu mến. Kể làm sao xiết muôn vàn tâm huyết chứa đựng trong từng bài giảng của người nghệ sĩ cầm phấn này đây! Dẫu biết mỗi chuyến đò đều là một hành trình đầy gian truân và vất vả, thế nhưng những người thuyền trưởng ấy chẳng bỏ mái chèo giữa chừng mà rời đi. Trong chặng hành trình rực rỡ dưới mái trường <strong>THPT Thiệu Hóa</strong> này đây, chỉ một lời cảm ơn suông là không đủ, tập thể <strong>12C4</strong> luôn muốn gửi vạn lời cảm ơn vì thầy cô đã chọn nghề cao quý này để đem lại tri thức và chắp cánh ước mơ. Nhân dịp ngày Nhà giáo Việt Nam 20 - 11, từ tận đáy lòng chúng em xin kính chúc những người lái đò luôn có thật nhiều sức khỏe để tiếp tục dìu dắt chúng em cập bến an toàn!
+              </div>
+
+              <!-- Nhãn tên tác giả cắt viền trắng góc dưới phải giống mẫu 6 -->
+              <div class="text-right pr-1">
+                <span class="inline-block bg-white px-4 py-0.5 rounded-full shadow-md border border-emerald-200 font-script text-base font-extrabold text-[#162415] transform rotate-1">
+                  Phan Lê Tường Nguyên • 12C4
+                </span>
+              </div>
+            </div>
+
+            <div class="page-footer-bar pl-2">
+              <span>Mục 4: Văn Xuôi — Chuyến Đò Tri Ân</span>
+              <span class="font-bold text-[#3d6b58]">Trang 07</span>
             </div>
             <div class="corner-curl-hint"></div>
           </div>
         `
       },
-      // TRANG 8
+
+      // ================= TRANG 8: MỤC 6 — CA DAO (SIÊU CHI TIẾT 10/10 VỚI STICKER VẼ TAY SVG GIỐNG MẪU CA DAO) =================
       {
         number: 8,
-        title: "Khung Thư Chưa Gửi: Dòng Lưu Bút Xanh",
-        badge: "Cánh Thư Học Trò",
+        title: "6. Ca Dao & Tục Ngữ Tôn Sư Trọng Đạo",
+        badge: "Mục 6 • Ca Dao",
         html: `
-          <div class="page-inner relative">
-            <div class="flex items-center justify-between border-b border-[#c9933b]/40 pb-1">
-              <span class="text-[10px] uppercase tracking-widest text-[#8c5828] font-bold">Hộp Thư Ký Ức</span>
-              <span class="text-[10px] text-[#9e2a2b] font-semibold"><i class="fa-solid fa-envelope-open-text mr-1"></i>Thư viết tay</span>
+          <div class="page-inner relative" style="background: #f8f5ec; padding: 10px 14px 14px 26px;">
+            <div class="spiral-edge-strip"></div>
+
+            <!-- Chữ thư pháp 'ca dao' đen bóng đổ cam đỏ kéo dài ngang đỉnh giống hệt ảnh mẫu Ca Dao -->
+            <div class="text-center mt-0.5 relative z-20">
+              <svg viewBox="0 0 420 56" class="w-full h-12 mx-auto overflow-visible">
+                <path d="M 10,30 Q 65,42 122,26 M 298,26 Q 355,40 410,20" fill="none" stroke="#d9534f" stroke-width="6.5" stroke-linecap="round" transform="translate(3, 4)" />
+                <text x="210" y="44" text-anchor="middle" font-family="'Dancing Script', cursive" font-size="52" font-weight="900" fill="#d9534f">ca dao</text>
+                <path d="M 10,30 Q 65,42 122,26 M 298,26 Q 355,40 410,20" fill="none" stroke="#181210" stroke-width="5.5" stroke-linecap="round" />
+                <text x="207" y="41" text-anchor="middle" font-family="'Dancing Script', cursive" font-size="52" font-weight="900" fill="#181210">ca dao</text>
+              </svg>
             </div>
-            <div class="lined-paper relative my-auto rounded-xl p-4 border border-[#d4c09e] shadow-md" style="transform: rotate(0.7deg);">
-              <div class="washi-tape -top-2.5 left-8"></div>
-              <div class="absolute top-0 bottom-0 left-7 w-[1px] bg-rose-400/50 pointer-events-none"></div>
-              <div class="pl-5">
-                <div class="flex items-center justify-between mb-1">
-                  <span class="font-script text-lg text-[#1e3a8a] font-bold">Gửi người thầy, người cô kính yêu!</span>
-                  <span class="text-[10px] px-2 py-0.5 rounded bg-amber-100 text-amber-900 border border-amber-300">Kỷ niệm 20/11</span>
+
+            <!-- 5 Mảnh giấy kẻ ô vuông cắt lượn sóng dán chéo so le + Sticker SVG chi tiết (Đồng hồ cổ, Hoa hồng, Chim sẻ, Nấm rừng) -->
+            <div class="my-auto space-y-1.5 relative z-10 py-0.5">
+              <!-- Cụm Ca dao 1 (Trái trên + Đồng hồ cổ bỏ túi SVG + Tem Happy Autumn 1878) -->
+              <div class="flex items-center justify-between gap-1">
+                <div class="stepped-grid-poem px-3 py-1.5 w-[75%] transform -rotate-4 relative pl-7">
+                  <svg width="42" height="42" viewBox="-24 -24 48 48" class="absolute -left-2 -top-2 drop-shadow">
+                    <use href="#vintage-pocket-watch" />
+                  </svg>
+                  <p class="font-script text-[14.5px] font-bold text-[#221c18] text-center leading-snug">
+                    Cơm cha, áo mẹ, chữ thầy<br/>Nghĩ sao cho bõ những ngày ước mong.
+                  </p>
                 </div>
-                <div class="font-script text-[16px] sm:text-[17px] text-[#1e3a8a] leading-[24px] space-y-2">
-                  <p>Em viết những dòng này khi ngoài hiên lớp nắng thu đang trải vàng trên từng tán lá. Đã bao lần chúng em vô tư tinh nghịch làm thầy cô phải phiền lòng, nhưng chưa bao giờ thầy cô ngừng bao dung.</p>
-                  <p>Cảm ơn thầy vì những bài học nghiêm khắc mà ấm áp. Cảm ơn cô vì những lời động viên dịu dàng mỗi khi chúng em mệt mỏi trước kỳ thi.</p>
-                  <p>Dù mai này tung cánh muôn phương, chúng em vẫn mãi tự hào là học trò dưới mái trường thân yêu này!</p>
-                </div>
-                <div class="mt-2 flex items-center justify-between pt-1">
-                  <div class="flex items-center gap-1.5 text-[11px] text-[#5c4332]">
-                    <i class="fa-solid fa-seedling text-emerald-700"></i>
-                    <span class="italic font-editorial">Hoa ép khô trong trang vở cũ</span>
+                <div class="flex flex-col items-center gap-1 pr-1">
+                  <div class="bg-[#ebd9c0] p-1 rounded border border-[#8c6d46] shadow-xs text-[6.5px] font-mono text-center transform rotate-6">
+                    <span class="block font-bold">💐 1878</span>
+                    <span class="italic">Happy Autumn</span>
                   </div>
-                  <span class="font-script text-base text-[#9e2a2b] font-bold">— Tập thể Học trò & Thanh Long ❤️‍🩹</span>
+                </div>
+              </div>
+
+              <!-- Cụm Ca dao 2 (Phải giữa + Khung hoa hồng cam & Nhánh hoa khô bên trái) -->
+              <div class="flex items-center justify-between gap-1">
+                <div class="flex items-center gap-1.5 pl-1">
+                  <div class="bg-white p-1 rounded border border-amber-300 shadow-sm transform -rotate-4">
+                    <svg width="28" height="28" viewBox="-50 -50 100 100">
+                      <use href="#double-leaf" transform="scale(0.8)" />
+                      <use href="#vintage-rose" transform="scale(0.55)" />
+                    </svg>
+                  </div>
+                  <div class="bg-[#f3e5d8] p-1 rounded border border-amber-700/40 shadow-sm transform rotate-12 text-xs">
+                    🥀🌿
+                  </div>
+                </div>
+                <div class="stepped-grid-poem px-3 py-1.5 w-[76%] transform rotate-4 relative">
+                  <div class="absolute -top-3 left-3 bg-[#6d4c41] text-amber-100 text-[7.5px] font-mono px-1.5 py-0.5 rounded-full shadow-xs">
+                    You are 🌹
+                  </div>
+                  <p class="font-script text-[13.5px] font-bold text-[#221c18] text-center leading-snug pt-0.5">
+                    Dạy con từ thuở tiểu sinh<br/>Gần thầy gần bạn tập tành lễ nghi<br/>Học cho “cách vật trí tri”<br/>Văn chương chữ nghĩa nghề gì cũng thông.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Cụm Ca dao 3 (Trái giữa + Thẻ cành lá mùa thu & hoa hồng đen-trắng bên phải) -->
+              <div class="flex items-center justify-between gap-1">
+                <div class="stepped-grid-poem px-3 py-1.5 w-[72%] transform -rotate-3 relative">
+                  <p class="font-script text-[14px] font-bold text-[#221c18] text-center leading-snug">
+                    Học là học biết giữ giàng<br/>Biết điều nhân nghĩa biết đàng hiếu trung.
+                  </p>
+                </div>
+                <div class="flex items-center gap-1 pr-1">
+                  <div class="bg-[#fcf8f2] px-1.5 py-2 rounded border border-amber-300 shadow-sm transform rotate-12 text-xs">
+                    🍂🌿🍁
+                  </div>
+                  <div class="bg-[#e6d5c3] p-1.5 rounded border border-stone-500 shadow-sm transform -rotate-6 text-xs">
+                    🌹📜
+                  </div>
+                </div>
+              </div>
+
+              <!-- Cụm Ca dao 4 (Phải dưới + Chồng sách cổ & Tem bướm bên trái) -->
+              <div class="flex items-center justify-between gap-1">
+                <div class="flex items-center gap-1.5 pl-3">
+                  <div class="bg-[#efe5d8] p-1 rounded border border-amber-800/40 shadow-xs text-[10px] transform -rotate-6">
+                    📚🕰️
+                  </div>
+                  <div class="bg-[#dfd3c3] p-1 rounded border border-stone-500 shadow-xs text-[10px] transform rotate-8">
+                    🦋📰
+                  </div>
+                </div>
+                <div class="stepped-grid-poem px-3 py-1.5 w-[74%] transform rotate-3 relative">
+                  <p class="font-script text-[14px] font-bold text-[#221c18] text-center leading-snug">
+                    Bạn bè là nghĩa tương tri<br/>Sao cho sau trước một bờ mới nên.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Cụm Ca dao 5 (Trái dưới + Chim sẻ đậu cành SVG + Nấm rừng SVG góc phải giống hệt ảnh mẫu) -->
+              <div class="flex items-center justify-between gap-1">
+                <div class="stepped-grid-poem px-3 py-1.5 w-[68%] transform -rotate-2 relative pl-7">
+                  <svg width="42" height="36" viewBox="-26 -20 52 40" class="absolute -left-2 -top-2 drop-shadow">
+                    <use href="#vintage-bird-branch" />
+                  </svg>
+                  <p class="font-script text-[14px] font-bold text-[#221c18] text-center leading-snug">
+                    Ăn quả nhớ kẻ trồng cây<br/>Có danh có vọng nhớ thầy khi xưa.
+                  </p>
+                </div>
+                <div class="flex items-center gap-1.5 pr-1">
+                  <div class="bg-[#d8cbb8] p-1 rounded border border-stone-600 shadow-xs text-xs transform -rotate-3">
+                    🌿🎀
+                  </div>
+                  <svg width="38" height="38" viewBox="-22 -18 44 36" class="drop-shadow transform rotate-3">
+                    <use href="#vintage-mushroom" />
+                  </svg>
                 </div>
               </div>
             </div>
-            <div class="page-footer-bar">
-              <span>Khung Thư Học Trò</span>
+
+            <div class="page-footer-bar pl-2">
+              <span>Mục 6: Ca Dao Tôn Sư Trọng Đạo</span>
               <span class="font-bold text-[#9e2a2b]">Trang 08</span>
             </div>
             <div class="corner-curl-hint"></div>
           </div>
         `
       },
-      // TRANG 9
+
+      // ================= TRANG 9: MỤC 7 — BÀI HÁT: BỤI PHẤN (SIÊU CHI TIẾT 10/10 GIỐNG MẪU BỤI PHẤN) =================
       {
         number: 9,
-        title: "Trang Thơ & Giai Điệu: Bụi Phấn & Thời Gian",
-        badge: "Thơ & Nhạc",
+        title: "7. Bài Hát: Bụi Phấn (Bản Nhạc Scrapbook 3D)",
+        badge: "Mục 7 • Bài Hát",
         html: `
-          <div class="page-inner relative">
-            <div class="text-center border-b border-[#c9933b]/40 pb-1">
-              <span class="text-[10px] uppercase tracking-widest text-[#9e2a2b] font-bold">Góc Văn Thơ & Âm Nhạc</span>
-              <h2 class="font-display text-lg font-bold text-[#2c1e16]">Khúc Ca Bụi Phấn</h2>
-            </div>
-            <div class="my-auto bg-gradient-to-b from-[#fffdf9] to-[#f8edd8] border border-[#dfc9a3] rounded-2xl p-4 shadow-sm text-center relative overflow-hidden">
-              <i class="fa-solid fa-music text-6xl text-[#c9933b]/15 absolute -right-2 -bottom-2 pointer-events-none"></i>
-              <div class="space-y-3 font-editorial italic text-[14px] sm:text-[15px] text-[#2c1e16] leading-relaxed">
-                <div>
-                  <p>“Khi thầy viết bảng, bụi phấn rơi rơi</p>
-                  <p>Có hạt bụi nào rơi trên bục giảng</p>
-                  <p>Có hạt bụi nào vương trên tóc thầy...”</p>
+          <div class="page-inner relative select-none" style="background: #d8d4cb; padding: 10px 14px 14px 24px;" onmousedown="event.stopPropagation()" ontouchstart="event.stopPropagation()">
+            <div class="spiral-edge-strip"></div>
+
+            <!-- Lớp giấy Kraft nâu xé viền lót dưới + Ngôi sao kép góc trên phải + Lớp giấy đen xé viền đè lên trên giống hệt ảnh mẫu Bụi Phấn -->
+            <div class="relative flex-1 my-0.5 p-2 rounded-2xl flex flex-col justify-between overflow-hidden"
+                 style="background: linear-gradient(135deg, #cbb089 0%, #b8986c 100%); box-shadow: 0 8px 18px rgba(0,0,0,0.32);">
+
+              <!-- Ngôi sao kép Đen & Vàng góc trên phải giống hệt ảnh mẫu -->
+              <svg width="110" height="110" viewBox="0 0 100 100" class="absolute -top-4 -right-4 pointer-events-none z-10">
+                <polygon points="50,0 63,35 100,35 70,57 82,92 50,70 18,92 30,57 0,35 37,35" fill="#1e1e26" />
+                <polygon points="50,12 60,38 88,38 65,54 74,82 50,65 26,82 35,54 12,38 40,38" fill="#e0b054" />
+              </svg>
+
+              <!-- Mảng giấy đen xé viền chứa bản nhạc khuông vàng -->
+              <div class="relative flex-1 bg-[#1e1e26] rounded-xl p-2.5 text-[#f8f4e6] shadow-2xl border border-amber-200/20 flex flex-col justify-between z-20"
+                   style="clip-path: polygon(1% 3%, 92% 0%, 98% 14%, 95% 34%, 99% 56%, 93% 78%, 97% 94%, 80% 99%, 44% 95%, 12% 100%, 0% 88%, 2% 45%);">
+
+                <!-- Tiêu đề 3D 'BỤI PHẤN' uốn vòm cong kèm hoa văn baroque uốn lượn bên dưới giống hệt ảnh mẫu -->
+                <div class="text-center -mt-1 mb-0.5 relative z-30">
+                  <svg viewBox="0 0 340 82" class="w-64 sm:w-72 h-16 mx-auto drop-shadow-[0_6px_10px_rgba(0,0,0,0.65)]">
+                    <path d="M 18,62 C 18,22 95,6 170,6 C 245,6 322,22 322,62 C 295,76 260,68 242,56 C 215,44 125,44 98,56 C 80,68 45,76 18,62 Z"
+                          fill="#fcf8ef" stroke="#d4af37" stroke-width="2.5" />
+                    <path id="buiphan-arc" d="M 42,56 Q 170,14 298,56" fill="none" />
+                    <text font-family="'Playfair Display', Georgia, serif" font-size="38" font-weight="900" fill="#8b261d" stroke="#d4af37" stroke-width="0.8" letter-spacing="3">
+                      <textPath href="#buiphan-arc" startOffset="50%" text-anchor="middle">BỤI PHẤN</textPath>
+                    </text>
+                    <!-- Hoa văn xoắn baroque dưới chữ -->
+                    <path d="M 85,58 C 110,44 145,48 170,58 C 195,48 230,44 255,58" fill="none" stroke="#9c7a44" stroke-width="2" stroke-linecap="round" />
+                  </svg>
                 </div>
-                <div class="w-12 h-[1px] bg-[#c9933b] mx-auto"></div>
-                <div>
-                  <p>“Thời gian trôi qua mau chỉ còn lại những kỷ niệm</p>
-                  <p>Kỷ niệm thân yêu ơi sẽ còn nhớ mãi tiếng thầy cô</p>
-                  <p>Mái trường xưa dấu yêu, bóng dáng thầy cô nâng bước em đi...”</p>
+
+                <!-- 6 Dòng Khuông Nhạc Vàng + Hợp Âm (C, Dm, G, F, Em, Am) + Lời Bài Hát Viết Tay Trắng giống hệt ảnh mẫu -->
+                <div class="space-y-1 my-auto z-10 px-1">
+                  <div>
+                    <div class="flex justify-between text-[8.5px] font-mono font-bold text-amber-300 px-8 -mb-1">
+                      <span>C</span><span>F</span>
+                    </div>
+                    <div class="music-stave-row flex items-center justify-around text-amber-300 text-xs">
+                      <span>𝄞</span><span>♪</span><span>♫</span><span>♩</span><span>♪</span><span>♫</span>
+                    </div>
+                    <p class="font-script text-[13px] text-white tracking-wide pl-2 -mt-1.5">
+                      Khi thầy viết bảng, bụi phấn rơi rơi. Có
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-[8.5px] font-mono font-bold text-amber-300 px-6 -mb-1">
+                      <span>Dm</span><span>G</span>
+                    </div>
+                    <div class="music-stave-row flex items-center justify-around text-amber-300 text-xs">
+                      <span>𝄞</span><span>♩</span><span>♪</span><span>♫</span><span>♩</span><span>♪</span>
+                    </div>
+                    <p class="font-script text-[13px] text-white tracking-wide pl-2 -mt-1.5">
+                      hạt bụi nào rơi trên bục giảng? Có hạt bụi
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-[8.5px] font-mono font-bold text-amber-300 px-8 -mb-1">
+                      <span>C</span><span>Am</span>
+                    </div>
+                    <div class="music-stave-row flex items-center justify-around text-amber-300 text-xs">
+                      <span>𝄞</span><span>♫</span><span>♩</span><span>♪</span><span>♫</span><span>♩</span>
+                    </div>
+                    <p class="font-script text-[13px] text-white tracking-wide pl-2 -mt-1.5">
+                      nào vương trên tóc thầy? Em yêu phút giây
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-[8.5px] font-mono font-bold text-amber-300 px-8 -mb-1">
+                      <span>F</span><span>Em</span>
+                    </div>
+                    <div class="music-stave-row flex items-center justify-around text-amber-300 text-xs">
+                      <span>𝄞</span><span>♪</span><span>♩</span><span>♫</span><span>♪</span><span>♩</span>
+                    </div>
+                    <p class="font-script text-[13px] text-white tracking-wide pl-2 -mt-1.5">
+                      này, thầy em tóc như bạc thêm, bạc thêm vì bụi
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-[8.5px] font-mono font-bold text-amber-300 px-6 -mb-1">
+                      <span class="border border-amber-300/60 px-1">1. Am</span><span>D7</span><span>G</span>
+                    </div>
+                    <div class="music-stave-row flex items-center justify-around text-amber-300 text-xs">
+                      <span>𝄞</span><span>♩</span><span>♫</span><span>♪</span><span>♩</span><span>♫</span>
+                    </div>
+                    <p class="font-script text-[13px] text-white tracking-wide pl-2 -mt-1.5">
+                      phấn, để cho em bài học hay. Mai sau lớn lên
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-[8.5px] font-mono font-bold text-amber-300 px-6 -mb-1">
+                      <span class="border border-amber-300/60 px-1">2. Am</span><span>G</span><span>C</span>
+                    </div>
+                    <div class="music-stave-row flex items-center justify-around text-amber-300 text-xs">
+                      <span>𝄞</span><span>♫</span><span>♪</span><span>♩</span><span>♫</span><span>𝄀</span>
+                    </div>
+                    <p class="font-script text-[13px] text-white tracking-wide pl-2 -mt-1.5">
+                      rồi, làm sao có thể nào quên, ngày xưa thầy dạy dỗ khi em tuổi còn thơ...
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Khóa Sol lớn cắt viền trắng góc dưới trái + Ngôi sao khâu chỉ + Nút ngân vang hợp âm -->
+                <div class="flex items-center justify-between pt-1 border-t border-amber-200/20 z-30">
+                  <div class="flex items-center gap-1.5">
+                    <span class="inline-flex items-center justify-center w-9 h-11 rounded-full bg-white text-[#1e1e26] font-serif text-3xl font-black shadow-md transform -rotate-12">
+                      𝄞
+                    </span>
+                    <span class="text-xs">🦋 ⭐</span>
+                  </div>
+
+                  <button
+                    onclick="playTributeChime(event)"
+                    class="px-3 py-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-600 text-slate-950 text-[10.5px] font-extrabold shadow-md hover:scale-105 transition flex items-center gap-1 cursor-pointer"
+                  >
+                    <i class="fa-solid fa-music"></i> Ngân Giai Điệu
+                  </button>
                 </div>
               </div>
-              <div class="mt-3 pt-2.5 border-t border-[#c9933b]/30 flex flex-col items-center gap-1.5">
-                <button
-                  onclick="playTributeChime(event)"
-                  class="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#9e2a2b] to-[#c9933b] text-white text-xs font-semibold shadow hover:scale-105 transition flex items-center gap-1.5"
-                >
-                  <i class="fa-solid fa-bell"></i> Ngân Vang Giai Điệu Tri Ân
-                </button>
-                <span class="text-[10px] text-[#5c4332]">Nhấn để ngân vang hợp âm tri ân</span>
-              </div>
             </div>
-            <div class="page-footer-bar">
-              <span>Trang Thơ & Giai Điệu</span>
+
+            <div class="page-footer-bar pl-2">
+              <span>Mục 7: Bài Hát — Bụi Phấn</span>
               <span class="font-bold text-[#9e2a2b]">Trang 09</span>
             </div>
             <div class="corner-curl-hint"></div>
           </div>
         `
       },
-      // TRANG 10
+
+      // ================= TRANG 10: MỤC 10 — MÙI HOA SỮA & TRANH ẢNH 12C4 (SIÊU CHI TIẾT 10/10 GIỐNG MẪU MÙI HOA SỮA) =================
       {
         number: 10,
-        title: "Chuyển Đổi Số Trong Công Tác Đoàn",
-        badge: "Tuổi Trẻ Số",
+        title: "10. Mùi Hoa Sữa & Ký Ức 12C4",
+        badge: "Mục 10 • Hoa Sữa & Ảnh",
         html: `
-          <div class="page-inner relative">
-            <div class="flex items-center justify-between border-b border-[#3d6b58]/40 pb-1.5">
-              <div>
-                <span class="text-[10px] uppercase tracking-widest text-[#3d6b58] font-bold">Sức Trẻ & Công Nghệ</span>
-                <h2 class="font-display text-base sm:text-lg font-bold text-[#2c1e16]">Đoàn Viên Thời Đại Số</h2>
-              </div>
-              <span class="px-2 py-0.5 rounded-full bg-[#3d6b58] text-white text-[10px] font-bold">4.0 Youth</span>
-            </div>
-            <div class="my-auto space-y-2.5">
-              <div class="grid grid-cols-2 gap-2.5">
-                <div class="bg-[#fffdf8] p-2.5 rounded-xl border border-[#c9933b]/40 shadow-sm">
-                  <div class="w-7 h-7 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center mb-1">
-                    <i class="fa-solid fa-palette text-xs"></i>
-                  </div>
-                  <h4 class="font-bold text-xs text-[#2c1e16]">Thiết kế đa phương tiện</h4>
-                  <p class="text-[10.5px] text-[#5c4332] mt-0.5">Ứng dụng đồ họa số, âm thanh tương tác và hiệu ứng 3D hiện đại.</p>
-                </div>
-                <div class="bg-[#fffdf8] p-2.5 rounded-xl border border-[#3d6b58]/40 shadow-sm">
-                  <div class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center mb-1">
-                    <i class="fa-solid fa-people-group text-xs"></i>
-                  </div>
-                  <h4 class="font-bold text-xs text-[#2c1e16]">Làm việc nhóm hiệu quả</h4>
-                  <p class="text-[10.5px] text-[#5c4332] mt-0.5">Gắn kết đoàn viên qua biên tập nội dung, lập trình và sáng tạo.</p>
-                </div>
-              </div>
-              <div class="bg-gradient-to-br from-[#2d5243] to-[#1d382d] text-[#fdf8ef] p-3 rounded-xl shadow">
-                <div class="flex items-center justify-between mb-1">
-                  <span class="text-[10px] uppercase tracking-wider text-emerald-300 font-bold">Thông điệp chuyển đổi số xanh</span>
-                  <i class="fa-solid fa-leaf text-emerald-300 text-xs"></i>
-                </div>
-                <p class="text-[11.5px] leading-relaxed text-emerald-50">Ấn phẩm điện tử giúp <strong>tiết kiệm chi phí in ấn</strong>, bảo vệ môi trường, đồng thời lan tỏa thông điệp tri ân thầy cô nhanh chóng tới mọi miền qua không gian mạng.</p>
-              </div>
-              <div class="p-2 rounded-lg bg-[#f3e5cb] border border-[#c9933b]/50 flex items-center justify-between text-[11px]">
-                <span class="text-[#5c4332]"><i class="fa-solid fa-code text-[#9e2a2b] mr-1"></i>Kiến trúc giao diện: <strong>Liquid Glass iOS</strong></span>
-                <span class="font-bold text-[#9e2a2b]">Thanh Long ❤️‍🩹</span>
+          <div class="page-inner relative splatter-orange-bg" style="padding: 10px 14px 14px 26px;">
+            <div class="spiral-edge-strip"></div>
+
+            <!-- Tiêu đề cắt dán nổi 3D 'mùi HOA SỮA' chữ Bubble 3D cam-vàng-đỏ có bóng trắng giống hệt ảnh mẫu Mùi Hoa Sữa -->
+            <div class="text-center mt-0.5 relative z-20">
+              <div class="inline-block bg-white px-5 py-1 rounded-[26px] shadow-[0_6px_14px_rgba(217,72,15,0.28)] border-2 border-white transform -rotate-2">
+                <svg viewBox="0 0 320 68" class="w-60 sm:w-68 h-13 mx-auto overflow-visible">
+                  <defs>
+                    <linearGradient id="hoasua-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#ff3b1d" />
+                      <stop offset="55%" stop-color="#ff7b29" />
+                      <stop offset="100%" stop-color="#ffb74d" />
+                    </linearGradient>
+                  </defs>
+                  <line x1="48" y1="13" x2="122" y2="11" stroke="#e03131" stroke-width="1.8" stroke-linecap="round" />
+                  <text x="160" y="16" text-anchor="middle" font-family="'Dancing Script', cursive" font-size="22" font-weight="700" fill="#e03131">mùi</text>
+                  <line x1="196" y1="11" x2="268" y2="13" stroke="#e03131" stroke-width="1.8" stroke-linecap="round" />
+
+                  <text x="160" y="58" text-anchor="middle" font-family="'Be Vietnam Pro', sans-serif" font-size="44" font-weight="900" fill="url(#hoasua-grad)" stroke="#ffffff" stroke-width="2" paint-order="stroke" letter-spacing="1">HOA SỮA</text>
+                </svg>
               </div>
             </div>
-            <div class="page-footer-bar">
-              <span>Góc Sáng Tạo Đoàn Viên</span>
-              <span class="font-bold text-[#9e2a2b]">Trang 10</span>
+
+            <!-- Khổ thơ Mùi Hoa Sữa cắt viền bậc thang ở trung tâm + Đồng hồ cát SVG bên phải + Lông vũ tím góc trái + Tem xe cổ + Khung ảnh 12C4 góc dưới phải giống hệt ảnh mẫu -->
+            <div class="my-auto relative z-10 py-1">
+              <!-- Khung thơ cắt viền lượn sóng ở giữa -->
+              <div class="stepped-grid-poem mx-5 p-2 text-center font-editorial text-[11.2px] sm:text-[11.6px] leading-[1.36] text-[#241712] relative">
+                <!-- Sticker Hoa khô góc trái -->
+                <div class="diecut-sticker absolute -left-5 top-8 text-xs bg-[#fdf6ee] border border-amber-200 transform -rotate-6">
+                  🌷📜
+                </div>
+                <!-- Sticker Đồng hồ cát cổ điển SVG bên phải giống hệt ảnh mẫu -->
+                <div class="absolute -right-5 bottom-4 z-20 drop-shadow transform rotate-3">
+                  <svg width="34" height="48" viewBox="-16 -24 32 48">
+                    <use href="#vintage-hourglass" />
+                  </svg>
+                </div>
+
+                <p>Thoang thoảng mùi hoa sữa ghé vào</p>
+                <p>Ngôi trường trước mắt dần thân quen,</p>
+                <p>Tiếng trống vang, dòng người rộn rã</p>
+                <p>Thoáng chốc bước qua tuổi thời xuân.</p>
+                <p>Vội vã rảo bước chốn người xa,</p>
+                <p>Cái mới cái lạ đâu cũng thấy.</p>
+                <p>Chẳng còn tháng ngày mơ màng ngủ,</p>
+                <p>Bồng bột tuổi trẻ, lỗi lầm xưa.</p>
+                <p>Tháng năm trôi qua chẳng quay lại</p>
+                <p>Bồi hồi cảm xúc nhớ trường thương</p>
+                <p>Nỗi nhớ ươm đầy khoang kí ức</p>
+                <p>Liệu người có nhớ hoa sữa chăng ?</p>
+              </div>
+
+              <!-- Cụm Collage đáy trang giống hệt ảnh mẫu Mùi Hoa Sữa: Lông vũ tím bên trái + Tem xe cổ + Nhãn Nguyễn Khánh Lam + Khung ảnh kỷ niệm 12C4 góc phải -->
+              <div class="grid grid-cols-12 items-end gap-1 mt-1.5 px-1">
+                <div class="col-span-3 flex justify-center">
+                  <svg width="46" height="58" viewBox="-30 -90 60 95" class="transform -rotate-30 drop-shadow">
+                    <use href="#striped-feather" />
+                  </svg>
+                </div>
+
+                <div class="col-span-4 flex flex-col items-center">
+                  <div class="bg-[#e8dec8] px-2 py-0.5 rounded border border-slate-500 font-mono text-[7px] text-slate-800 shadow-xs">
+                    🚲 1972 • POST
+                  </div>
+                  <span class="inline-block bg-white px-2.5 py-0.5 rounded-full shadow-md border border-orange-200 font-script text-sm font-extrabold text-[#241612] -mt-1 whitespace-nowrap">
+                    Nguyễn Khánh Lam
+                  </span>
+                </div>
+
+                <!-- Khung ảnh Vintage góc dưới phải (Có thể thay link ảnh 12C4 của bạn) -->
+                <div class="col-span-5 bg-[#ebd9c8] p-1.5 rounded-lg border-2 border-white shadow-md transform rotate-1">
+                  <img
+                    src="https://placehold.co/240x140/8d5b4c/ffffff?text=Ky+Uc+Tap+The+12C4"
+                    alt="Ký ức 12C4"
+                    class="w-full h-16 object-cover rounded border border-stone-400 sepia-[.25]"
+                  />
+                  <p class="text-[8px] font-mono text-center font-bold text-[#4a2c22] mt-0.5">KÝ ỨC 12C4 • THPT THIỆU HÓA</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="page-footer-bar pl-2">
+              <span>Mục 10: Mùi Hoa Sữa & Ký Ức 12C4</span>
+              <span class="font-bold text-[#d9480f]">Trang 10</span>
             </div>
             <div class="corner-curl-hint"></div>
           </div>
         `
       },
-      // TRANG 11
+
+      // ================= TRANG 11: MỤC 11 — LỜI KẾT: LỜI HẸN NGÀY GẶP LẠI + LƯU BÚT (SIÊU CHI TIẾT 10/10 GIỐNG MẪU 8) =================
       {
         number: 11,
-        title: "Lưu Bút Tương Tác: Gửi Lời Chúc 20/11",
-        badge: "Tương Tác Trực Tiếp",
+        title: "11. Lời Kết: Lời Hẹn Ngày Gặp Lại",
+        badge: "Mục 11 • Lời Kết",
         html: `
-          <div class="page-inner relative" onmousedown="event.stopPropagation()" ontouchstart="event.stopPropagation()">
-            <div class="flex items-center justify-between border-b border-[#c9933b]/40 pb-1">
+          <div class="page-inner relative splatter-emerald-bg" style="padding: 10px 14px 14px 26px;" onmousedown="event.stopPropagation()" ontouchstart="event.stopPropagation()">
+            <div class="spiral-edge-strip"></div>
+
+            <!-- Tiêu đề 2 tầng cắt dán từ giấy ô ly 'Lời Hẹn NGÀY / GẶP LẠI' chữ in hoa xanh lá đậm giống hệt ảnh mẫu 8 -->
+            <div class="text-center mt-0.5 relative z-20 space-y-1">
+              <div class="inline-flex items-center justify-center gap-1.5">
+                <div class="stepped-grid-poem px-2.5 py-0.5 font-script text-lg font-extrabold text-[#2b8a3e] leading-tight transform -rotate-2">
+                  Lời<br/>Hẹn
+                </div>
+                <div class="stepped-grid-poem px-4 py-0.5 font-sans font-black text-3xl sm:text-4xl text-[#1b722c] tracking-wider transform rotate-1"
+                     style="text-shadow: 2px 2px 0px #8ce99a, -1px -1px 0px #0b4619;">
+                  NGÀY
+                </div>
+              </div>
               <div>
-                <span class="text-[10px] uppercase tracking-widest text-[#9e2a2b] font-bold">Bảng Vàng Lưu Bút</span>
-                <h2 class="font-display text-base font-bold text-[#2c1e16]">Gửi Lời Chúc Tới Thầy Cô</h2>
-              </div>
-              <span class="text-[10px] px-2 py-0.5 rounded-full bg-rose-100 text-rose-800 font-semibold">Live Note</span>
-            </div>
-            <div id="wishes-wall" class="grid grid-cols-2 gap-2 my-2 max-h-[210px] overflow-y-auto pr-1">
-              <div class="p-2 rounded-lg bg-[#fff3b0] border border-amber-300 shadow-sm text-[11px] text-[#2c1e16]" style="transform: rotate(-1deg);">
-                <p class="font-medium">“Chúc quý thầy cô luôn mạnh khỏe, hạnh phúc và giữ mãi ngọn lửa nhiệt huyết!”</p>
-                <p class="text-[9.5px] font-bold text-[#9e2a2b] mt-1 text-right">— Thanh Long ❤️‍🩹</p>
-              </div>
-              <div class="p-2 rounded-lg bg-[#ffd6d6] border border-rose-300 shadow-sm text-[11px] text-[#2c1e16]" style="transform: rotate(1.2deg);">
-                <p class="font-medium">“Cảm ơn thầy cô đã luôn kiên nhẫn dìu dắt chúng em nên người!”</p>
-                <p class="text-[9.5px] font-bold text-rose-900 mt-1 text-right">— Chi đoàn Thanh Niên</p>
+                <div class="stepped-grid-poem inline-block px-5 py-0.5 font-sans font-black text-3xl sm:text-4xl text-[#1b722c] tracking-wider transform -rotate-1"
+                     style="text-shadow: 2px 2px 0px #8ce99a, -1px -1px 0px #0b4619;">
+                  GẶP LẠI
+                </div>
               </div>
             </div>
-            <form onsubmit="handleAddWish(event)" class="bg-[#fffdf8] border border-[#c9933b]/60 rounded-xl p-2.5 shadow-sm space-y-1.5 mt-auto">
-              <p class="text-[10.5px] font-bold text-[#2c1e16] flex items-center gap-1">
-                <i class="fa-solid fa-pen-fancy text-[#9e2a2b]"></i> Viết thêm lời chúc của bạn lên trang tập san:
-              </p>
-              <div class="flex gap-1.5">
-                <input
-                  type="text"
-                  name="sender"
-                  placeholder="Tên bạn (VD: Lan Anh)"
-                  required
-                  class="w-1/3 px-2 py-1 text-[11px] rounded border border-[#c9933b]/60 bg-white text-[#2c1e16] focus:outline-none focus:border-[#9e2a2b]"
-                />
-                <input
-                  type="text"
-                  name="message"
-                  placeholder="Nhập lời chúc tri ân thầy cô..."
-                  required
-                  class="w-2/3 px-2 py-1 text-[11px] rounded border border-[#c9933b]/60 bg-white text-[#2c1e16] focus:outline-none focus:border-[#9e2a2b]"
-                />
+
+            <!-- Bài thơ Lời Kết cắt viền bậc thang theo từng dòng trên giấy ô ly + Con tem thuyền buồm góc trái + Nhãn Nguyễn Thị Hồng Nhung giống hệt mẫu 8 -->
+            <div class="my-1 relative z-10 flex flex-col items-center">
+              <!-- Tem thuyền buồm cổ điển dán bên trái dòng thứ 9 giống hệt ảnh mẫu 8 -->
+              <div class="absolute left-1 bottom-8 z-20 bg-[#2b3a4a] text-amber-100 p-1 rounded border-2 border-dashed border-white shadow-md transform -rotate-4 text-center">
+                <span class="text-sm block leading-none">⛵</span>
+                <span class="text-[6px] font-mono">SAIL 12C4</span>
               </div>
+
+              <div class="flex flex-col items-center font-editorial text-[11px] sm:text-[11.4px] leading-[1.34] text-[#14261c] filter drop-shadow-[0_3px_5px_rgba(20,50,30,0.15)]">
+                <span class="grid-line-strip">Bạn bè chung lớp bên nhau,</span>
+                <span class="grid-line-strip">Cùng qua năm tháng nặng sâu nghĩa tình.</span>
+                <span class="grid-line-strip">Thương nhau sách vở cùng mình,</span>
+                <span class="grid-line-strip">Khó khăn chẳng ngại, lặng thinh giúp liền.</span>
+                <span class="grid-line-strip">Gian nan không quản ngại gì,</span>
+                <span class="grid-line-strip">Chia nhau từng bước, khắc ghi nghĩa tình.</span>
+                <span class="grid-line-strip">Mai này xa cách bóng hình,</span>
+                <span class="grid-line-strip">Chỉ mong giữ trọn chân tình thuở xưa.</span>
+                <span class="grid-line-strip">Dù xa xôi cách trăm miền,</span>
+                <span class="grid-line-strip">Vẫn còn giữ mãi niềm tin đợi chờ.</span>
+                <span class="grid-line-strip">Bạn ơi, dù cách đôi bờ,</span>
+                <span class="grid-line-strip">Chớ quên kỉ niệm, chớ nhòa dấu xưa.</span>
+                <span class="grid-line-strip">Tình thân chung lớp <strong>12C4</strong> mãi không nhạt nhòa.</span>
+              </div>
+
+              <div class="w-full text-right pr-2 mt-1">
+                <span class="inline-block bg-white px-3 py-0.5 rounded-full shadow-md border border-emerald-200 font-script text-sm font-extrabold text-[#12241a]">
+                  Nguyễn Thị Hồng Nhung • 12C4
+                </span>
+              </div>
+            </div>
+
+            <!-- Form gửi Lưu Bút trực tiếp gọn đẹp ở cuối trang -->
+            <div id="wishes-wall" class="grid grid-cols-2 gap-1 my-0.5 max-h-[48px] overflow-y-auto pr-1 relative z-10">
+              <div class="px-2 py-1 rounded bg-[#fff3b0] border border-amber-300 text-[9.5px] text-[#2c1e16] truncate">
+                “Chúc thầy cô 20/11 hạnh phúc!” — <strong>Thanh Long ❤️‍🩹</strong>
+              </div>
+              <div class="px-2 py-1 rounded bg-[#d8f3dc] border border-emerald-300 text-[9.5px] text-[#2c1e16] truncate">
+                “Mãi nhớ THPT Thiệu Hóa!” — <strong>12C4</strong>
+              </div>
+            </div>
+
+            <form onsubmit="handleAddWish(event)" class="bg-white/95 border border-emerald-600/40 rounded-lg p-1 shadow-xs flex gap-1 mt-auto relative z-10">
+              <input
+                type="text"
+                name="sender"
+                placeholder="Tên..."
+                required
+                class="w-1/4 px-1.5 py-0.5 text-[10px] rounded border border-emerald-300 bg-white text-[#2c1e16] focus:outline-none"
+              />
+              <input
+                type="text"
+                name="message"
+                placeholder="Viết lưu bút 12C4..."
+                required
+                class="w-2/4 px-1.5 py-0.5 text-[10px] rounded border border-emerald-300 bg-white text-[#2c1e16] focus:outline-none"
+              />
               <button
                 type="submit"
-                class="w-full py-1.5 rounded-lg bg-gradient-to-r from-[#9e2a2b] to-[#b85d19] text-white text-[11px] font-bold shadow hover:opacity-95 transition"
+                class="w-1/4 py-0.5 rounded bg-gradient-to-r from-[#2b8a3e] to-[#3d6b58] text-white text-[10px] font-bold shadow"
               >
-                <i class="fa-solid fa-paper-plane mr-1"></i> Ghim Lời Chúc Lên Tập San
+                Ghim
               </button>
             </form>
-            <div class="page-footer-bar">
-              <span>Tường Lưu Bút Tương Tác</span>
-              <span class="font-bold text-[#9e2a2b]">Trang 11</span>
+
+            <div class="page-footer-bar pl-2">
+              <span>Mục 11: Lời Kết — Ngày Gặp Lại</span>
+              <span class="font-bold text-[#2b8a3e]">Trang 11</span>
             </div>
             <div class="corner-curl-hint"></div>
           </div>
         `
       },
-      // TRANG 12
+
+      // ================= TRANG 12: BÌA SAU SANG TRỌNG (CHỮ KÝ THANH LONG ❤️‍🩹) =================
       {
         number: 12,
         title: "Bìa Sau: Trọn Vẹn Đạo Nghĩa Thầy Trò",
@@ -1700,21 +2529,36 @@
           <div class="page-inner cover-luxury relative select-none" style="padding: 18px;">
             <div class="relative w-full h-full border-2 border-[#d49b4b]/80 rounded-xl p-4 flex flex-col justify-between text-center overflow-hidden">
               <div class="pt-2">
-                <span class="text-[10px] uppercase tracking-[0.2em] text-amber-300/90 font-semibold">Ấn Phẩm Số Kỷ Niệm Ngày Nhà Giáo Việt Nam 20/11</span>
+                <span class="text-[10px] uppercase tracking-[0.2em] text-amber-300/90 font-semibold">
+                  Ấn Phẩm Số Kỷ Niệm Ngày Nhà Giáo Việt Nam 20/11
+                </span>
                 <div class="w-16 h-[1px] bg-amber-400/50 mx-auto mt-1.5"></div>
               </div>
+
               <div class="my-auto px-2 space-y-3">
                 <div class="w-16 h-16 rounded-full mx-auto bg-gradient-to-br from-amber-300/20 to-amber-600/20 border border-amber-300/50 flex items-center justify-center text-amber-300 shadow-inner">
                   <i class="fa-solid fa-award text-2xl"></i>
                 </div>
-                <h2 class="font-script text-2xl sm:text-3xl text-amber-300">“Một chữ cũng là thầy,<br/>nửa chữ cũng là thầy”</h2>
-                <p class="font-editorial italic text-xs sm:text-sm text-amber-100/85 max-w-xs mx-auto leading-relaxed">Kính chúc quý thầy cô giáo luôn dồi dào sức khỏe, tràn ngập niềm vui và mãi là ngọn đuốc sáng soi đường cho bao thế hệ học trò Việt Nam.</p>
+
+                <h2 class="font-script text-2xl sm:text-3xl text-amber-300">
+                  “Một chữ cũng là thầy,<br/>nửa chữ cũng là thầy”
+                </h2>
+
+                <p class="font-editorial italic text-xs sm:text-sm text-amber-100/85 max-w-xs mx-auto leading-relaxed">
+                  Kính chúc quý thầy cô giáo trường THPT Thiệu Hóa luôn dồi dào sức khỏe, tràn ngập niềm vui và mãi là ngọn đuốc sáng soi đường cho bao thế hệ học trò.
+                </p>
+
                 <div class="mt-3 p-3 rounded-2xl bg-white/10 backdrop-blur-md border border-amber-300/35 text-amber-100 shadow-lg">
                   <p class="text-[10px] uppercase tracking-widest text-amber-300 font-bold">Thiết kế, Lập trình & Đồ họa 3D</p>
-                  <p class="text-base sm:text-lg font-bold text-white mt-0.5">Thanh Long ❤️‍🩹</p>
-                  <p class="text-[10.5px] text-amber-200/80 mt-0.5">Tập San Điện Tử Tương Tác • Liquid Glass iOS Edition</p>
+                  <p class="text-base sm:text-lg font-bold text-white mt-0.5">
+                    Thanh Long ❤️‍🩹
+                  </p>
+                  <p class="text-[10.5px] text-amber-200/80 mt-0.5">
+                    Chi Đoàn 12C4 • Trường THPT Thiệu Hóa
+                  </p>
                 </div>
               </div>
+
               <div class="pt-2 border-t border-amber-400/25 flex items-center justify-between text-[11px] text-amber-200/80">
                 <button
                   onclick="jumpToPage(1); event.stopPropagation();"
@@ -1731,6 +2575,9 @@
       }
     ];
 
+    /***************************************************************************
+     * 2. STATE & 3D FLIPBOOK ENGINE (12 TRANG = 6 TỜ GIẤY TRÊN PC)
+     ***************************************************************************/
     let currentPageNumber = 1;
     let isMobileMode = window.innerWidth <= 920;
     let isMusicPlaying = true;
@@ -1748,6 +2595,7 @@
       dotsRoot.innerHTML = '';
       tocGrid.innerHTML = '';
 
+      // 6 Physical Sheets on Desktop (12 Pages)
       for (let s = 0; s < 6; s++) {
         const frontData = PAGES_DATA[s * 2];
         const backData = PAGES_DATA[s * 2 + 1];
@@ -1770,6 +2618,7 @@
         desktopRoot.appendChild(sheetEl);
       }
 
+      // 12 Individual Cards on Mobile
       PAGES_DATA.forEach((page, idx) => {
         const cardEl = document.createElement('div');
         cardEl.className = 'mobile-page-card future-page';
@@ -1965,6 +2814,40 @@
       } else if (face === 'back' && sheetIndex === flipped - 1) {
         turnPrev();
       }
+    }
+
+    // HIỆU ỨNG TƯƠNG TÁC THẺ KÉO PULL ↓ (KÉO XUỐNG) TRÊN TRANG 5 (ĐỒNG BỘ CẢ PC & MOBILE)
+    let isPullDrawerOpen = false;
+    function togglePullDrawer(event) {
+      if (event) event.stopPropagation();
+      unlockAudioImmediately();
+      isPullDrawerOpen = !isPullDrawerOpen;
+
+      const drawers = document.querySelectorAll('#thieuhoa-pull-drawer');
+      const mainTexts = document.querySelectorAll('.pull-main-text');
+      const subTexts = document.querySelectorAll('.pull-sub-text');
+
+      drawers.forEach((drawer) => {
+        if (isPullDrawerOpen) {
+          drawer.style.maxHeight = '420px';
+          drawer.style.paddingTop = '6px';
+          drawer.style.paddingBottom = '6px';
+        } else {
+          drawer.style.maxHeight = '0px';
+          drawer.style.paddingTop = '0px';
+          drawer.style.paddingBottom = '0px';
+        }
+      });
+
+      mainTexts.forEach((txt) => {
+        txt.textContent = isPullDrawerOpen ? 'PUSH ↑' : 'PULL ↓';
+      });
+
+      subTexts.forEach((sub) => {
+        sub.textContent = isPullDrawerOpen ? '(thu ảnh lại) ♡' : '(kéo xuống) nhẹ tay ♡';
+      });
+
+      playTributeChime();
     }
 
     function initTouchAndDragGestures() {
@@ -2173,10 +3056,10 @@
 
       walls.forEach((wall) => {
         const note = document.createElement('div');
-        note.className = `p-2 rounded-lg ${chosenColor} border shadow-sm text-[11px] text-[#2c1e16] transition-all`;
+        note.className = `p-2 rounded-lg ${chosenColor} border shadow-xs text-[10.5px] text-[#2c1e16] transition-all`;
         note.innerHTML = `
           <p class="font-medium">“${message.replace(/</g, '&lt;')}”</p>
-          <p class="text-[9.5px] font-bold text-[#9e2a2b] mt-1 text-right">— ${sender.replace(/</g, '&lt;')}</p>
+          <p class="text-[9px] font-bold text-[#9e2a2b] mt-1 text-right">— ${sender.replace(/</g, '&lt;')}</p>
         `;
         wall.prepend(note);
       });
@@ -2198,11 +3081,9 @@
       buildFlipbookDOM();
       initTouchAndDragGestures();
 
-      // Tự động phát nhạc MP3 ngay khi load trang (nếu trình duyệt cho phép)
       const audioEl = document.getElementById('bg-audio-element');
       if (audioEl) {
         audioEl.play().catch(() => {
-          // Trợ giúp kích hoạt nếu bị chặn autoplay
           console.log("Autoplay blocked, waiting for user gesture.");
         });
       }
