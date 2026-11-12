@@ -426,6 +426,12 @@
       border-right: 1px solid rgba(92, 67, 50, 0.18);
       box-shadow: inset -28px 0 38px -12px rgba(44, 30, 22, 0.22);
     }
+    .book-sheet:not(.flipped) .sheet-back {
+      pointer-events: none !important;
+    }
+    .book-sheet.flipped .sheet-front {
+      pointer-events: none !important;
+    }
 
     .page-turn-lighting {
       position: absolute;
@@ -1375,15 +1381,15 @@
        ========================================================================== -->
   <header class="fixed top-2.5 left-0 right-0 z-50 px-3 sm:px-6 flex items-center justify-between pointer-events-none">
     <div class="liquid-glass px-3.5 py-1.5 flex items-center gap-2.5 pointer-events-auto max-w-[58vw] sm:max-w-none">
-      <div class="w-8 h-8 rounded-full bg-gradient-to-br from-amber-400 via-orange-500 to-rose-500 flex items-center justify-center text-white shadow-md shrink-0">
-        <i class="fa-solid fa-book-open-reader text-xs"></i>
+      <div onclick="openPhotoZoomModal(this, event)" data-caption="👑 Thanh Long ❤️‍🩹 — Code & Thiết Kế Tập San 12C4" class="zoomable-photo-card w-8 h-8 sm:w-9 sm:h-9 rounded-full overflow-hidden border-2 border-amber-300 shadow-md shrink-0 cursor-zoom-in hover:scale-105 transition" title="Nhấn để phóng to ảnh đại diện Thanh Long ❤️‍🩹">
+        <img src="https://github.com/porccht/T-p-San-12C4/blob/main/thanhlong.png?raw=true" onerror="if(!this.dataset.fbk){this.dataset.fbk='1';this.src='https://raw.githubusercontent.com/porccht/T-p-San-12C4/main/thanhlong.png';}" alt="Avatar Thanh Long ❤️‍🩹" class="w-full h-full object-cover block" />
       </div>
       <div class="truncate">
         <div class="flex items-center gap-1.5">
-          <span class="text-xs sm:text-sm font-bold text-white tracking-wide truncate">Tập San Điện Tử 12C4</span>
+          <span class="text-xs sm:text-sm font-bold text-white tracking-wide truncate">Tập San Điện Tử 12C4 (24-27)</span>
         </div>
         <p class="text-[10px] sm:text-[11px] text-amber-100/85 truncate">
-          Code bởi <strong class="text-amber-300 font-semibold">Thanh Long ❤️‍🩹</strong>
+          Code bởi <a href="https://fb.com/htl165" target="_blank" rel="noopener noreferrer" class="text-amber-300 font-semibold hover:underline">Thanh Long ❤️‍🩹</a>
         </p>
       </div>
     </div>
@@ -1482,7 +1488,7 @@
             Mục Lục Tập San Điện Tử 12C4
           </h3>
           <p class="text-xs text-amber-100/80">
-            Chủ đề: 20/11 • Code bởi Thanh Long ❤️‍🩹
+            Chủ đề: 20/11 • Code bởi <a href="https://fb.com/htl165" target="_blank" rel="noopener noreferrer" class="text-amber-300 font-bold hover:underline">Thanh Long ❤️‍🩹</a>
           </p>
         </div>
         <button onclick="toggleTocModal()" class="liquid-btn px-3 py-1.5 text-xs">
@@ -1494,7 +1500,7 @@
 
       <div class="pt-3 border-t border-white/15">
         <div class="social-container justify-center w-full">
-          <a href="https://facebook.com/htl165" target="_blank" class="liquid-social-link fb">
+          <a href="https://fb.com/htl165" target="_blank" class="liquid-social-link fb">
             <span>📘 Facebook:</span> <span class="name-text font-bold">Thanh Long ❤️‍🩹</span>
           </a>
           <a href="https://tiktok.com/@tlongmmo" target="_blank" class="liquid-social-link tk">
@@ -2373,11 +2379,31 @@
                 <span class="grid-line-strip">Chắp cánh cho em vững bước chân.</span>
               </div>
 
-              <!-- Chữ ký tác giả đã đổi thành Trần Thị Quỳnh -->
+              <!-- Chữ ký tác giả Trần Thị Quỳnh -->
               <div class="w-full text-right pr-2 pt-0.5">
                 <span class="inline-block bg-white px-4 py-0.5 rounded-full shadow-md border-2 border-rose-200 font-script text-lg font-extrabold text-[#2b141d] transform -rotate-2">
                   ✒️ Trần Thị Quỳnh
                 </span>
+              </div>
+
+              <!-- Khung hiển thị tên Ban Thực Hiện Tập San ở khoảng trống Trang 6 -->
+              <div class="w-full grid grid-cols-2 gap-1.5 pt-1 pl-12 pr-1">
+                <div class="bg-[#fffdf9]/95 px-2.5 py-1 rounded-lg border border-rose-300 shadow-sm flex items-center gap-1.5 text-[10px] font-sans text-[#2c1e16] transform -rotate-1">
+                  <span>🎨</span>
+                  <span class="truncate"><strong>Thiết kế:</strong> <a href="https://fb.com/htl165" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" class="text-[#9e2a2b] font-bold hover:underline">Thanh Long ❤️‍🩹</a></span>
+                </div>
+                <div class="bg-[#fffdf9]/95 px-2.5 py-1 rounded-lg border border-rose-300 shadow-sm flex items-center gap-1.5 text-[10px] font-sans text-[#2c1e16] transform rotate-1">
+                  <span>📝</span>
+                  <span class="truncate"><strong>Biên tập:</strong> Mai Trang</span>
+                </div>
+                <div class="bg-[#fffdf9]/95 px-2.5 py-1 rounded-lg border border-rose-300 shadow-sm flex items-center gap-1.5 text-[10px] font-sans text-[#2c1e16] transform rotate-0.5">
+                  <span>📖</span>
+                  <span class="truncate"><strong>Nội dung:</strong> Huyền Trang</span>
+                </div>
+                <div class="bg-[#fffdf9]/95 px-2.5 py-1 rounded-lg border border-rose-300 shadow-sm flex items-center gap-1.5 text-[10px] font-sans text-[#2c1e16] transform -rotate-0.5">
+                  <span>📸</span>
+                  <span class="truncate"><strong>Hình ảnh:</strong> Ánh Tuyết</span>
+                </div>
               </div>
             </div>
 
@@ -3500,9 +3526,10 @@
                 </div>
               </div>
 
-              <div class="relative w-full flex-1 rounded-lg overflow-hidden bg-black border border-stone-300 shadow-inner flex items-center justify-center">
+              <div class="relative w-full flex-1 rounded-lg overflow-hidden border border-amber-200/80 shadow-sm">
                 <video
-                  class="loiket-video-player w-full h-full max-h-[155px] object-contain bg-black"
+                  class="loiket-video-player w-full h-full object-cover rounded-lg block"
+                  style="width: 100%; height: 100%; object-fit: cover; background: transparent;"
                   src="https://github.com/porccht/T-p-San-12C4/raw/main/tlong12c4/trang15.mp4"
                   playsinline
                   controls
@@ -3512,7 +3539,7 @@
             </div>
 
             <div class="page-footer-bar relative z-30 pl-2">
-              <span>Mục 12: Lời Kết Tập San 12C4 — Thanh Long ❤️‍🩹</span>
+              <span>Mục 12: Lời Kết Tập San 12C4 — <a href="https://fb.com/htl165" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" class="font-bold text-[#9e2a2b] hover:underline">Thanh Long ❤️‍🩹</a></span>
               <span class="font-bold text-[#9e2a2b]">Trang 15 (Hết)</span>
             </div>
             <div class="corner-curl-hint"></div>
@@ -3614,13 +3641,18 @@
 
       walls.forEach((wall) => {
         wall.className = `wishes-wall-container grid ${gridColsClass} my-1 flex-1 content-start overflow-y-auto pr-0.5 pt-1 relative z-20`;
-        wall.innerHTML = SAVED_WISHES.map((w) => `
+        wall.innerHTML = SAVED_WISHES.map((w) => {
+          const senderHtml = w.sender.includes('Thanh Long')
+            ? `<a href="https://fb.com/htl165" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" class="hover:underline">${w.sender}</a>`
+            : w.sender;
+          return `
           <div class="sticky-note-card ${w.color} border ${padClass} ${textSizeClass} text-[#2c1e16]" style="transform: rotate(${w.rot});">
             <div class="push-pin-3d ${w.pin}"></div>
             <p class="leading-snug pt-1">“${w.message}”</p>
-            <p class="text-[9px] font-bold text-[#9e2a2b] mt-1 text-right">— ${w.sender}</p>
+            <p class="text-[9px] font-bold text-[#9e2a2b] mt-1 text-right">— ${senderHtml}</p>
           </div>
-        `).join('');
+        `;
+        }).join('');
       });
     }
 
@@ -3820,11 +3852,6 @@
       const zoomCaption = document.getElementById('photo-zoom-caption');
       if (!overlay || !zoomCard || !zoomImg) return;
 
-      if (isZoomModalOpen) {
-        closePhotoZoomModal();
-        return;
-      }
-
       const imgEl = (cardEl && cardEl.tagName === 'IMG') ? cardEl : (cardEl ? cardEl.querySelector('img') : null);
       if (!imgEl) return;
 
@@ -3918,9 +3945,11 @@
         if (s < flippedCount) {
           sheetEl.classList.add('flipped');
           sheetEl.style.zIndex = 10 + s;
+          sheetEl.style.pointerEvents = (s === flippedCount - 1) ? 'auto' : 'none';
         } else {
           sheetEl.classList.remove('flipped');
           sheetEl.style.zIndex = 30 - s;
+          sheetEl.style.pointerEvents = (s === flippedCount) ? 'auto' : 'none';
         }
       }
 
