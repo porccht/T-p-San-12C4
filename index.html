@@ -466,42 +466,34 @@
     }
 
     /* ==========================================================================
-       MOBILE SINGLE-PAGE 3D FLIP ENGINE (<= 920px) — 1:1 HEYZINE-GRADE PC PARITY
+       MOBILE SINGLE-PAGE 3D FLIP ENGINE (<= 920px)
        ========================================================================== */
     .mobile-book-stage {
       display: none;
       position: relative;
-      width: 480px;
+      width: 440px;
       height: 640px;
       flex-shrink: 0;
-      perspective: 2400px;
+      perspective: 1800px;
       transform-style: preserve-3d;
       transform-origin: center center;
-      transform: scale3d(var(--mobile-book-scale, 0.85), var(--mobile-book-scale, 0.85), 1) rotateX(3deg);
-      transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+      transform: scale(var(--mobile-book-scale, 0.88));
     }
     .mobile-spine-edge {
       position: absolute;
-      left: -10px;
-      top: -2px;
-      bottom: -2px;
-      width: 18px;
-      background: linear-gradient(90deg, #2b120c, #6b3322, #8e4830, #d49b4b 55%, #4a2218);
+      left: -6px; top: 4px; bottom: 4px;
+      width: 14px;
+      background: linear-gradient(90deg, #3b1c14, #8e4830, #d49b4b, #4a2218);
       border-radius: 8px 0 0 8px;
-      box-shadow: -4px 8px 20px rgba(0,0,0,0.65);
-      z-index: 45;
-      pointer-events: none;
+      box-shadow: -3px 4px 14px rgba(0,0,0,0.55);
+      z-index: 40;
     }
     .mobile-paper-stack {
       position: absolute;
-      top: 5px;
-      bottom: 5px;
-      left: 2px;
-      right: -7px;
-      background: linear-gradient(90deg, var(--paper-bg) 94%, #d8c3a2 96%, #efe3ce 98%, #bda37d 100%);
-      border-radius: 0 15px 15px 0;
-      box-shadow: 12px 10px 26px rgba(0,0,0,0.52);
-      pointer-events: none;
+      inset: 4px -6px 4px 4px;
+      background: #efe3ce;
+      border-radius: 4px 18px 18px 4px;
+      box-shadow: 8px 8px 24px rgba(0,0,0,0.55);
     }
     .mobile-page-card {
       position: absolute;
@@ -513,54 +505,18 @@
         radial-gradient(rgba(139, 98, 59, 0.045) 1px, transparent 0),
         radial-gradient(rgba(139, 98, 59, 0.035) 1px, transparent 0);
       background-size: 24px 24px;
-      background-position: 0 0, 12px 12px;
-      border-radius: 0 14px 14px 0;
-      border-left: 1px solid rgba(92, 67, 50, 0.2);
+      border-radius: 6px 18px 18px 6px;
       transform-origin: left center;
       transform-style: preserve-3d;
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-      will-change: transform;
-      transition: transform 0.86s cubic-bezier(0.32, 0.72, 0, 1), box-shadow 0.86s ease;
-      box-shadow: inset 28px 0 38px -12px rgba(44, 30, 22, 0.22), 0 10px 28px rgba(0, 0, 0, 0.35);
-      overflow: hidden;
+      transition: transform 0.68s cubic-bezier(0.25, 1, 0.35, 1), opacity 0.45s ease;
+      box-shadow: inset 22px 0 32px -12px rgba(44, 30, 22, 0.24), 0 14px 34px rgba(0, 0, 0, 0.45);
+      overflow-y: auto;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
     }
-    .mobile-page-card.turning .page-turn-lighting { opacity: 1; }
-    .mobile-page-card.hidden-page { display: none !important; pointer-events: none !important; }
-    .mobile-page-card.past-page {
-      transform: rotateY(-180deg);
-      pointer-events: none;
-      z-index: 15;
-      box-shadow: inset 28px 0 38px -12px rgba(44, 30, 22, 0.22);
-    }
-    .mobile-page-card.active-page {
-      transform: rotateY(0deg);
-      pointer-events: auto;
-      z-index: 30;
-      box-shadow: inset 28px 0 38px -12px rgba(44, 30, 22, 0.22), -6px 12px 28px rgba(0, 0, 0, 0.42);
-    }
-    .mobile-page-card.next-under-page {
-      transform: rotateY(0deg);
-      pointer-events: none;
-      z-index: 20;
-    }
-    .mobile-page-card.future-page {
-      transform: rotateY(0deg);
-      pointer-events: none;
-      z-index: 10;
-    }
-    .mobile-under-shadow {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.55s ease;
-      background: linear-gradient(90deg, rgba(20, 10, 5, 0.48) 0%, rgba(20, 10, 5, 0.16) 45%, transparent 100%);
-      z-index: 35;
-    }
-    .mobile-page-card.next-under-page.uncovering .mobile-under-shadow {
-      opacity: 1;
-    }
+    .mobile-page-card.past-page { transform: rotateY(-112deg); opacity: 0; pointer-events: none; }
+    .mobile-page-card.active-page { transform: rotateY(0deg); opacity: 1; z-index: 20; }
+    .mobile-page-card.future-page { transform: rotateY(0deg) scale(0.99); opacity: 0; z-index: 10; pointer-events: none; }
 
     @media (max-width: 920px) {
       .book-scene { display: none !important; }
@@ -1074,66 +1030,6 @@
     #audio-hidden-container {
       position: fixed; width: 1px; height: 1px; bottom: -10px; right: -10px; opacity: 0.01; pointer-events: none; z-index: -1;
     }
-
-    /* ==========================================================================
-       HEYZINE 60FPS DIAGONAL PAGE-CURL ENGINE (PC 2-PAGE & MOBILE 1-PAGE)
-       ========================================================================== */
-    .heyzine-curl-overlay {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      z-index: 60;
-      overflow: visible;
-    }
-    .heyzine-under-shadow-host {
-      position: absolute;
-      inset: 0;
-      overflow: hidden;
-      pointer-events: none;
-      z-index: 42;
-    }
-    .heyzine-flap-drop-shadow {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      z-index: 48;
-      filter: drop-shadow(-8px 10px 18px rgba(18, 9, 4, 0.38)) drop-shadow(-2px 3px 6px rgba(18, 9, 4, 0.24));
-    }
-    .heyzine-flap-surface {
-      position: absolute;
-      inset: 0;
-      width: 480px;
-      height: 640px;
-      background: linear-gradient(135deg, #fffdf9 0%, #f7efe0 55%, #ebe0cc 100%);
-      overflow: hidden;
-      pointer-events: none;
-      will-change: clip-path, transform;
-    }
-    .heyzine-cylinder-ribbon {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 300px;
-      height: 1800px;
-      pointer-events: none;
-      transform-origin: center center;
-      will-change: transform, width, opacity;
-    }
-    .heyzine-crease-cast-ribbon {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 220px;
-      height: 1800px;
-      pointer-events: none;
-      transform-origin: center center;
-      will-change: transform, width, opacity;
-    }
-    /* Hide static corner-curl-hint because Heyzine engine renders real dynamic 3D corner curls */
-    .corner-curl-hint {
-      display: none !important;
-    }
-
   </style>
 </head>
 <body>
@@ -1695,7 +1591,6 @@
     </div>
 
     <div id="mobile-book" class="mobile-book-stage">
-      <div class="book-table-shadow"></div>
       <div class="mobile-spine-edge"></div>
       <div class="mobile-paper-stack"></div>
       <div id="mobile-pages-root" class="w-full h-full relative" style="transform-style: preserve-3d;"></div>
@@ -1961,10 +1856,10 @@
     let pendingEditWishId = null;
     let pendingDeleteWishId = null;
 
-    // Danh sách từ ngữ khiếm nhã cần lọc tự động (hỗ trợ đầy đủ dấu tiếng Việt Unicode)
+    // Danh sách từ ngữ khiếm nhã cần lọc tự động
     const BAD_WORDS_DICT = [
-      { pattern: /(?<![\p{L}\p{N}_])(đm|dm|đkm|dkm|đcm|dcm|vcl|vl|vkl|cc|cl|đéo|deo|đĩ|di~|lồn|lon|buồi|buoi|cặc|cac|địt|dit|chó|cho'|óc chó|oc cho|ngu|đần|cút|cut|xéo|mẹ mày|me may|bố mày|bo may|vãi|vai~)(?![\p{L}\p{N}_])/giu, replacement: "đáng yêu" },
-      { pattern: /(?<![\p{L}\p{N}_])(fuck|shit|bitch|asshole|bastard|dick|pussy|wtf|stfu)(?![\p{L}\p{N}_])/giu, replacement: "*" }
+      { pattern: /\b(đm|dm|đkm|dkm|đcm|dcm|vcl|vl|vkl|cc|cl|đéo|deo|đĩ|di~|lồn|lon|buồi|buoi|cặc|cac|địt|dit|chó|cho'|óc chó|oc cho|ngu|đần|cút|cut|xéo|mẹ mày|me may|bố mày|bo may|vãi|vai~)\b/gi, replacement: "đáng yêu" },
+      { pattern: /\b(fuck|shit|bitch|asshole|bastard|dick|pussy|wtf|stfu)\b/gi, replacement: "*" }
     ];
 
     // Bộ lọc kiểm duyệt & sửa tự động (autoModerateText)
@@ -1978,11 +1873,9 @@
       // 2. Rút gọn các ký tự kéo dài bất thường (/(.)\1{5,}/g -> $1$1$1)
       text = text.replace(/(.)\1{5,}/g, "$1$1$1");
 
-      // 3. Tự động ẩn các đường link lạ (chỉ cho phép giữ link ở lưu bút đặc biệt của Admin Thanh Long)
-      if (!allowLinks) {
-        const linkRegex = /(https?:\/\/[^\s]+)|(www\.[^\s]+)|(\b[a-zA-Z0-9-]+\.(com|vn|net|org|io|me|ly)\b[^\s]*)|(\b(t\.me|zalo\.me|bit\.ly)\/[^\s]*)/gi;
-        text = text.replace(linkRegex, "[link ẩn]");
-      }
+      // 3. Tự động ẩn các đường link lạ (http, https, .com, .vn, t.me, zalo.me, bit.ly)
+      const linkRegex = /(https?:\/\/[^\s]+)|(www\.[^\s]+)|(\b[a-zA-Z0-9-]+\.(com|vn|net|org|io|me|ly)\b[^\s]*)|(\b(t\.me|zalo\.me|bit\.ly)\/[^\s]*)/gi;
+      text = text.replace(linkRegex, "[link ẩn]");
 
       // 4. Thay thế từ ngữ khiếm nhã/chửi bới trong BAD_WORDS_DICT
       BAD_WORDS_DICT.forEach((rule) => {
@@ -1990,8 +1883,8 @@
       });
 
       // 5. Giới hạn độ dài tối đa
-      if (text.length > maxLen) {
-        text = text.slice(0, maxLen).trim();
+      if (text.length > maxLength) {
+        text = text.slice(0, maxLength).trim();
       }
 
       return text;
@@ -2498,7 +2391,7 @@
 
               <div class="bg-white px-5 py-1 rounded-[26px] shadow-[0_6px_14px_rgba(180,35,24,0.28)] border-2 border-white transform -rotate-2">
                 <span class="font-script text-3xl sm:text-4xl font-black text-[#d9381e]" style="text-shadow: 2px 2px 0px #f8b4a8;">
-                  nhà trường
+                  Nhà Trường
                 </span>
               </div>
 
@@ -2627,7 +2520,7 @@
                       PULL ↓
                     </span>
                     <span class="pull-sub-text font-hand text-[9px] font-bold text-amber-100">
-                      (chạm khung đỏ để kéo xuống) nhẹ tay ♡
+                      chạm khung đỏ để kéo xuốngnhẹ tay ♡
                     </span>
                   </button>
                 </div>
@@ -2668,7 +2561,7 @@
             </div>
 
             <div class="page-footer-bar pl-2">
-              <span>Chạm vào khung đỏ để xổ / thu chuỗi ảnh</span>
+              <span>Trường THPT Thiệu </span>
               <span class="font-bold text-[#9e2a2b]">Trang 05</span>
             </div>
             <div class="corner-curl-hint"></div>
@@ -3294,9 +3187,9 @@
 
             <!-- Lưới Khung Ảnh Giấy Nhớ & Polaroid Tập Thể 12C4 (2 ảnh trên & ảnh 3 hiển thị trọn vẹn 100% không bị khuất, 2 giấy nhớ đẩy sát xuống dưới) -->
             <div class="flex-1 flex flex-col justify-between py-1 relative z-20">
-              <!-- Khối 3 bức ảnh phía trên (Đã phóng to ảnh 13.1 & 13.2 và hạ thấp ảnh 13.3 lấp khoảng trống) -->
+              <!-- Khối 3 bức ảnh phía trên -->
               <div class="grid grid-cols-2 gap-2.5 items-start">
-                <!-- Tấm ảnh ghim 4 (Phóng to chiều cao 182px bù trừ khoảng trống bên dưới) -->
+                <!-- Tấm ảnh ghim 4 (Hiển thị trọn vẹn 100% ảnh gốc không bị khuất) -->
                 <div
                   onclick="openPhotoZoomModal(this, event)"
                   data-caption="🔥 Lửa trại & Sức trẻ Đoàn viên 12C4 rực cháy"
@@ -3307,14 +3200,14 @@
                     src="https://github.com/porccht/T-p-San-12C4/raw/main/tlong12c4/trang13.1.jpg"
                     alt="Hội trại 12C4"
                     class="w-full rounded-xs border border-sky-200 mt-0.5 block bg-[#f8fdff]"
-                    style="width: 100%; height: 182px; object-fit: fill;"
+                    style="width: 100%; height: 118px; object-fit: fill;"
                   />
                   <p class="font-hand text-[10px] font-bold text-center text-sky-950 mt-1 mb-0 leading-tight">
                     🔥 Lửa trại & Sức trẻ 12C4
                   </p>
                 </div>
 
-                <!-- Tấm ảnh ghim 5 (Phóng to chiều cao 182px bù trừ khoảng trống bên dưới) -->
+                <!-- Tấm ảnh ghim 5 (Hiển thị trọn vẹn 100% ảnh gốc không bị khuất) -->
                 <div
                   onclick="openPhotoZoomModal(this, event)"
                   data-caption="Thầy chủ nhiệm"
@@ -3325,18 +3218,18 @@
                     src="https://github.com/porccht/T-p-San-12C4/raw/main/tlong12c4/trang13.2.jpg"
                     alt="Thầy chủ nhiệm"
                     class="w-full rounded-xs border border-amber-200 mt-0.5 block bg-[#fffdf5]"
-                    style="width: 100%; height: 182px; object-fit: fill;"
+                    style="width: 100%; height: 118px; object-fit: fill;"
                   />
                   <p class="font-hand text-[10px] font-bold text-center text-amber-950 mt-1 mb-0 leading-tight">
                     Người Cha Kính Yêu
                   </p>
                 </div>
 
-                <!-- Tấm ảnh ghim 6 (Ảnh 13.3 hạ thấp xuống sát 2 giấy nhớ bên dưới để nhường diện tích cho 2 ảnh trên phóng to) -->
+                <!-- Tấm ảnh ghim 6 (Ảnh 3 Trang 13: Hiển thị trọn vẹn 100% khung hình và đầy đủ dòng chữ chú thích) -->
                 <div
                   onclick="openPhotoZoomModal(this, event)"
                   data-caption="✨ Chuyến tàu thanh xuân 12C4 — Hẹn gặp lại ở đỉnh vinh quang!"
-                  class="zoomable-photo-card col-span-2 bg-white p-1.5 pb-1.5 rounded shadow-[0_10px_20px_rgba(40,22,10,0.25)] border border-stone-200 relative transform -rotate-0.5 mt-1.5"
+                  class="zoomable-photo-card col-span-2 bg-white p-1.5 pb-1.5 rounded shadow-[0_10px_20px_rgba(40,22,10,0.25)] border border-stone-200 relative transform -rotate-0.5 mt-0.5"
                 >
                   <div class="push-pin-3d push-pin-teal"></div>
                   <div class="washi-tape washi-sage -top-2.5 left-8 -rotate-3"></div>
@@ -3346,7 +3239,7 @@
                     onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='https://github.com/porccht/T-p-San-12C4/raw/main/tlong12c4/trang13.3.jpg';}"
                     alt="Kỷ yếu 12C4"
                     class="w-full rounded-xs border border-stone-200 block bg-[#faf6ee]"
-                    style="width: 100%; height: 210px; object-fit: fill;"
+                    style="width: 100%; height: 214px; object-fit: fill;"
                   />
                   <div class="flex items-center justify-between gap-1 mt-1 px-1">
                     <span class="font-editorial text-[13px] font-bold text-[#2c1e16] leading-tight whitespace-nowrap">✨ Chuyến tàu thanh xuân 12C4 — Mãi bên nhau!</span>
@@ -3355,8 +3248,8 @@
                 </div>
               </div>
 
-              <!-- 2 Giấy nhớ cảm xúc đặt sát chân trang -->
-              <div class="grid grid-cols-2 gap-2.5 items-start mt-auto mb-0.5 pt-1">
+              <!-- 2 Giấy nhớ cảm xúc đã được hạ thấp xuống sát chân trang (~2cm) để nhường không gian cho 3 bức ảnh phía trên -->
+              <div class="grid grid-cols-2 gap-2.5 items-start mt-auto mb-0.5 pt-2">
                 <div class="sticky-note-card bg-[#f3d9fa] border border-purple-300 p-1.5 transform -rotate-1">
                   <div class="push-pin-3d push-pin-gold"></div>
                   <p class="font-hand text-[10px] text-purple-950 leading-snug pt-0.5 m-0">
@@ -3427,7 +3320,7 @@
                   type="text"
                   name="message"
                   maxlength="120"
-                  placeholder="Viết lời chúc/lưu bút 12C4..."
+                  placeholder="Viết lời chúc/lưu bút  12C4..."
                   required
                   class="w-[66%] px-2 py-1 font-hand text-[10.5px] rounded-md border border-[#c9933b]/60 bg-white text-[#2c1e16] focus:outline-none focus:border-[#9e2a2b]"
                 />
@@ -3527,7 +3420,7 @@
                   onclick="jumpToPage(1); event.stopPropagation();"
                   class="px-2.5 py-0.5 rounded-full bg-[#9e2a2b] text-amber-100 font-sans text-[9px] font-bold shadow hover:bg-[#7c1d1d] transition cursor-pointer"
                 >
-                  ↺ Đọc lại từ Bìa Trước
+                  ↺ Hay Quá Tôi Xem Lại 
                 </button>
               </div>
 
@@ -3829,7 +3722,7 @@
       const availW = Math.max(300, window.innerWidth - 36);
       const availH = Math.max(360, window.innerHeight - 130);
       const desktopScale = Math.max(0.45, Math.min(0.85, availW / 960, availH / 640));
-      const mobileScale = Math.max(0.52, Math.min(0.98, (window.innerWidth - 18) / 480, (window.innerHeight - 116) / 640));
+      const mobileScale = Math.max(0.55, Math.min(0.98, (window.innerWidth - 14) / 440, (window.innerHeight - 118) / 640));
       document.documentElement.style.setProperty('--book-scale', desktopScale.toFixed(3));
       document.documentElement.style.setProperty('--mobile-book-scale', mobileScale.toFixed(3));
     }
@@ -3901,82 +3794,6 @@
       });
     }
 
-    // =========================================================================
-    // HEYZINE 60FPS REALISTIC DIAGONAL PAGE-CURL ENGINE (PC 2-PAGE & MOBILE 1-PAGE)
-    // =========================================================================
-    const PAGE_W = 480;
-    const PAGE_H = 640;
-    const PAGE_RECT_POLY = [
-      [0, 0],
-      [PAGE_W, 0],
-      [PAGE_W, PAGE_H],
-      [0, PAGE_H]
-    ];
-
-    let curlAnimFrameId = null;
-    let isCurlAnimating = false;
-    let activeCurlState = null; // { mode: 'mobile'|'desktop', dir: 'next'|'prev', y0: 0|640, cx, cy, sheetIdx, fromPage, toPage }
-    let idlePeekTimer = null;
-
-    // Cắt đa giác hình chữ nhật trang sách theo nửa mặt phẳng của đường nếp gấp chéo L (Sutherland-Hodgman)
-    function clipPagePolygon(poly, vx, vy, mx, my, keepLe) {
-      const out = [];
-      const n = poly.length;
-      const evalPt = (p) => vx * (p[0] - mx) + vy * (p[1] - my);
-      const inside = (val) => (keepLe ? val <= 1e-4 : val >= -1e-4);
-
-      for (let i = 0; i < n; i++) {
-        const cur = poly[i];
-        const prev = poly[(i + n - 1) % n];
-        const curVal = evalPt(cur);
-        const prevVal = evalPt(prev);
-        const curIn = inside(curVal);
-        const prevIn = inside(prevVal);
-
-        if (curIn !== prevIn) {
-          const denom = prevVal - curVal;
-          const t = Math.abs(denom) > 1e-9 ? prevVal / denom : 0.5;
-          out.push([
-            prev[0] + t * (cur[0] - prev[0]),
-            prev[1] + t * (cur[1] - prev[1])
-          ]);
-        }
-        if (curIn) {
-          out.push(cur);
-        }
-      }
-      return out;
-    }
-
-    function polyToClipPath(poly) {
-      if (!poly || poly.length < 3) return 'polygon(0px 0px, 0px 0px, 0px 0px)';
-      return 'polygon(' + poly.map((p) => `${p[0].toFixed(1)}px ${p[1].toFixed(1)}px`).join(', ') + ')';
-    }
-
-    // Giới hạn vật lý gáy sách (Spine Radius Constraint) để trang giấy uốn cong tự nhiên mà không bao giờ bị rách khỏi gáy
-    function clampPeelPointToSpine(cx, cy, x0, y0, spineX) {
-      let dx1 = cx - spineX;
-      let dy1 = cy - y0;
-      const dist1 = Math.hypot(dx1, dy1);
-      if (dist1 > PAGE_W) {
-        const scale1 = PAGE_W / dist1;
-        cx = spineX + dx1 * scale1;
-        cy = y0 + dy1 * scale1;
-      }
-
-      const oppY = y0 === 0 ? PAGE_H : 0;
-      let dx2 = cx - spineX;
-      let dy2 = cy - oppY;
-      const maxDiag = Math.hypot(PAGE_W, PAGE_H);
-      const dist2 = Math.hypot(dx2, dy2);
-      if (dist2 > maxDiag) {
-        const scale2 = maxDiag / dist2;
-        cx = spineX + dx2 * scale2;
-        cy = oppY + dy2 * scale2;
-      }
-      return [cx, cy];
-    }
-
     function buildFlipbookDOM() {
       const desktopRoot = document.getElementById('desktop-sheets-root');
       const mobileRoot = document.getElementById('mobile-pages-root');
@@ -3998,11 +3815,11 @@
         sheetEl.dataset.sheetIndex = s;
 
         sheetEl.innerHTML = `
-          <div class="sheet-face sheet-front" id="desktop-front-${s}" onclick="handleDesktopSheetClick(${s}, 'front', event)">
+          <div class="sheet-face sheet-front" onclick="handleDesktopSheetClick(${s}, 'front', event)">
             <div class="page-turn-lighting"></div>
             ${frontData ? frontData.html : ''}
           </div>
-          <div class="sheet-face sheet-back" id="desktop-back-${s}" onclick="handleDesktopSheetClick(${s}, 'back', event)">
+          <div class="sheet-face sheet-back" onclick="handleDesktopSheetClick(${s}, 'back', event)">
             <div class="page-turn-lighting"></div>
             ${backData ? backData.html : '<div class="page-inner cover-luxury"></div>'}
           </div>
@@ -4010,33 +3827,11 @@
         desktopRoot.appendChild(sheetEl);
       }
 
-      // Lớp phủ hiệu ứng uốn cong trang 3D (Heyzine Curl Overlay) cho bản PC 2 mặt
-      const desktopCurlOverlay = document.createElement('div');
-      desktopCurlOverlay.id = 'desktop-curl-overlay';
-      desktopCurlOverlay.className = 'heyzine-curl-overlay hidden';
-      desktopCurlOverlay.innerHTML = `
-        <div id="desktop-curl-under-shadow" class="heyzine-under-shadow-host" style="width: 960px; height: 640px;">
-          <div id="desktop-crease-cast-ribbon" class="heyzine-crease-cast-ribbon"></div>
-        </div>
-        <div id="desktop-curl-flap-shadow" class="heyzine-flap-drop-shadow" style="width: 960px; height: 640px;">
-          <div id="desktop-curl-flap-card" class="heyzine-flap-surface">
-            <div id="desktop-curl-flap-content" class="w-full h-full relative"></div>
-            <div id="desktop-curl-cylinder-ribbon" class="heyzine-cylinder-ribbon"></div>
-          </div>
-        </div>
-      `;
-      desktopRoot.appendChild(desktopCurlOverlay);
-
       PAGES_DATA.forEach((page, idx) => {
         const cardEl = document.createElement('div');
         cardEl.className = 'mobile-page-card future-page';
         cardEl.id = `mobile-page-${idx + 1}`;
-        cardEl.onclick = (ev) => handleMobileCardEdgeClick(idx + 1, ev);
-        cardEl.innerHTML = `
-          <div class="page-turn-lighting"></div>
-          <div class="mobile-under-shadow"></div>
-          ${page.html}
-        `;
+        cardEl.innerHTML = page.html;
         mobileRoot.appendChild(cardEl);
 
         const dotBtn = document.createElement('button');
@@ -4069,22 +3864,6 @@
         `;
         tocGrid.appendChild(tocItem);
       });
-
-      // Lớp phủ hiệu ứng uốn cong góc giấy (Heyzine Curl Overlay) cho bản Điện thoại 1 mặt
-      const mobileCurlOverlay = document.createElement('div');
-      mobileCurlOverlay.id = 'mobile-curl-overlay';
-      mobileCurlOverlay.className = 'heyzine-curl-overlay hidden';
-      mobileCurlOverlay.innerHTML = `
-        <div id="mobile-curl-under-shadow" class="heyzine-under-shadow-host">
-          <div id="mobile-crease-cast-ribbon" class="heyzine-crease-cast-ribbon"></div>
-        </div>
-        <div id="mobile-curl-flap-shadow" class="heyzine-flap-drop-shadow">
-          <div id="mobile-curl-flap-card" class="heyzine-flap-surface">
-            <div id="mobile-curl-cylinder-ribbon" class="heyzine-cylinder-ribbon"></div>
-          </div>
-        </div>
-      `;
-      mobileRoot.appendChild(mobileCurlOverlay);
 
       renderAndAutoFitWishes();
       updateBookViewportScale();
@@ -4245,6 +4024,7 @@
     let isPullDrawerOpen = false;
     function togglePullDrawer(event) {
       if (event) {
+        // Nếu người dùng chạm trực tiếp vào bức ảnh bên trong khung đỏ thì ưu tiên phóng to ảnh đó
         if (event.target.closest('img')) return;
         event.stopPropagation();
       }
@@ -4273,404 +4053,8 @@
       playRealisticPaperFlipSound();
     }
 
-    // Dọn dẹp lớp phủ uốn góc giấy sau khi hoàn tất lật trang
-    function clearCurlVisuals() {
-      const mobOverlay = document.getElementById('mobile-curl-overlay');
-      if (mobOverlay) mobOverlay.classList.add('hidden');
-      const deskOverlay = document.getElementById('desktop-curl-overlay');
-      if (deskOverlay) deskOverlay.classList.add('hidden');
-
-      for (let p = 1; p <= TOTAL_PAGES; p++) {
-        const c = document.getElementById(`mobile-page-${p}`);
-        if (c) {
-          c.style.clipPath = '';
-          c.style.webkitClipPath = '';
-        }
-      }
-      for (let s = 0; s < TOTAL_SHEETS; s++) {
-        const sh = document.getElementById(`desktop-sheet-${s}`);
-        const fr = document.getElementById(`desktop-front-${s}`);
-        const bk = document.getElementById(`desktop-back-${s}`);
-        if (sh) sh.style.transition = '';
-        if (fr) {
-          fr.style.clipPath = '';
-          fr.style.webkitClipPath = '';
-        }
-        if (bk) {
-          bk.style.clipPath = '';
-          bk.style.webkitClipPath = '';
-        }
-      }
-    }
-
-    // Vẽ khung hình uốn cong góc giấy trên Mobile (1 mặt đơn 480x640, giống hệt video Heyzine 00:44 - 01:26)
-    function renderMobileCurlFrame(fromPageNum, toPageNum, y0, rawCx, rawCy) {
-      const fromCard = document.getElementById(`mobile-page-${fromPageNum}`);
-      const toCard = document.getElementById(`mobile-page-${toPageNum}`);
-      const overlay = document.getElementById('mobile-curl-overlay');
-      const flapCard = document.getElementById('mobile-curl-flap-card');
-      const cylRibbon = document.getElementById('mobile-curl-cylinder-ribbon');
-      const castRibbon = document.getElementById('mobile-crease-cast-ribbon');
-      if (!fromCard || !toCard || !overlay || !flapCard || !cylRibbon || !castRibbon) return;
-
-      // Đảm bảo cả trang đang lật và trang bên dưới đều hiển thị ở góc 0deg phẳng tuyệt đối
-      fromCard.classList.remove('hidden-page', 'past-page', 'future-page');
-      fromCard.classList.add('active-page');
-      fromCard.style.zIndex = 30;
-      fromCard.style.transition = 'none';
-      fromCard.style.transform = 'rotateY(0deg)';
-
-      toCard.classList.remove('hidden-page', 'past-page', 'future-page');
-      toCard.classList.add('next-under-page');
-      toCard.style.zIndex = 22;
-      toCard.style.transition = 'none';
-      toCard.style.transform = 'rotateY(0deg)';
-
-      const [cx, cy] = clampPeelPointToSpine(rawCx, rawCy, PAGE_W, y0, 0);
-      const P0 = [PAGE_W, y0];
-      const vx = P0[0] - cx;
-      const vy = P0[1] - cy;
-      const dist = Math.hypot(vx, vy);
-
-      if (dist < 2) {
-        fromCard.style.clipPath = '';
-        overlay.classList.add('hidden');
-        return;
-      }
-
-      const mx = (P0[0] + cx) * 0.5;
-      const my = (P0[1] + cy) * 0.5;
-
-      const unpeeledPoly = clipPagePolygon(PAGE_RECT_POLY, vx, vy, mx, my, true);
-      const peeledPoly = clipPagePolygon(PAGE_RECT_POLY, vx, vy, mx, my, false);
-
-      if (peeledPoly.length < 3) {
-        fromCard.style.clipPath = '';
-        overlay.classList.add('hidden');
-        return;
-      }
-
-      // Cắt trang hiện tại theo đường nếp gấp chéo L để lộ trực tiếp trang bên dưới
-      const unpeeledCss = polyToClipPath(unpeeledPoly);
-      fromCard.style.clipPath = unpeeledCss;
-      fromCard.style.webkitClipPath = unpeeledCss;
-
-      // Phản xạ đa giác góc giấy qua đường nếp gấp L để tạo mép giấy uốn cong 3D
-      const len2 = vx * vx + vy * vy;
-      const reflectedPoly = peeledPoly.map((pt) => {
-        const dot = (pt[0] - mx) * vx + (pt[1] - my) * vy;
-        return [
-          pt[0] - 2 * (dot / len2) * vx,
-          pt[1] - 2 * (dot / len2) * vy
-        ];
-      });
-
-      overlay.classList.remove('hidden');
-      const flapCss = polyToClipPath(reflectedPoly);
-      flapCard.style.clipPath = flapCss;
-      flapCard.style.webkitClipPath = flapCss;
-      flapCard.style.transform = 'none';
-
-      // Đặt dải sáng bóng trụ tròn 3D (Cylindrical Roll Shading) dọc theo đúng đường nếp gấp L
-      const angleRad = Math.atan2(vy, vx);
-      const angleDeg = (angleRad * 180) / Math.PI;
-      const rollWidth = Math.max(70, Math.min(340, dist * 0.95));
-
-      cylRibbon.style.width = `${rollWidth.toFixed(0)}px`;
-      cylRibbon.style.transform = `translate3d(${(mx - rollWidth * 0.5).toFixed(1)}px, ${(my - 900).toFixed(1)}px, 0) rotate(${angleDeg.toFixed(2)}deg)`;
-      cylRibbon.style.background = `linear-gradient(90deg,
-        rgba(185, 162, 130, 0.42) 0%,
-        rgba(242, 234, 218, 0.25) 16%,
-        rgba(255, 255, 255, 0.88) 34%,
-        rgba(255, 253, 248, 0.94) 44%,
-        rgba(218, 200, 172, 0.55) 49.2%,
-        rgba(65, 42, 22, 0.32) 50%,
-        transparent 50.5%)`;
-
-      // Bóng đổ мяг (Cast Shadow) trải dọc theo đường nếp gấp lên trang bên dưới
-      const castWidth = Math.max(60, Math.min(240, dist * 0.65));
-      castRibbon.style.width = `${castWidth.toFixed(0)}px`;
-      castRibbon.style.transform = `translate3d(${(mx - castWidth * 0.5).toFixed(1)}px, ${(my - 900).toFixed(1)}px, 0) rotate(${angleDeg.toFixed(2)}deg)`;
-      castRibbon.style.background = `linear-gradient(90deg,
-        transparent 0%,
-        rgba(22, 10, 4, 0.04) 32%,
-        rgba(22, 10, 4, 0.28) 49%,
-        rgba(22, 10, 4, 0.34) 51%,
-        rgba(22, 10, 4, 0.12) 68%,
-        transparent 100%)`;
-    }
-
-    // Vẽ khung hình uốn cong góc giấy trên PC (2 mặt mở rộng 960x640, giống hệt video Heyzine 00:01 - 00:35)
-    function renderDesktopCurlFrame(sheetIdx, dir, y0, rawCx, rawCy) {
-      const sheetEl = document.getElementById(`desktop-sheet-${sheetIdx}`);
-      const frontEl = document.getElementById(`desktop-front-${sheetIdx}`);
-      const backEl = document.getElementById(`desktop-back-${sheetIdx}`);
-      const overlay = document.getElementById('desktop-curl-overlay');
-      const flapCard = document.getElementById('desktop-curl-flap-card');
-      const flapContent = document.getElementById('desktop-curl-flap-content');
-      const cylRibbon = document.getElementById('desktop-curl-cylinder-ribbon');
-      const castRibbon = document.getElementById('desktop-crease-cast-ribbon');
-      if (!sheetEl || !frontEl || !backEl || !overlay || !flapCard || !flapContent || !cylRibbon || !castRibbon) return;
-
-      const desktopBook = document.getElementById('desktop-book');
-      if (desktopBook && desktopBook.classList.contains('closed-front')) {
-        desktopBook.classList.remove('closed-front');
-        desktopBook.classList.add('open-spread');
-        document.getElementById('stack-left').style.opacity = '1';
-      }
-
-      if (dir === 'next') {
-        // Đang uốn trang bên phải (frontEl của tờ sheetIdx) từ phải sang trái:
-        // rawCx, rawCy tính theo hệ tọa độ của trang phải (x từ -480 đến 480, gáy sách tại x = 0)
-        const [cx, cy] = clampPeelPointToSpine(rawCx, rawCy, PAGE_W, y0, 0);
-        const P0 = [PAGE_W, y0];
-        const vx = P0[0] - cx;
-        const vy = P0[1] - cy;
-        const dist = Math.hypot(vx, vy);
-
-        if (dist < 2) {
-          frontEl.style.clipPath = '';
-          overlay.classList.add('hidden');
-          return;
-        }
-
-        const mx = (P0[0] + cx) * 0.5;
-        const my = (P0[1] + cy) * 0.5;
-
-        const unpeeledPoly = clipPagePolygon(PAGE_RECT_POLY, vx, vy, mx, my, true);
-        const peeledPoly = clipPagePolygon(PAGE_RECT_POLY, vx, vy, mx, my, false);
-
-        if (peeledPoly.length < 3) {
-          frontEl.style.clipPath = '';
-          overlay.classList.add('hidden');
-          return;
-        }
-
-        // Cắt mặt trước của tờ hiện tại để lộ tờ kế tiếp bên dưới
-        const unpeeledCss = polyToClipPath(unpeeledPoly);
-        frontEl.style.clipPath = unpeeledCss;
-        frontEl.style.webkitClipPath = unpeeledCss;
-
-        // Mặt sau của chính tờ giấy đó (backPage = trang trái tiếp theo!) xuất hiện trên mép giấy uốn cong
-        const backLocalPoly = peeledPoly.map((pt) => [PAGE_W - pt[0], pt[1]]);
-        const backClipCss = polyToClipPath(backLocalPoly);
-
-        const alpha = Math.atan2(vy, vx);
-        const thetaDeg = ((2 * alpha) * 180) / Math.PI;
-
-        overlay.classList.remove('hidden');
-        // Trang phải bắt đầu tại X = 480 trên khung 960x640
-        flapCard.style.left = '480px';
-        flapCard.style.top = '0px';
-        flapCard.style.clipPath = backClipCss;
-        flapCard.style.webkitClipPath = backClipCss;
-        flapCard.style.transformOrigin = `0px ${y0}px`;
-        flapCard.style.transform = `translate3d(${cx.toFixed(1)}px, ${(cy - y0).toFixed(1)}px, 0) rotate(${thetaDeg.toFixed(2)}deg)`;
-
-        // Vị trí đường nếp gấp trong hệ tọa độ cục bộ của mặt sau (backLocal):
-        const localMx = PAGE_W - mx;
-        const localMy = my;
-        const localAngleDeg = -((alpha * 180) / Math.PI);
-        const rollWidth = Math.max(80, Math.min(360, dist * 0.95));
-
-        cylRibbon.style.width = `${rollWidth.toFixed(0)}px`;
-        cylRibbon.style.transform = `translate3d(${(localMx - rollWidth * 0.5).toFixed(1)}px, ${(localMy - 900).toFixed(1)}px, 0) rotate(${localAngleDeg.toFixed(2)}deg)`;
-        cylRibbon.style.background = `linear-gradient(90deg,
-          rgba(45, 25, 10, 0.30) 49.5%,
-          rgba(235, 218, 190, 0.42) 51%,
-          rgba(255, 255, 255, 0.65) 58%,
-          rgba(255, 252, 245, 0.25) 72%,
-          rgba(40, 24, 12, 0.14) 96%,
-          transparent 100%)`;
-
-        // Bóng đổ trên mặt sách 960x640 dọc theo đường nếp gấp (X_spread = 480 + mx)
-        const spreadMx = 480 + mx;
-        const spreadAngleDeg = (alpha * 180) / Math.PI;
-        const castWidth = Math.max(70, Math.min(260, dist * 0.65));
-        castRibbon.style.width = `${castWidth.toFixed(0)}px`;
-        castRibbon.style.transform = `translate3d(${(spreadMx - castWidth * 0.5).toFixed(1)}px, ${(my - 900).toFixed(1)}px, 0) rotate(${spreadAngleDeg.toFixed(2)}deg)`;
-        castRibbon.style.background = `linear-gradient(90deg,
-          transparent 0%,
-          rgba(20, 10, 4, 0.05) 30%,
-          rgba(20, 10, 4, 0.30) 49%,
-          rgba(20, 10, 4, 0.35) 51%,
-          rgba(20, 10, 4, 0.12) 70%,
-          transparent 100%)`;
-      } else {
-        // Đang uốn trang bên trái (backEl của tờ sheetIdx) từ trái sang phải:
-        // rawCx, rawCy tính theo hệ tọa độ của trang trái (x từ 0 đến 960, gáy sách tại x = 480)
-        const [cx, cy] = clampPeelPointToSpine(rawCx, rawCy, 0, y0, PAGE_W);
-        const P0 = [0, y0];
-        const vx = P0[0] - cx; // âm khi kéo sang phải
-        const vy = P0[1] - cy;
-        const dist = Math.hypot(vx, vy);
-
-        if (dist < 2) {
-          backEl.style.clipPath = '';
-          overlay.classList.add('hidden');
-          return;
-        }
-
-        const mx = (P0[0] + cx) * 0.5;
-        const my = (P0[1] + cy) * 0.5;
-
-        const unpeeledPoly = clipPagePolygon(PAGE_RECT_POLY, vx, vy, mx, my, true);
-        const peeledPoly = clipPagePolygon(PAGE_RECT_POLY, vx, vy, mx, my, false);
-
-        if (peeledPoly.length < 3) {
-          backEl.style.clipPath = '';
-          overlay.classList.add('hidden');
-          return;
-        }
-
-        // Cắt mặt trái hiện tại để lộ trang trái phía dưới
-        const unpeeledCss = polyToClipPath(unpeeledPoly);
-        backEl.style.clipPath = unpeeledCss;
-        backEl.style.webkitClipPath = unpeeledCss;
-
-        // Mặt trước của tờ đó (frontPage = trang phải trước đó!) xuất hiện trên mép giấy uốn cong
-        const frontLocalPoly = peeledPoly.map((pt) => [PAGE_W - pt[0], pt[1]]);
-        const frontClipCss = polyToClipPath(frontLocalPoly);
-
-        const alpha = Math.atan2(-vy, -vx);
-        const thetaDeg = ((2 * alpha) * 180) / Math.PI;
-
-        overlay.classList.remove('hidden');
-        flapCard.style.left = '0px';
-        flapCard.style.top = '0px';
-        flapCard.style.clipPath = frontClipCss;
-        flapCard.style.webkitClipPath = frontClipCss;
-        flapCard.style.transformOrigin = `${PAGE_W}px ${y0}px`;
-        flapCard.style.transform = `translate3d(${(cx - PAGE_W).toFixed(1)}px, ${(cy - y0).toFixed(1)}px, 0) rotate(${thetaDeg.toFixed(2)}deg)`;
-
-        const localMx = PAGE_W - mx;
-        const localMy = my;
-        const localAngleDeg = -((alpha * 180) / Math.PI);
-        const rollWidth = Math.max(80, Math.min(360, dist * 0.95));
-
-        cylRibbon.style.width = `${rollWidth.toFixed(0)}px`;
-        cylRibbon.style.transform = `translate3d(${(localMx - rollWidth * 0.5).toFixed(1)}px, ${(localMy - 900).toFixed(1)}px, 0) rotate(${localAngleDeg.toFixed(2)}deg)`;
-        cylRibbon.style.background = `linear-gradient(270deg,
-          rgba(45, 25, 10, 0.30) 49.5%,
-          rgba(235, 218, 190, 0.42) 51%,
-          rgba(255, 255, 255, 0.65) 58%,
-          rgba(255, 252, 245, 0.25) 72%,
-          rgba(40, 24, 12, 0.14) 96%,
-          transparent 100%)`;
-
-        const spreadMx = mx;
-        const spreadAngleDeg = (alpha * 180) / Math.PI;
-        const castWidth = Math.max(70, Math.min(260, dist * 0.65));
-        castRibbon.style.width = `${castWidth.toFixed(0)}px`;
-        castRibbon.style.transform = `translate3d(${(spreadMx - castWidth * 0.5).toFixed(1)}px, ${(my - 900).toFixed(1)}px, 0) rotate(${spreadAngleDeg.toFixed(2)}deg)`;
-        castRibbon.style.background = `linear-gradient(90deg,
-          transparent 0%,
-          rgba(20, 10, 4, 0.12) 30%,
-          rgba(20, 10, 4, 0.35) 49%,
-          rgba(20, 10, 4, 0.30) 51%,
-          rgba(20, 10, 4, 0.05) 70%,
-          transparent 100%)`;
-      }
-    }
-
-    // Nạp nội dung trang mặt sau vào lớp flap trên PC trước khi uốn góc
-    function prepareDesktopFlapContent(sheetIdx, dir) {
-      const flapContent = document.getElementById('desktop-curl-flap-content');
-      if (!flapContent) return;
-      if (dir === 'next') {
-        const backData = PAGES_DATA[sheetIdx * 2 + 1];
-        flapContent.innerHTML = backData ? backData.html : '<div class="page-inner cover-luxury"></div>';
-      } else {
-        const frontData = PAGES_DATA[sheetIdx * 2];
-        flapContent.innerHTML = frontData ? frontData.html : '';
-      }
-    }
-
-    // Chạy hoạt ảnh uốn góc giấy mượt 60fps theo đường cong parabol tự nhiên như Heyzine
-    function animateHeyzineCurl(options) {
-      if (curlAnimFrameId) {
-        cancelAnimationFrame(curlAnimFrameId);
-        curlAnimFrameId = null;
-      }
-      isCurlAnimating = true;
-      const {
-        mode,
-        dir,
-        y0,
-        startX,
-        startY,
-        endX,
-        endY,
-        arcLiftY = 0,
-        duration = 620,
-        fromPage,
-        toPage,
-        sheetIdx,
-        onComplete
-      } = options;
-
-      if (mode === 'desktop') {
-        prepareDesktopFlapContent(sheetIdx, dir);
-      }
-
-      const t0 = performance.now();
-      const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
-
-      function step(now) {
-        const rawT = Math.min(1, (now - t0) / duration);
-        const e = easeOutCubic(rawT);
-        const arc = Math.sin(rawT * Math.PI) * arcLiftY;
-        const curX = startX + (endX - startX) * e;
-        const curY = startY + (endY - startY) * e + arc;
-
-        if (mode === 'mobile') {
-          renderMobileCurlFrame(fromPage, toPage, y0, curX, curY);
-        } else {
-          renderDesktopCurlFrame(sheetIdx, dir, y0, curX, curY);
-        }
-
-        if (rawT < 1) {
-          curlAnimFrameId = requestAnimationFrame(step);
-        } else {
-          curlAnimFrameId = null;
-          isCurlAnimating = false;
-          clearCurlVisuals();
-          if (onComplete) onComplete();
-        }
-      }
-
-      curlAnimFrameId = requestAnimationFrame(step);
-    }
-
-    // Hiệu ứng nhấp nhô hé góc giấy nhẹ nhàng ở góc dưới phải (giống video Heyzine 00:48, 00:50, 01:11, 01:25)
-    function triggerCornerPeekHint() {
-      if (isCurlAnimating || activeCurlState) return;
-      if (isMobileMode) {
-        if (currentPageNumber >= TOTAL_PAGES) return;
-        const nextP = currentPageNumber + 1;
-        const startT = performance.now();
-        const peekDuration = 920;
-
-        function peekStep(now) {
-          if (isCurlAnimating || activeCurlState || !isMobileMode) return;
-          const p = Math.min(1, (now - startT) / peekDuration);
-          const wave = Math.sin(p * Math.PI);
-          if (p < 1) {
-            const cx = PAGE_W - wave * 78;
-            const cy = PAGE_H - wave * 64;
-            renderMobileCurlFrame(currentPageNumber, nextP, PAGE_H, cx, cy);
-            requestAnimationFrame(peekStep);
-          } else {
-            clearCurlVisuals();
-          }
-        }
-        requestAnimationFrame(peekStep);
-      }
-    }
-
     function syncBookVisualState(playSound = true) {
       isMobileMode = window.innerWidth <= 920;
-      clearCurlVisuals();
 
       if (playSound && isFlipSfxEnabled) {
         playRealisticPaperFlipSound();
@@ -4696,7 +4080,9 @@
         const sheetEl = document.getElementById(`desktop-sheet-${s}`);
         if (!sheetEl) continue;
 
-        sheetEl.style.transition = 'none';
+        sheetEl.classList.add('turning');
+        setTimeout(() => sheetEl.classList.remove('turning'), 650);
+
         if (s < flippedCount) {
           sheetEl.classList.add('flipped');
           sheetEl.style.zIndex = 10 + s;
@@ -4711,22 +4097,17 @@
       for (let p = 1; p <= TOTAL_PAGES; p++) {
         const cardEl = document.getElementById(`mobile-page-${p}`);
         if (!cardEl) continue;
-        cardEl.classList.remove('past-page', 'active-page', 'next-under-page', 'future-page', 'hidden-page', 'uncovering');
-        cardEl.style.transition = 'none';
-        cardEl.style.transform = 'rotateY(0deg)';
+        cardEl.classList.remove('past-page', 'active-page', 'future-page');
 
-        if (p < currentPageNumber - 1 || p > currentPageNumber + 1) {
-          cardEl.classList.add('hidden-page');
-          cardEl.style.zIndex = 1;
-        } else if (p === currentPageNumber - 1) {
-          cardEl.classList.add('next-under-page');
-          cardEl.style.zIndex = 18;
+        if (p < currentPageNumber) {
+          cardEl.classList.add('past-page');
+          cardEl.style.zIndex = p;
         } else if (p === currentPageNumber) {
           cardEl.classList.add('active-page');
           cardEl.style.zIndex = 30;
-        } else if (p === currentPageNumber + 1) {
-          cardEl.classList.add('next-under-page');
-          cardEl.style.zIndex = 20;
+        } else {
+          cardEl.classList.add('future-page');
+          cardEl.style.zIndex = 25 - p;
         }
       }
 
@@ -4767,188 +4148,59 @@
         : (flippedCount >= MAX_DESKTOP_FLIPPED);
 
       syncPageSpecificAudio(flippedCount);
+    }
 
-      if (idlePeekTimer) clearTimeout(idlePeekTimer);
-      if (isMobileMode && currentPageNumber < TOTAL_PAGES) {
-        idlePeekTimer = setTimeout(triggerCornerPeekHint, 420);
+    function turnNext() {
+      unlockAudioImmediately();
+      if (isMobileMode) {
+        if (currentPageNumber < TOTAL_PAGES) {
+          currentPageNumber++;
+          syncBookVisualState(true);
+        }
+      } else {
+        const flipped = getDesktopFlippedCountFromPage(currentPageNumber);
+        if (flipped < MAX_DESKTOP_FLIPPED) {
+          const nextFlipped = flipped + 1;
+          currentPageNumber = nextFlipped * 2;
+          syncBookVisualState(true);
+        }
       }
     }
 
-    function turnNext(customStart = null) {
-      if (isCurlAnimating) return;
+    function turnPrev() {
       unlockAudioImmediately();
-      isMobileMode = window.innerWidth <= 920;
-
       if (isMobileMode) {
-        if (currentPageNumber >= TOTAL_PAGES) return;
-        const fromP = currentPageNumber;
-        const toP = currentPageNumber + 1;
-        const y0 = customStart ? customStart.y0 : PAGE_H;
-        const sx = customStart ? customStart.cx : PAGE_W - 24;
-        const sy = customStart ? customStart.cy : (y0 === PAGE_H ? PAGE_H - 22 : 22);
-        const lift = customStart ? 0 : (y0 === PAGE_H ? -135 : 135);
-
-        if (isFlipSfxEnabled) playRealisticPaperFlipSound();
-
-        animateHeyzineCurl({
-          mode: 'mobile',
-          dir: 'next',
-          y0,
-          startX: sx,
-          startY: sy,
-          endX: -PAGE_W,
-          endY: y0,
-          arcLiftY: lift,
-          duration: customStart ? 460 : 640,
-          fromPage: fromP,
-          toPage: toP,
-          onComplete: () => {
-            currentPageNumber = toP;
-            syncBookVisualState(false);
-          }
-        });
+        if (currentPageNumber > 1) {
+          currentPageNumber--;
+          syncBookVisualState(true);
+        }
       } else {
         const flipped = getDesktopFlippedCountFromPage(currentPageNumber);
-        if (flipped >= MAX_DESKTOP_FLIPPED) return;
-        const y0 = customStart ? customStart.y0 : PAGE_H;
-        const sx = customStart ? customStart.cx : PAGE_W - 28;
-        const sy = customStart ? customStart.cy : (y0 === PAGE_H ? PAGE_H - 24 : 24);
-        const lift = customStart ? 0 : (y0 === PAGE_H ? -140 : 140);
-
-        if (isFlipSfxEnabled) playRealisticPaperFlipSound();
-
-        animateHeyzineCurl({
-          mode: 'desktop',
-          dir: 'next',
-          y0,
-          startX: sx,
-          startY: sy,
-          endX: -PAGE_W,
-          endY: y0,
-          arcLiftY: lift,
-          duration: customStart ? 480 : 660,
-          sheetIdx: flipped,
-          onComplete: () => {
-            const nextFlipped = flipped + 1;
-            currentPageNumber = nextFlipped * 2;
-            syncBookVisualState(false);
-          }
-        });
-      }
-    }
-
-    function turnPrev(customStart = null) {
-      if (isCurlAnimating) return;
-      unlockAudioImmediately();
-      isMobileMode = window.innerWidth <= 920;
-
-      if (isMobileMode) {
-        if (currentPageNumber <= 1) return;
-        const prevP = currentPageNumber - 1;
-        const currP = currentPageNumber;
-        const y0 = customStart ? customStart.y0 : PAGE_H;
-        const sx = customStart ? customStart.cx : -PAGE_W + 40;
-        const sy = customStart ? customStart.cy : (y0 === PAGE_H ? PAGE_H - 30 : 30);
-        const lift = customStart ? 0 : (y0 === PAGE_H ? -125 : 125);
-
-        if (isFlipSfxEnabled) playRealisticPaperFlipSound();
-
-        // Kéo trang trước (prevP) từ mép trái (-PAGE_W) phủ sang phải (PAGE_W) mở lại trang trước
-        animateHeyzineCurl({
-          mode: 'mobile',
-          dir: 'prev',
-          y0,
-          startX: sx,
-          startY: sy,
-          endX: PAGE_W,
-          endY: y0,
-          arcLiftY: lift,
-          duration: customStart ? 460 : 620,
-          fromPage: prevP,
-          toPage: currP,
-          onComplete: () => {
-            currentPageNumber = prevP;
-            syncBookVisualState(false);
-          }
-        });
-      } else {
-        const flipped = getDesktopFlippedCountFromPage(currentPageNumber);
-        if (flipped <= 0) return;
-        const targetSheet = flipped - 1;
-        const y0 = customStart ? customStart.y0 : PAGE_H;
-        const sx = customStart ? customStart.cx : 28;
-        const sy = customStart ? customStart.cy : (y0 === PAGE_H ? PAGE_H - 24 : 24);
-        const lift = customStart ? 0 : (y0 === PAGE_H ? -140 : 140);
-
-        if (isFlipSfxEnabled) playRealisticPaperFlipSound();
-
-        animateHeyzineCurl({
-          mode: 'desktop',
-          dir: 'prev',
-          y0,
-          startX: sx,
-          startY: sy,
-          endX: PAGE_W * 2,
-          endY: y0,
-          arcLiftY: lift,
-          duration: customStart ? 480 : 660,
-          sheetIdx: targetSheet,
-          onComplete: () => {
-            const prevFlipped = flipped - 1;
-            currentPageNumber = prevFlipped === 0 ? 1 : prevFlipped * 2;
-            syncBookVisualState(false);
-          }
-        });
+        if (flipped > 0) {
+          const prevFlipped = flipped - 1;
+          currentPageNumber = prevFlipped === 0 ? 1 : prevFlipped * 2;
+          syncBookVisualState(true);
+        }
       }
     }
 
     function jumpToPage(targetPage) {
-      if (curlAnimFrameId) {
-        cancelAnimationFrame(curlAnimFrameId);
-        curlAnimFrameId = null;
-        isCurlAnimating = false;
-      }
       unlockAudioImmediately();
       currentPageNumber = Math.max(1, Math.min(TOTAL_PAGES, targetPage));
       syncBookVisualState(true);
     }
 
     function handleDesktopSheetClick(sheetIndex, face, event) {
-      if (event.target.closest('button, input, textarea, form, a, video, .zoomable-photo-card')) return;
-      if (Math.abs(lastDragMovedX) > 10 || isCurlAnimating) return;
+      if (event.target.closest('button, input, form, a, video, .zoomable-photo-card')) return;
       unlockAudioImmediately();
-
-      const rect = event.currentTarget.getBoundingClientRect();
-      const relY = (event.clientY - rect.top) / Math.max(1, rect.height);
-      const y0 = relY < 0.45 ? 0 : PAGE_H;
 
       const flipped = getDesktopFlippedCountFromPage(currentPageNumber);
       if (face === 'front' && sheetIndex === flipped && flipped < MAX_DESKTOP_FLIPPED) {
-        turnNext({ y0, cx: PAGE_W - 24, cy: y0 === PAGE_H ? PAGE_H - 20 : 20 });
+        turnNext();
       } else if (face === 'back' && sheetIndex === flipped - 1) {
-        turnPrev({ y0, cx: 24, cy: y0 === PAGE_H ? PAGE_H - 20 : 20 });
+        turnPrev();
       }
     }
-
-    function handleMobileCardEdgeClick(pageNumber, event) {
-      if (!isMobileMode || isCurlAnimating) return;
-      if (event.target.closest('button, input, textarea, form, a, video, .zoomable-photo-card')) return;
-      if (Math.abs(lastDragMovedX) > 10) return;
-      unlockAudioImmediately();
-
-      const rect = event.currentTarget.getBoundingClientRect();
-      const relX = (event.clientX - rect.left) / Math.max(1, rect.width);
-      const relY = (event.clientY - rect.top) / Math.max(1, rect.height);
-      const y0 = relY < 0.42 ? 0 : PAGE_H;
-
-      if (relX >= 0.68 && currentPageNumber < TOTAL_PAGES) {
-        turnNext({ y0, cx: PAGE_W - 22, cy: y0 === PAGE_H ? PAGE_H - 18 : 18 });
-      } else if (relX <= 0.24 && currentPageNumber > 1) {
-        turnPrev({ y0, cx: -PAGE_W + 36, cy: y0 === PAGE_H ? PAGE_H - 22 : 22 });
-      }
-    }
-
-    let lastDragMovedX = 0;
 
     function initTouchAndDragGestures() {
       const stage = document.getElementById('book-touch-zone');
@@ -4958,6 +4210,7 @@
       let isDragging = false;
       let isHorizontalSwipe = null;
 
+      // Chỉ phóng to các ảnh kỷ niệm nằm trong khung .zoomable-photo-card (không phóng to ảnh nền trang Mục lục, Lời ngỏ, Bụi phấn)
       stage.addEventListener('click', (e) => {
         const zoomCard = e.target.closest('.zoomable-photo-card');
         if (zoomCard) {
@@ -4966,173 +4219,32 @@
       });
 
       stage.addEventListener('pointerdown', (e) => {
-        if (isCurlAnimating) return;
-        if (e.target.closest('button, input, textarea, form, a, video, .zoomable-photo-card')) return;
+        if (e.target.closest('button, input, form, a, video, .zoomable-photo-card')) return;
         unlockAudioImmediately();
         startX = e.clientX;
         startY = e.clientY;
         currentDeltaX = 0;
-        lastDragMovedX = 0;
         isDragging = true;
         isHorizontalSwipe = null;
-        activeCurlState = null;
       }, { passive: true });
 
-      let isHoverPeeking = false;
-      let hoverPeekSide = null;
-
       stage.addEventListener('pointermove', (e) => {
-        if (!isDragging && !isCurlAnimating && !isMobileMode) {
-          const deskBook = document.getElementById('desktop-book');
-          if (deskBook) {
-            const rect = deskBook.getBoundingClientRect();
-            const scaleX = (PAGE_W * 2) / Math.max(1, rect.width);
-            const scaleY = PAGE_H / Math.max(1, rect.height);
-            const sx = (e.clientX - rect.left) * scaleX;
-            const sy = (e.clientY - rect.top) * scaleY;
-            const flipped = getDesktopFlippedCountFromPage(currentPageNumber);
-
-            const nearRightCorner = (sx >= PAGE_W * 2 - 85 && sx <= PAGE_W * 2 && (sy <= 85 || sy >= PAGE_H - 85)) && (flipped < MAX_DESKTOP_FLIPPED);
-            const nearLeftCorner = (sx >= 0 && sx <= 85 && (sy <= 85 || sy >= PAGE_H - 85)) && (flipped > 0);
-
-            if (nearRightCorner) {
-              const y0 = sy < PAGE_H * 0.5 ? 0 : PAGE_H;
-              const key = `next_${flipped}_${y0}`;
-              if (hoverPeekSide !== key) {
-                hoverPeekSide = key;
-                prepareDesktopFlapContent(flipped, 'next');
-              }
-              isHoverPeeking = true;
-              const cx = Math.min(PAGE_W - 36, sx - PAGE_W - 22);
-              const cy = y0 === 0 ? Math.max(32, sy + 18) : Math.min(PAGE_H - 32, sy - 18);
-              renderDesktopCurlFrame(flipped, 'next', y0, cx, cy);
-              return;
-            } else if (nearLeftCorner) {
-              const y0 = sy < PAGE_H * 0.5 ? 0 : PAGE_H;
-              const key = `prev_${flipped - 1}_${y0}`;
-              if (hoverPeekSide !== key) {
-                hoverPeekSide = key;
-                prepareDesktopFlapContent(flipped - 1, 'prev');
-              }
-              isHoverPeeking = true;
-              const cx = Math.max(36, sx + 22);
-              const cy = y0 === 0 ? Math.max(32, sy + 18) : Math.min(PAGE_H - 32, sy - 18);
-              renderDesktopCurlFrame(flipped - 1, 'prev', y0, cx, cy);
-              return;
-            } else if (isHoverPeeking) {
-              isHoverPeeking = false;
-              hoverPeekSide = null;
-              clearCurlVisuals();
-            }
-          }
-        }
-        if (!isDragging || isCurlAnimating) return;
+        if (!isDragging) return;
         const dx = e.clientX - startX;
         const dy = e.clientY - startY;
 
-        if (isHorizontalSwipe === null && (Math.abs(dx) > 6 || Math.abs(dy) > 6)) {
-          isHorizontalSwipe = Math.abs(dx) > Math.abs(dy) * 0.85;
+        if (isHorizontalSwipe === null && (Math.abs(dx) > 8 || Math.abs(dy) > 8)) {
+          isHorizontalSwipe = Math.abs(dx) > Math.abs(dy) * 1.15;
         }
 
-        if (!isHorizontalSwipe) return;
-        currentDeltaX = dx;
-        lastDragMovedX = dx;
-
-        if (isMobileMode) {
-          const mobBook = document.getElementById('mobile-book');
-          if (!mobBook) return;
-          const rect = mobBook.getBoundingClientRect();
-          const scaleX = PAGE_W / Math.max(1, rect.width);
-          const scaleY = PAGE_H / Math.max(1, rect.height);
-          const localX = (e.clientX - rect.left) * scaleX;
-          const localY = Math.max(12, Math.min(PAGE_H - 12, (e.clientY - rect.top) * scaleY));
-
-          if (!activeCurlState) {
-            const startLocalY = (startY - rect.top) * scaleY;
-            const y0 = startLocalY < PAGE_H * 0.42 ? 0 : PAGE_H;
-            if (dx < 0 && currentPageNumber < TOTAL_PAGES) {
-              activeCurlState = {
-                mode: 'mobile',
-                dir: 'next',
-                y0,
-                fromPage: currentPageNumber,
-                toPage: currentPageNumber + 1,
-                cx: PAGE_W - 10,
-                cy: localY
-              };
-            } else if (dx > 0 && currentPageNumber > 1) {
-              activeCurlState = {
-                mode: 'mobile',
-                dir: 'prev',
-                y0,
-                fromPage: currentPageNumber - 1,
-                toPage: currentPageNumber,
-                cx: -PAGE_W + 20,
-                cy: localY
-              };
-            }
-          }
-
-          if (activeCurlState) {
-            if (activeCurlState.dir === 'next') {
-              const cx = Math.min(PAGE_W - 6, PAGE_W + dx * scaleX * 1.45);
-              activeCurlState.cx = cx;
-              activeCurlState.cy = localY;
-              renderMobileCurlFrame(activeCurlState.fromPage, activeCurlState.toPage, activeCurlState.y0, cx, localY);
-            } else {
-              const cx = Math.max(-PAGE_W + 10, -PAGE_W + dx * scaleX * 1.55);
-              activeCurlState.cx = cx;
-              activeCurlState.cy = localY;
-              renderMobileCurlFrame(activeCurlState.fromPage, activeCurlState.toPage, activeCurlState.y0, cx, localY);
-            }
-          }
-        } else {
-          const deskBook = document.getElementById('desktop-book');
-          if (!deskBook) return;
-          const rect = deskBook.getBoundingClientRect();
-          const scaleX = (PAGE_W * 2) / Math.max(1, rect.width);
-          const scaleY = PAGE_H / Math.max(1, rect.height);
-          const spreadX = (e.clientX - rect.left) * scaleX;
-          const localY = Math.max(12, Math.min(PAGE_H - 12, (e.clientY - rect.top) * scaleY));
-          const flipped = getDesktopFlippedCountFromPage(currentPageNumber);
-
-          if (!activeCurlState) {
-            const startLocalY = (startY - rect.top) * scaleY;
-            const y0 = startLocalY < PAGE_H * 0.45 ? 0 : PAGE_H;
-            if (dx < 0 && flipped < MAX_DESKTOP_FLIPPED) {
-              prepareDesktopFlapContent(flipped, 'next');
-              activeCurlState = {
-                mode: 'desktop',
-                dir: 'next',
-                y0,
-                sheetIdx: flipped,
-                cx: PAGE_W - 12,
-                cy: localY
-              };
-            } else if (dx > 0 && flipped > 0) {
-              prepareDesktopFlapContent(flipped - 1, 'prev');
-              activeCurlState = {
-                mode: 'desktop',
-                dir: 'prev',
-                y0,
-                sheetIdx: flipped - 1,
-                cx: 12,
-                cy: localY
-              };
-            }
-          }
-
-          if (activeCurlState) {
-            if (activeCurlState.dir === 'next') {
-              const cx = Math.min(PAGE_W - 6, spreadX - PAGE_W);
-              activeCurlState.cx = cx;
-              activeCurlState.cy = localY;
-              renderDesktopCurlFrame(activeCurlState.sheetIdx, 'next', activeCurlState.y0, cx, localY);
-            } else {
-              const cx = Math.max(6, spreadX);
-              activeCurlState.cx = cx;
-              activeCurlState.cy = localY;
-              renderDesktopCurlFrame(activeCurlState.sheetIdx, 'prev', activeCurlState.y0, cx, localY);
+        if (isHorizontalSwipe) {
+          currentDeltaX = dx;
+          if (isMobileMode) {
+            const activeCard = document.getElementById(`mobile-page-${currentPageNumber}`);
+            if (activeCard && dx < 0 && currentPageNumber < TOTAL_PAGES) {
+              const angle = Math.max(-45, (dx / 260) * 45);
+              activeCard.style.transition = 'none';
+              activeCard.style.transform = `rotateY(${angle}deg)`;
             }
           }
         }
@@ -5142,53 +4254,23 @@
         if (!isDragging) return;
         isDragging = false;
 
-        if (activeCurlState) {
-          const st = activeCurlState;
-          activeCurlState = null;
-          const shouldComplete = Math.abs(currentDeltaX) > 34;
-
-          if (shouldComplete) {
-            if (st.dir === 'next') {
-              turnNext({ y0: st.y0, cx: st.cx, cy: st.cy });
-            } else {
-              turnPrev({ y0: st.y0, cx: st.cx, cy: st.cy });
-            }
-          } else {
-            // Nếu người dùng kéo nhẹ rồi thả ra (như ở giây 00:34 trong video), trang sách đàn hồi mượt về góc cũ
-            if (st.mode === 'mobile') {
-              animateHeyzineCurl({
-                mode: 'mobile',
-                dir: st.dir,
-                y0: st.y0,
-                startX: st.cx,
-                startY: st.cy,
-                endX: st.dir === 'next' ? PAGE_W : -PAGE_W,
-                endY: st.y0,
-                duration: 280,
-                fromPage: st.fromPage,
-                toPage: st.toPage,
-                onComplete: () => syncBookVisualState(false)
-              });
-            } else {
-              animateHeyzineCurl({
-                mode: 'desktop',
-                dir: st.dir,
-                y0: st.y0,
-                startX: st.cx,
-                startY: st.cy,
-                endX: st.dir === 'next' ? PAGE_W : 0,
-                endY: st.y0,
-                duration: 280,
-                sheetIdx: st.sheetIdx,
-                onComplete: () => syncBookVisualState(false)
-              });
-            }
+        if (isMobileMode) {
+          const activeCard = document.getElementById(`mobile-page-${currentPageNumber}`);
+          if (activeCard) {
+            activeCard.style.transition = '';
+            activeCard.style.transform = '';
           }
         }
 
+        if (isHorizontalSwipe && Math.abs(currentDeltaX) > 36) {
+          if (currentDeltaX < 0) {
+            turnNext();
+          } else {
+            turnPrev();
+          }
+        }
         currentDeltaX = 0;
         isHorizontalSwipe = null;
-        setTimeout(() => { lastDragMovedX = 0; }, 60);
       };
 
       stage.addEventListener('pointerup', finishGesture, { passive: true });
